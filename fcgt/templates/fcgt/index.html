@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/style.css' %}" />
 <head>
     <meta charset="UTF-8">
     <title>Auchtung! Faber Castell ищет таланты!</title>
 </head>
 <body>
 <header>
-    <div class="upper_link">Achtung! Faber - Castell ищет таланты
+    <div class="upper_link">Achtung! <a href="">Faber - Castell</a> ищет таланты
         <nav class="share">twitter | facebook | google + | vkontakte | odnoklassniki</nav>
         <nav class="menu">
             <a href="pravila">Правила </a>
-            <a href="">Участникам </a>
-            <a href="">Жюри </a>
-            <a href="">Призы </a>
+            <a href="uchastnikam">Участникам </a>
+            <a href="{% url 'jury' %}">Жюри </a>
+            <a href="{% url 'nagradi'%}">Призы </a>
             <a href="">Учавствуй! </a>
         </nav>
     </div>
     <div class="lower_link">
         <nav class="gallery_links">
-            <a href="">Черное и белое и серое</a>
+            <a href="{% url 'gallery' %}">Черное и белое и серое</a>
             <a href="">Цветопробы или Profi vs Hobby</a>
             <a href="">Скетчинг</a>
             <a href="">Copy Paste или Копипастеры всех стран объединяйтесь</a>
@@ -32,7 +34,10 @@
         ЕЩЕ ПРИЗЫ!
     </div>
     <div class="ucha">
-        <form>Я котик</form>
+        {% csrf_token %}
+        <form action="{%url 'add_art' %}" method="post">
+        <input type="submit" value="Vote" />
+</form>
     </div>
     <footer>
         <div>Сайт фаберКастел</div>

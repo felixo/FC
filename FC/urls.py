@@ -17,11 +17,12 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^$', 'fcgt.views.index'),
-    url(r'^jury/', 'fcgt.views.jury'),
+    url(r'^$', 'fcgt.views.index', name='main'),
+    url(r'^jury/', 'fcgt.views.jury', name='jury'),
     url(r'^admin/', admin.site.urls),
-    url(r'^nagradi/', 'fcgt.views.awards'),
+    url(r'^nagradi/', 'fcgt.views.awards', name='nagradi'),
     url(r'^pravila/', 'fcgt.views.full_rull'),
-    url(r'^gallery/', 'fcgt.views.gallery'),
+    url(r'^gallery/', 'fcgt.views.gallery', name='gallery'),
     url(r'^uchastnikam/', 'fcgt.views.short_rull'),
+    url(r'^add_art/', 'fcgt.views.add_art', name='add_art'),
 ]

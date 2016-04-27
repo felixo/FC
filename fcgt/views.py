@@ -21,3 +21,5 @@ def jury(request):
 def short_rull(request):
     return render(request, 'fcgt/short_rull.html')
 # Create your views here.
+def add_art(request):
+    return render(request, 'fcgt/gallery.html')
