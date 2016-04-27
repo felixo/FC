@@ -1,6 +1,9 @@
-from django.shortcuts import get_object_or_404, render
-
+from django.shortcuts import get_object_or_404, render, render_to_response
+from django.http import HttpResponseRedirect
 from .models import Gallery, Vote
+from .forms import UploadFileForm
+from forms import handle_uploaded_file
+
 
 def index(request):
     #question = get_object_or_404(Question, pk=question_id)
@@ -20,6 +23,13 @@ def jury(request):
 
 def short_rull(request):
     return render(request, 'fcgt/short_rull.html')
-# Create your views here.
+
 def add_art(request):
-    return render(request, 'fcgt/gallery.html')
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            handle_uploaded_file(request.FILES['file'])
+            return HttpResponseRedirect('/success/url/')
+    else:
+        form = UploadFileForm()
+    return render_to_response('fcgt/index.html', {'form': form})
