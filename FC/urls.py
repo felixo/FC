@@ -20,4 +20,8 @@ urlpatterns = [
     url(r'^$', 'fcgt.views.index'),
     url(r'^jury/', 'fcgt.views.jury'),
     url(r'^admin/', admin.site.urls),
+    url(r'^nagradi/', 'fcgt.views.awards'),
+    url(r'^pravila/', 'fcgt.views.full_rull'),
+    url(r'^gallery/', 'fcgt.views.gallery'),
+    url(r'^uchastnikam/', 'fcgt.views.short_rull'),
 ]
