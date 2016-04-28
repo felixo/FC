@@ -1,8 +1,11 @@
 from django.shortcuts import get_object_or_404, render, render_to_response
 from django.http import HttpResponseRedirect
 from .models import Gallery, Vote
-from .forms import UploadFileForm
-from forms import handle_uploaded_file
+from .forms import ImageUploadForm
+from django.core.urlresolvers import reverse
+from django.views.generic import FormView, DetailView, ListView
+from django.http import HttpResponse, HttpResponseForbidden
+from django.utils import timezone
 
 
 def index(request):
@@ -26,10 +29,10 @@ def short_rull(request):
 
 def add_art(request):
     if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
+        form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
-            handle_uploaded_file(request.FILES['file'])
-            return HttpResponseRedirect('/success/url/')
-    else:
-        form = UploadFileForm()
-    return render_to_response('fcgt/index.html', {'form': form})
+            m = Gallery.objects.create(pub_date=timezone.now())
+            m.model_pic = form.cleaned_data['image']
+            m.save()
+            return HttpResponse('image upload success')
+    return HttpResponseForbidden('allowed only via POST')

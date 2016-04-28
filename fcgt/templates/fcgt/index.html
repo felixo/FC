@@ -34,11 +34,12 @@
         ЕЩЕ ПРИЗЫ!
     </div>
     <div class="ucha">
-        <form action="{%url 'add_art' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-            <input type="file">
-            <input type="submit" value="Участвовать" />
-</form>
+       <form action="{% url 'add_art' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+                <p>
+                    <input id="id_image" type="file" class="" name="image">
+                </p>
+                <input type="submit" value="Submit" />
+            </form>
     </div>
     <footer>
         <div>Сайт фаберКастел</div>

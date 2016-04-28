@@ -12,10 +12,10 @@ class Gallery(models.Model):
     art_category = models.CharField(max_length=200)
     art_delete = models.BooleanField(default=False)
     art_vote = models.IntegerField(default=0)
-
-
+    art_add = models.ImageField(upload_to='fcgt/media', default='fcgt/media/no-img.jpg')
 
 class Vote(models.Model):
     art = models.ForeignKey(Gallery, on_delete=models.CASCADE)
     vote_id = models.CharField(max_length=200)
     vote_is_it = models.BooleanField(default=False)
+
