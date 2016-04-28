@@ -19,7 +19,10 @@ def full_rull(request):
     return render(request, 'fcgt/full_rull.html')
 
 def gallery(request):
-    return render(request, 'fcgt/gallery.html')
+    documents = Gallery.objects.all()
+    return render(request, 'fcgt/gallery.html', {
+        'documents': documents
+    })
 
 def jury(request):
     return render(request, 'fcgt/jury.html')
@@ -31,8 +34,11 @@ def add_art(request):
     if request.method == 'POST':
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
-            m = Gallery.objects.create(pub_date=timezone.now())
-            m.model_pic = form.cleaned_data['image']
-            m.save()
+            #return HttpResponse(request.FILES)
+            newdoc = Gallery(docfile = request.FILES['image'])
+            newdoc.pub_date = timezone.now()
+            newdoc.docfile.name = 'Img_%s.jpg' % newdoc.pk
+            return HttpResponse(newdoc.pk)
+            newdoc.save()
             return HttpResponse('image upload success')
     return HttpResponseForbidden('allowed only via POST')
