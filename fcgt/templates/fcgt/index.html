@@ -11,16 +11,16 @@
     <div class="upper_link">Achtung! <a href="">Faber - Castell</a> ищет таланты
         <nav class="share">twitter | facebook | google + | vkontakte | odnoklassniki</nav>
         <nav class="menu">
-            <a href="pravila">Правила </a>
-            <a href="uchastnikam">Участникам </a>
-            <a href="{% url 'jury' %}">Жюри </a>
-            <a href="{% url 'nagradi'%}">Призы </a>
-            <a href="">Учавствуй! </a>
+            <a href="{% url 'fcgt:rules' %}">Правила </a>
+            <a href="{% url 'fcgt:uchastnikam' %}">Участникам </a>
+            <a href="{% url 'fcgt:jury' %}">Жюри </a>
+            <a href="{% url 'fcgt:nagradi'%}">Призы </a>
+            <a href="{% url 'fcgt:add_art' %}">Учавствуй! </a>
         </nav>
     </div>
     <div class="lower_link">
         <nav class="gallery_links">
-            <a href="{% url 'gallery' %}">Черное и белое и серое</a>
+            <a href="{% url 'fcgt:gallery' %}">Черное и белое и серое</a>
             <a href="">Цветопробы или Profi vs Hobby</a>
             <a href="">Скетчинг</a>
             <a href="">Copy Paste или Копипастеры всех стран объединяйтесь</a>
@@ -32,14 +32,6 @@
     </div>
     <div class="Еще призы">
         ЕЩЕ ПРИЗЫ!
-    </div>
-    <div class="ucha">
-       <form action="{% url 'add_art' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
-                <p>
-                    <input id="id_image" type="file" class="" name="image">
-                </p>
-                <input type="submit" value="Submit" />
-            </form>
     </div>
     <footer>
         <div>Сайт фаберКастел</div>

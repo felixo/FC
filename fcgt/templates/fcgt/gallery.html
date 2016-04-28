@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'fcgt/style.css' %}" />
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'fcgt/layout.html' %}
+
+{% block body %}
 <label>Шаблон Галлереи</label>
 
 {% if documents %}
-        <ul>
+    <ul>
         {% for document in documents %}
             <li><a href="{{ document.docfile.url }}">"{{ document.pk }}"<img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a></li>
         {% endfor %}
-        </ul>
-    {% else %}
-        <p>No documents.</p>
-        <p>{{ documents }}</p>
-    {% endif %}
-
-</body>
-</html>
+    </ul>
+{% else %}
+    <p>No documents.</p>
+    <p>{{ documents }}</p>
+{% endif %}
+{% endblock %}
