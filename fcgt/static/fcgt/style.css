@@ -3,6 +3,8 @@ body {
 	font: 20px Basil, sans-serif;
 	background-color: #002d28;
 	margin: 0;
+    height: 100%;
+    width: 100%;
 }
 input[type="text"] {
 	background-color: #e6ddbd;
@@ -12,6 +14,8 @@ input[type="text"] {
 	color: #5c6759;
 	padding: 0 10px;
 	vertical-align: top;
+}
+
 
 select {
     background-color: #e6ddbd;
@@ -23,14 +27,94 @@ select {
 	vertical-align: top;
 }
 
-}
 button {
-	color: #fff;
-	background-color: #29c5e6;
+	color: #5c6759;
+	background-color: #e6ddbd;
 	border: none;
 	height: 32px;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Basil', sans-serif;
 }
-p {
-	margin: 20px 0;
+
+#wrapper {
+	max-width: 1294px;
+	margin: auto;
+	height: 100%;
+    width: 1294px;
+    background-image: url('images/banner.jpg');
+    background-repeat: no-repeat;
+}
+
+header {
+
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	list-style-position: inside;
+	font: 19px 'Basil', sans-serif;
+	padding: 10px;
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.top-menu li.active {
+	background: #29c5e6;
+	color: #e6ddbd;
+}
+
+.top-menu a {
+	color: #e6ddbd;
+}
+
+#share {
+    text-align: right;
+    height: 58px;
+    background-color: #002d28;
+}
+
+.logo {
+    color: #f6f7f7;
+	font: 49px 'Hitch Hike';
+	text-align:center;
+}
+
+.logo a img {
+    margin-top: -45px;
+}
+
+.logo span {
+    vertical-align: 30px;
+    padding: 20px 10px;
+}
+
+.title {
+  height: 204px;
+  background: rgba(109, 134, 130, 0.5);
+}
+
+#auchtung {
+    position: relative;
+    left: 165px;
+}
+
+.list {
+    margin-top: 400px;
+}
+
+nav.menu {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }

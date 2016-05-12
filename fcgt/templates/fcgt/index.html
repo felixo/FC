@@ -4,10 +4,41 @@
 <link rel="stylesheet" type="text/css" href="{% static 'fcgt/style.css' %}" />
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>Auchtung! Faber Castell ищет таланты!</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 <body>
+<div id="wrapper">
+
+
 <header>
+    <div class="title">
+        <div id="share">Поделиться</div>
+        <div class="logo">
+            <span id="auchtung">AUCHTUNG!  </span>
+            <img id="swoosh" src="{% static "fcgt/images/swoosh.png" %}" alt="swoosh">
+            <a href="/"><img src="{% static "fcgt/images/logo.png" %}" alt="Logo"></a>
+            <span>  Ищет таланты!</span>
+        </div>
+        <nav class="menu">
+         <ul class="top-menu">
+            <li><a href="{% url 'fcgt:rules' %}">ПРАВИЛА </a></li>
+            <li><a href="{% url 'fcgt:uchastnikam' %}">УЧАСТНИКАМ</a></li>
+            <li><a href="{% url 'fcgt:jury' %}">ЖЮРИ</a></li>
+            <li><a href="{% url 'fcgt:nagradi'%}">ПРИЗЫ</a></li>
+             <li> <a href="{% url 'fcgt:add_art' %}">УЧАВСТВОВАТЬ</a></li>
+          </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="list">
     <div class="upper_link">Achtung! <a href="">Faber - Castell</a> ищет таланты
         <nav class="share">twitter | facebook | google + | vkontakte | odnoklassniki</nav>
         <nav class="menu">
@@ -30,6 +61,7 @@
     <div class="prizi">
         Тут про призы
     </div>
+    </div>
     <div class="Еще призы">
         ЕЩЕ ПРИЗЫ!
     </div>
@@ -38,10 +70,11 @@
     {{ form }}
     <input type="submit" value="Отправить" />
     </form>
+    </div>
     <footer>
         <div>Сайт фаберКастел</div>
         <div>Телефон:+7444123123123</div>
     </footer>
-</header>
+
 </body>
 </html>
