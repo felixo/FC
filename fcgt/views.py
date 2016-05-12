@@ -10,7 +10,8 @@ from forms import ArtForm
 
 def index(request):
     # question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'fcgt/index.html')
+    form = ArtForm()
+    return render(request, 'fcgt/index.html',  {'form': form})
 
 
 def awards(request):
