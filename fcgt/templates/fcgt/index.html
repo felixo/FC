@@ -39,29 +39,18 @@
 </header>
 
 <div class="list">
-    <div class="upper_link">Achtung! <a href="">Faber - Castell</a> ищет таланты
-        <nav class="share">twitter | facebook | google + | vkontakte | odnoklassniki</nav>
-        <nav class="menu">
-            <a href="{% url 'fcgt:rules' %}">Правила </a>
-            <a href="{% url 'fcgt:uchastnikam' %}">Участникам </a>
-            <a href="{% url 'fcgt:jury' %}">Жюри </a>
-            <a href="{% url 'fcgt:nagradi'%}">Призы </a>
-            <a href="{% url 'fcgt:add_art' %}">Учавствуй! </a>
-        </nav>
-    </div>
-    <div class="lower_link">
-        <nav class="gallery_links">
-            <a href="{% url 'fcgt:gallery' %}">Черное и белое и серое</a>
-            <a href="">Цветопробы или Profi vs Hobby</a>
-            <a href="">Скетчинг</a>
-            <a href="">Copy Paste или Копипастеры всех стран объединяйтесь</a>
-            <a href="">Мини-художники</a>
-        </nav>
-    </div>
+        <ul class="gallerylink">
+            <li><img src="{% static "fcgt/images/blackandwhite.png" %}" alt="black and white"><a href="{% url 'fcgt:gallery' %}">Черное и белое <br>и Серое</a></li>
+            <li><img src="{% static "fcgt/images/trypaint.png" %}" alt="black and white"><a href="">Цветопробы или <br>Profi vs Hobby</a></li>
+            <li><img src="{% static "fcgt/images/scatching.png" %}" alt="black and white"><a href="">Скетчинг</a></li>
+            <li><img src="{% static "fcgt/images/copypast.png" %}" alt="black and white"><a href="">Copy Paste или <br>Копипастеры всех стран <br>объединяйтесь</a></li>
+            <li><img src="{% static "fcgt/images/MiniArt.png" %}" alt="black and white"><a href="">Мини-художники</a></li>
+        </ul>
+ </div>
     <div class="prizi">
         Тут про призы
     </div>
-    </div>
+
     <div class="Еще призы">
         ЕЩЕ ПРИЗЫ!
     </div>

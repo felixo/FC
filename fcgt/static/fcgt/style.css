@@ -41,6 +41,7 @@ button {
 	height: 100%;
     width: 1294px;
     background-image: url('images/banner.jpg');
+    background-position: 0px -180px;
     background-repeat: no-repeat;
 }
 
@@ -48,7 +49,7 @@ header {
 
 }
 
-nav a {
+a {
 	text-decoration: none;
 }
 
@@ -87,7 +88,7 @@ nav li {
 .logo {
     color: #f6f7f7;
 	font: 49px 'Hitch Hike';
-	text-align:center;
+
 }
 
 .logo a img {
@@ -111,10 +112,34 @@ nav li {
 
 .list {
     margin-top: 400px;
+    width: 81%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav.menu {
-    width: 100%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.gallerylink {
+  margin-top: -70px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.gallerylink a {
+    color: #e6ddbd;
+}
+
+.gallerylink li img {
+  display: block;
+}
+
+.gallerylink li{
+  display: inline-block;
+  margin: 10px;
+  font: 26px 'Hitch Hike';
+  vertical-align: top;
 }
