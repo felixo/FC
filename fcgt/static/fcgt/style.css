@@ -142,4 +142,133 @@ nav.menu {
   margin: 10px;
   font: 26px 'Hitch Hike';
   vertical-align: top;
+  text-align: center;
+}
+
+.stepsWrapper {
+    background-image: url('images/stepsback.png');
+    background-position: 178px 140px;
+    background-repeat: no-repeat;
+}
+
+.stepsWrapper p {
+    text-align: center;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font: 30px 'Basil';
+    color: #e6ddbd;
+}
+
+#p2 {
+    font: 20px 'Basil';
+    color: #b6a974;
+    margin-top: -20px;
+    }
+
+.steps {
+    list-style-type: none;
+    list-style-position: outside;
+    width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps li {
+
+    font: 24px 'PT Sans Narrow';
+    /*text-align: center;*/
+    color: #e6ddbd;
+    margin: 34px 0px;
+}
+
+.steps img {
+    /*margin: left;*/
+    float: left;
+}
+
+.mainword {
+    font: 46px 'Hitch Hike';
+    color: white;
+}
+
+.web {
+    color: #ffffff;
+    font: 24px 'Basil';
+}
+
+.stepswrap {
+    vertical-align: 40px;
+    margin-left: 193px;
+    display: block;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#mvimg1 {
+    margin-top: -25px;
+}
+
+#mvimg2 {
+    margin-top: -13px;
+}
+
+#swoosh2 {
+    margin-left: 440px;
+    margin-top: -12px;
+}
+
+#swoosh3 {
+    margin-left: 394px;
+}
+
+#mvimg4{
+    margin-left: 322px;
+}
+
+#prizikon {
+    font: 30px 'Basil';
+    color: #b6a974;
+    margin: 20px;
+}
+
+.prizi {
+    width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.prizeList {
+    display: block;
+    list-style-type: none;
+}
+
+.prizeList li {
+    float: left;
+}
+
+.prizeList li img{
+    display: block;
+}
+
+.prizelistNarrow {
+    font: 15px 'PT Sans Narrow';
+    /*text-align: center;*/
+    color: #a2986a;
+}
+
+.place {
+    font: 24px 'Basil';
+    color: white;
+
+}
+
+.prizelistNarrowit {
+    font: 15px 'PT Sans Narrow';
+    /*text-align: center;*/
+    color: #a2986a;
+    font-style: italic;
 }

@@ -40,20 +40,55 @@
 
 <div class="list">
         <ul class="gallerylink">
-            <li><img src="{% static "fcgt/images/blackandwhite.png" %}" alt="black and white"><a href="{% url 'fcgt:gallery' %}">Черное и белое <br>и Серое</a></li>
-            <li><img src="{% static "fcgt/images/trypaint.png" %}" alt="black and white"><a href="">Цветопробы или <br>Profi vs Hobby</a></li>
-            <li><img src="{% static "fcgt/images/scatching.png" %}" alt="black and white"><a href="">Скетчинг</a></li>
-            <li><img src="{% static "fcgt/images/copypast.png" %}" alt="black and white"><a href="">Copy Paste или <br>Копипастеры всех стран <br>объединяйтесь</a></li>
-            <li><img src="{% static "fcgt/images/MiniArt.png" %}" alt="black and white"><a href="">Мини-художники</a></li>
+            <li><a href="{% url 'fcgt:gallery' %}"><img src="{% static "fcgt/images/blackandwhite.png" %}" alt="black and white">Черное и белое <br>и Серое</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/trypaint.png" %}" alt="black and white">Цветопробы или <br>Profi vs Hobby</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/scatching.png" %}" alt="black and white">Скетчинг</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/copypast.png" %}" alt="black and white">Copy Paste или <br>Копипастеры всех стран <br>объединяйтесь</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/MiniArt.png" %}" alt="black and white">Мини-художники</a></li>
         </ul>
  </div>
+    <div class="stepsWrapper">
+        <p id="p1">ПРИМИ УЧАСТИЕ <br>В КОНКУРСЕ ТАЛАНТОВ!</p>
+        <p id="p2"> C 01 мая по 30 ноября 2016 года</p>
+        <ul class="steps">
+            <li id="step1"><img id="mvimg1" src="{% static "fcgt/images/step1.png" %}" alt="Step 1"><span class="stepswrap"><span class="mainword">Создай</span><span> свой шедевр</span></span><div class="clearfix"></div></li>
+            <li id="step2"><img id="mvimg2" src="{% static "fcgt/images/step2.png" %}" alt="Step 2"><span class="stepswrap"><span class="mainword">Закачай</span><span> на специально <br>созданный сайт </span><span class="web">fabercastellgottalent.com</span></span><img id="swoosh2" src="{% static "fcgt/images/swoosh2.png" %}" alt="swoosh"><div class="clearfix"></div></li>
+            <li id="step3"><img id="mvimg3" src="{% static "fcgt/images/step3.png" %}" alt="Step 3"><span class="stepswrap"><span class="mainword">Расскажи</span><br><span>своим друзьям о конкурсе в любой социальной<br>сети с хэштегом </span><span class="web">#fabercastellgottalent</span></span><img id="swoosh3" src="{% static "fcgt/images/swoosh3.png" %}" alt="swoosh"><div class="clearfix"></div></li>
+        </ul>
+        <img id="mvimg4" src="{% static "fcgt/images/step4.png" %}" alt="Step 4"><span class="stepswrap">
+    </div>
     <div class="prizi">
-        Тут про призы
+        <span id="prizikon">ПРИЗЫ КОНКУРСА</span>
+        <ul class="prizeList">
+            <li>
+                <img src="{% static "fcgt/images/1st.png" %}" alt="1st">
+                <span class="place">1 МЕСТО</span>
+                <div><span class="prizelistNarrow">Интенсив-обучение в Британке</span></div>
+                <div><span class="prizelistNarrowit">(или см. "Призы" на выбор Победителя)</span></div>
+            <div class="clearfix"></div></li>
+            <li>
+                <img src="{% static "fcgt/images/2st.png" %}" alt="2st">
+                <span class="place">2 МЕСТО</span>
+                <div><span class="prizelistNarrow">Онлайн-обучение в Bang-Bang Education</span></div>
+                <div><span class="prizelistNarrowit">(или см. "Призы" на выбор Победителя)</span></div>
+           <div class="clearfix"></div></li>
+            <li>
+                <img src="{% static "fcgt/images/3st.png" %}" alt="3st">
+                <span class="place">3 МЕСТО</span>
+                <div><span class="prizelistNarrow">Полугодовой запас материалов</span></div>
+                <img src="{% static "fcgt/images/bottomlogo.png" %}" alt="bottom-logo">
+            <div class="clearfix"></div></li>
+        </ul>
+         <div class="clearfix"></div>
+        <div class="prizeSpecial">
+            <p>СПЕЦИАЛЬНЫЙ ПРИЗ</p>
+            <p>Каждую неделю шедевр, собравший наибольшее количество лайков, будет удостоен специального приза - <br>набор для графики от Faber-Castell! Всего разыгрывается 30 призов.</p>
+            <img src="" alt="bottom-line">
+        </div>
     </div>
 
-    <div class="Еще призы">
-        ЕЩЕ ПРИЗЫ!
-    </div>
+    <div class="form">
+        <span>УЧАВСТВОВАТЬ ПРОСТО</span>
     <form action="{% url 'fcgt:add_art' %}" method="POST" enctype="multipart/form-data">
     <p>{% csrf_token %}</p>
     {{ form }}
@@ -61,8 +96,17 @@
     </form>
     </div>
     <footer>
-        <div>Сайт фаберКастел</div>
-        <div>Телефон:+7444123123123</div>
+        <div class="footerwrap">
+            <ul>
+                <li>
+                    <div><span>ООО "Фабер-Кастелл Анадолу</span></div>
+                    <div><span>115432, Москва, проспект Андропова, дом 18/корп. 7</span></div>
+                    <div><span>Бизнес-парк "Nagatino i-land</span></div>
+                </li>
+                <li>
+                    <div><span>+7 (495) 225 96 34</span></div>
+                    <div><span>contest@faber-castell.com.ru</span></div>
+                </li>
     </footer>
 
 </body>
