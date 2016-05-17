@@ -22,6 +22,7 @@ class Gallery(models.Model):
     art_delete = models.BooleanField(default=False)
     art_vote = models.IntegerField(default=0)
     docfile = models.FileField(upload_to='arts')
+    art_password = models.CharField(max_length=200)
 
 
 class Vote(models.Model):

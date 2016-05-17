@@ -6,14 +6,18 @@ body {
     height: 100%;
     width: 100%;
 }
+
 input[type="text"] {
 	background-color: #e6ddbd;
-	border: 1px solid #e7e7e7;
+	border: 1px inset #e7e7e7;
 	height: 27px;
 	width: 245px;
 	color: #5c6759;
 	padding: 0 10px;
-	vertical-align: top;
+    -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 2px; /* закругление углов для всех, кто понимает */
 }
 
 
@@ -24,7 +28,10 @@ select {
 	width: 245px;
 	color: #5c6759;
 	padding: 0 10px;
-	vertical-align: top;
+	 -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 2px; /* закругление углов для всех, кто понимает */
 }
 
 button {
@@ -235,10 +242,14 @@ nav.menu {
 }
 
 .prizi {
-    width: 49%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    background-image: url('images/placeback.png');
+    background-position: 0px 24px;
+    background-repeat: no-repeat;
+
 }
 
 .prizeList {
@@ -252,12 +263,17 @@ nav.menu {
 
 .prizeList li img{
     display: block;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
 }
 
 .prizelistNarrow {
     font: 15px 'PT Sans Narrow';
     /*text-align: center;*/
     color: #a2986a;
+    margin: 0px 31px;
 }
 
 .place {
@@ -271,4 +287,111 @@ nav.menu {
     /*text-align: center;*/
     color: #a2986a;
     font-style: italic;
+    margin: 0px 31px;
 }
+
+.prizeSpecial {
+    font: 20px 'Basil';
+    color: white;
+}
+
+.prizeSpecialNarrow {
+    font: 15px 'PT Sans Narrow';
+    color: #a2986a;
+    margin-top: -18px;
+}
+
+.prizewrap img {
+    margin: 47px -24px;
+}
+
+.form {
+    width: 31%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form span {
+    font: 30px 'Basil';
+    color: #e6ddbd;
+}
+
+.footerwrap {
+    max-width: 1294px;
+	margin: auto;
+	height: 303px;
+    width: 1294px;
+    /*background-position: 0px -180px;*/
+    background-repeat: no-repeat;
+    background-image: url('images/footerback.jpg');
+}
+
+.footerlist li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.footerright {
+
+    margin: -7px 0px;
+}
+
+
+.footerright span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.number span{
+    font: 28px 'Basil';
+    color: #051e05;
+}
+
+.email span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.footerleft {
+    margin-left: 450px;
+    text-align: right;
+}
+
+.footerleftmain {
+    margin-top: 22px;
+    margin-left: 140px;
+}
+
+label {
+    font: 15px 'PT Sans Narrow';
+    color: #a2986a;
+}
+
+.formlist {
+    width: 750px;
+}
+
+.formlist li {
+    list-style-type: none;
+    float: left;
+}
+
+#sendfilefix {
+
+ overflow:hidden;
+      width:130px;
+      height:27px;
+      cursor:pointer;
+      background: url('images/choose.png') no-repeat;
+ }
+
+  input[type="file"] {
+      opacity:0;
+      filter:alpha(opacity:0);
+      font-size:199px;
+      cursor:pointer;
+      padding:0px;
+      margin:0px;
+      border:none;
+      margin-left:-450px;
+    }
