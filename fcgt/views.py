@@ -34,7 +34,8 @@ def jury(request):
 
 
 def short_rull(request):
-    return render(request, 'fcgt/short_rull.html')
+    form = ArtForm()
+    return render(request, 'fcgt/short_rull.html',  {'form': form})
 
 
 def add_art(request):

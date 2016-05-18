@@ -99,55 +99,57 @@
     <ul class="formlist">
 
         <li class="formleft">
-        <div><label class="control-label" for="{{ form.art_host_name.id_for_label }}">{{ form.art_host_name.label }}</label>
+        <div id="div_art_host">
+        <label class="control-label" for="{{ form.art_host_name.id_for_label }}">{{ form.art_host_name.label }}</label>
         {{ form.art_host_name }}
         {% if form.art_host_name.errors %}
-
         <label class="control-label">{{ form.art_host_name.errors|first }}</label>
         {% endif %}
         </div>
-        <div>
+
+        <div id="div_art_catergory">
         <label class="control-label" for="{{ form.art_category.id_for_label }}">{{ form.art_category.label }}</label>
         {{ form.art_category }}
         {% if form.art_category.errors %}
         <label class="control-label">{{ form.art_category.errors|first }}</label>
         {% endif %}
         </div>
-            <div>
+
+        <div id="div_art_city">
         <label class="control-label" for="{{ form.art_city.id_for_label }}">{{ form.art_city.label }}</label>
         {{ form.art_city }}
         {% if form.art_city.errors %}
         <label class="control-label">{{ form.art_city.errors|first }}</label>
         {% endif %}
-        </div>
-        </li>
+        </div></li>
+
         <li class="formright">
-            <div>
-            <label class="control-label" for="{{ form.art_mail.id_for_label }}">{{ form.art_mail.label }}</label>
+        <div id="div_art_mail">
+        <label class="control-label" for="{{ form.art_mail.id_for_label }}">{{ form.art_mail.label }}</label>
         {{ form.art_mail }}
         {% if form.art_mail.errors %}
         <label class="control-label">{{ form.art_mail.errors|first }}</label>
-            {% endif %}
-                </div>
+        {% endif %}
+        </div>
 
-<div>
-            <label class="control-label" for="{{ form.art_password.id_for_label }}">{{ form.art_password.label }}</label>
+        <div id="div_art_password">
+        <label class="control-label" for="{{ form.art_password.id_for_label }}">{{ form.art_password.label }}</label>
         {{ form.art_password }}
         {% if form.art_password.errors %}
         <label class="control-label">{{ form.art_password.errors|first }}</label>
-            {% endif %}
-    </div>
-<div>
-            <label class="control-label" for="{{ form.docfile.id_for_label }}">{{ form.docfile.label }}</label>
+        {% endif %}
+        </div>
+
+        <div id="div_docfile">
+        <label id="labelfile" class="control-label" for="{{ form.docfile.id_for_label }}">{{ form.docfile.label }}</label>
     <div id="sendfilefix" title="Нажмите на меня, для обзора файла"></div>
-    {{ form.docfile }}
+        {{ form.docfile }}
         {% if form.docfile.errors %}
         <label class="control-label">{{ form.docfile.errors|first }}</label>
-            {% endif %}
-</div>
+        {% endif %}
+        </div>
 
-            <div><input type="submit" value="Отправить" /></div>
-
+        <div id="div_send"><input type="submit" value="Отправить на конкурс >>" /></div>
         </li>
 <div class="clearfix"></div>
     </ul>

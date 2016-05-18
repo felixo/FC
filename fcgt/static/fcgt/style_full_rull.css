@@ -1,54 +1,20 @@
 body {
-	color: #e6ddbd;
+	color: white;
 	font: 20px Basil, sans-serif;
-	background-color: #002d28;
+	background-color: white;
 	margin: 0;
     height: 100%;
     width: 100%;
 }
 
-input[type="text"] {
-	background-color: #e6ddbd;
-	border: 1px inset #e7e7e7;
-	height: 27px;
-	width: 245px;
-	color: #5c6759;
-	padding: 0 10px;
-    -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
-    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
-    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
-    border-radius: 2px; /* закругление углов для всех, кто понимает */
-}
-
-
-select {
-    background-color: #e6ddbd;
-	border: 1px solid #e7e7e7;
-	height: 27px;
-	width: 267px;
-	color: #5c6759;
-	padding: 0 10px;
-	 -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
-    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
-    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
-    border-radius: 2px; /* закругление углов для всех, кто понимает */
-}
-
-button {
-	color: #5c6759;
-	background-color: #e6ddbd;
-	border: none;
-	height: 32px;
-	font-family: 'Basil', sans-serif;
-}
 
 #wrapper {
 	max-width: 1294px;
 	margin: auto;
 	height: 100%;
     width: 1294px;
-    background-image: url('images/banner.jpg');
-    background-position: 0px -180px;
+    background-image: url('images/rullBG.jpg');
+    background-position: 0px -54px;
     background-repeat: no-repeat;
 }
 
@@ -118,7 +84,7 @@ nav li {
 }
 
 .list {
-    margin-top: 400px;
+    margin-top: 172px;
     width: 81%;
     margin-left: auto;
     margin-right: auto;
@@ -137,7 +103,7 @@ nav.menu {
 }
 
 .gallerylink a {
-    color: #e6ddbd;
+    color: #002d28;
 }
 
 .gallerylink li img {
@@ -377,62 +343,63 @@ label {
     float: left;
 }
 
-#sendfilefix {
-
-      overflow:hidden;
-      width:130px;
-      height:27px;
-      cursor:pointer;
-      background: url('images/choose.png') no-repeat;
-      display: inline-table;
- }
-
-input[type="file"] {
-      opacity:0;
-      filter:alpha(opacity:0);
-      font-size:0px;
-      cursor:pointer;
-      padding:0px;
-      border:none;
-      margin-left:-130px;
-      width: 130px;
-      height: 30px;
-      vertical-align: 26px;
+#currentlink {
+    text-decoration: underline;
 }
 
-input[type="submit"] {
-    color: #e6ddbd;
-	background-color: #002d28;
-	border: none;
-	height: 32px;
-	font: 26px 'Hitch Hike';
-	margin-left: 133px;
-	margin-top: 18px;
+h1 {
+    font: 24px 'Basil';
+    color: #002d28;
+    text-align: center;
 }
 
-.formwrap {
-    margin-left: -138px;
-    margin-top: 54px;
+h2 {
+    font: 14px 'Arial';
+    color: black;
+    font-weight: bold;
+    margin-left: 117px;
 }
 
-#div_art_city {
-    margin-left: -4px;
+p {
+    font: 14px 'Arial';
+    color: black;
+    margin-left: 117px;
 }
 
-#div_art_catergory {
-    margin-left: -35px;
-    margin-right: 83px;
+li {
+    font: 14px 'Arial';
+    color: black;
+    margin-left: 117px;
 }
 
-#id_art_mail {
-    margin-left: 5px;
+td {
+    font: 14px 'Arial';
+    color: black;
 }
 
-#sendfilefix {
-    margin-left: 20px;
-    vertical-align: 0px;
+.link {
+    font: 14px 'Arial';
+    color: black;
+    text-decoration: underline;
 }
 
-#labelfile {
-    vertical-align: 8px;
+table {
+    margin-left: 117px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.headerTr {
+    text-align: center;
+    background-color: #002d28;
+    font: 16px 'Arial';
+}
+
+.headerTr td{
+    color: white;
 }

@@ -1,11 +1,153 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/styleShort.css' %}" />
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Auchtung! Faber Castell ищет таланты!</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 <body>
-<div class="upper_link">Achtung! <a href="{% url 'fcgt:index' %}">Faber - Castell</a> ищет таланты</div>
-<label>Коротко про правила</label>
+<div id="wrapper">
+
+
+<header>
+    <div class="title">
+        <div id="share">Поделиться</div>
+        <div class="logo">
+            <span id="auchtung">AUCHTUNG!  </span>
+            <img id="swoosh" src="{% static "fcgt/images/swoosh.png" %}" alt="swoosh">
+            <a href="/"><img src="{% static "fcgt/images/logo.png" %}" alt="Logo"></a>
+            <span>  Ищет таланты!</span>
+        </div>
+        <nav class="menu">
+         <ul class="top-menu">
+            <li><a href="{% url 'fcgt:rules' %}">ПРАВИЛА </a></li>
+            <li><a id="currentlink" href="{% url 'fcgt:uchastnikam' %}">УЧАСТНИКАМ</a></li>
+            <li><a href="{% url 'fcgt:jury' %}">ЖЮРИ</a></li>
+            <li><a href="{% url 'fcgt:nagradi'%}">ПРИЗЫ</a></li>
+             <li> <a href="{% url 'fcgt:add_art' %}">УЧАВСТВОВАТЬ</a></li>
+          </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="list">
+        <ul class="gallerylink">
+            <li><a href="{% url 'fcgt:gallery' %}"><img src="{% static "fcgt/images/blackandwhite.png" %}" alt="black and white">Черное и белое <br>и Серое</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/trypaint.png" %}" alt="black and white">Цветопробы или <br>Profi vs Hobby</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/scatching.png" %}" alt="black and white">Скетчинг</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/copypast.png" %}" alt="black and white">Copy Paste или <br>Копипастеры всех стран <br>объединяйтесь</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/MiniArt.png" %}" alt="black and white">Мини-художники</a></li>
+        </ul>
+ </div>
+
+
+
+    <div class="stepsWrapper">
+        <p id="p1">УЧАСТНИКАМ</p>
+
+        <ul class="steps">
+            <li id="step1"><img id="mvimg1" src="{% static "fcgt/images/step1-white.png" %}" alt="Step 1"><span class="stepswrap"><span class="mainword">Создай</span><span> свой шедевр</span></span><div class="clearfix"></div></li>
+            <li id="step2"><img id="mvimg2" src="{% static "fcgt/images/step2-white.png" %}" alt="Step 2"><span class="stepswrap"><span class="mainword">Закачай</span><span> на специально <br>созданный сайт </span><span class="web">fabercastellgottalent.com</span></span><img id="swoosh2" src="{% static "fcgt/images/swoosh2.png" %}" alt="swoosh"><div class="clearfix"></div></li>
+            <li id="step3"><img id="mvimg3" src="{% static "fcgt/images/step3-white.png" %}" alt="Step 3"><span class="stepswrap"><span class="mainword">Расскажи</span><br><span>своим друзьям о конкурсе в любой социальной<br>сети с хэштегом </span><span class="web">#fabercastellgottalent</span></span><img id="swoosh3" src="{% static "fcgt/images/swoosh3.png" %}" alt="swoosh"><div class="clearfix"></div></li>
+        </ul>
+        <img id="mvimg4" src="{% static "fcgt/images/step4-white.png" %}" alt="Step 4"><span class="stepswrap">
+    </div>
+
+    <div class="prizewrap">
+        <img src="{% static "fcgt/images/line-white.jpg" %}" alt="bottom-line">
+    </div>
+
+    <div class="form">
+        <span>УЧАВСТВОВАТЬ ПРОСТО</span>
+    <form action="{% url 'fcgt:add_art' %}" method="POST" enctype="multipart/form-data">
+    <p>{% csrf_token %}</p>
+    <div class="formwrap">
+    <ul class="formlist">
+
+        <li class="formleft">
+        <div id="div_art_host">
+        <label class="control-label" for="{{ form.art_host_name.id_for_label }}">{{ form.art_host_name.label }}</label>
+        {{ form.art_host_name }}
+        {% if form.art_host_name.errors %}
+        <label class="control-label">{{ form.art_host_name.errors|first }}</label>
+        {% endif %}
+        </div>
+
+        <div id="div_art_catergory">
+        <label class="control-label" for="{{ form.art_category.id_for_label }}">{{ form.art_category.label }}</label>
+        {{ form.art_category }}
+        {% if form.art_category.errors %}
+        <label class="control-label">{{ form.art_category.errors|first }}</label>
+        {% endif %}
+        </div>
+
+        <div id="div_art_city">
+        <label class="control-label" for="{{ form.art_city.id_for_label }}">{{ form.art_city.label }}</label>
+        {{ form.art_city }}
+        {% if form.art_city.errors %}
+        <label class="control-label">{{ form.art_city.errors|first }}</label>
+        {% endif %}
+        </div></li>
+
+        <li class="formright">
+        <div id="div_art_mail">
+        <label class="control-label" for="{{ form.art_mail.id_for_label }}">{{ form.art_mail.label }}</label>
+        {{ form.art_mail }}
+        {% if form.art_mail.errors %}
+        <label class="control-label">{{ form.art_mail.errors|first }}</label>
+        {% endif %}
+        </div>
+
+        <div id="div_art_password">
+        <label class="control-label" for="{{ form.art_password.id_for_label }}">{{ form.art_password.label }}</label>
+        {{ form.art_password }}
+        {% if form.art_password.errors %}
+        <label class="control-label">{{ form.art_password.errors|first }}</label>
+        {% endif %}
+        </div>
+
+        <div id="div_docfile">
+        <label id="labelfile" class="control-label" for="{{ form.docfile.id_for_label }}">{{ form.docfile.label }}</label>
+    <div id="sendfilefix" title="Нажмите на меня, для обзора файла"></div>
+        {{ form.docfile }}
+        {% if form.docfile.errors %}
+        <label class="control-label">{{ form.docfile.errors|first }}</label>
+        {% endif %}
+        </div>
+
+        <div id="div_send"><input type="submit" value="Отправить на конкурс >>" /></div>
+        </li>
+<div class="clearfix"></div>
+    </ul>
+
+</div>
+
+
+    </form>
+    </div>
+
+    <footer>
+        <div class="footerwrap">
+            <ul class="footerlist">
+                <li class="footerleftmain">
+                    <div class="footerright"><span>ООО "Фабер-Кастелл Анадолу</span></div>
+                    <div class="footerright"><span>115432, Москва, проспект Андропова, дом 18/корп. 7</span></div>
+                    <div class="footerright"><span>Бизнес-парк "Nagatino i-land"</span></div>
+                </li>
+                <li class="footerleft">
+                    <div class="number"><span>+7 (495) 225 96 34</span></div>
+                    <div class="email"><span>contest@faber-castell.com.ru</span></div>
+                </li>
+    </footer>
+
 </body>
 </html>
