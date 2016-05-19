@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^gallery/', 'fcgt.views.gallery', name='gallery'),
     url(r'^uchastnikam/', 'fcgt.views.short_rull', name='uchastnikam'),
     url(r'^add_art/', 'fcgt.views.add_art', name='add_art'),
+
 ]

@@ -1,16 +1,86 @@
-{% extends 'fcgt/layout.html' %}
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/styleGallery.css' %}" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Auchtung! Faber Castell ищет таланты!</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
 
-{% block body %}
-<label>Шаблон Галлереи</label>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+
+
+<header>
+    <div class="title">
+        <div id="share">Поделиться</div>
+        <div class="logo">
+            <span id="auchtung">AUCHTUNG!  </span>
+            <img id="swoosh" src="{% static "fcgt/images/swoosh.png" %}" alt="swoosh">
+            <a href="/"><img src="{% static "fcgt/images/logo.png" %}" alt="Logo"></a>
+            <span>  Ищет таланты!</span>
+        </div>
+        <nav class="menu">
+         <ul class="top-menu">
+            <li><a href="{% url 'fcgt:rules' %}">ПРАВИЛА </a></li>
+            <li><a id="currentlink" href="{% url 'fcgt:uchastnikam' %}">УЧАСТНИКАМ</a></li>
+            <li><a href="{% url 'fcgt:jury' %}">ЖЮРИ</a></li>
+            <li><a href="{% url 'fcgt:nagradi'%}">ПРИЗЫ</a></li>
+             <li> <a href="{% url 'fcgt:index' %}#send">УЧАВСТВОВАТЬ</a></li>
+          </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="list">
+        <ul class="gallerylink">
+            <li><a href="{% url 'fcgt:gallery' %}"><img src="{% static "fcgt/images/blackandwhitePick.png" %}" alt="black and white">Черное и белое <br>и Серое</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/trypaint.png" %}" alt="black and white">Цветопробы или <br>Profi vs Hobby</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/scatching.png" %}" alt="black and white">Скетчинг</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/copypast.png" %}" alt="black and white">Copy Paste или <br>Копипастеры всех стран <br>объединяйтесь</a></li>
+            <li><a href=""><img src="{% static "fcgt/images/MiniArt.png" %}" alt="black and white">Мини-художники</a></li>
+        </ul>
+ </div>
+    <div class="titleWrap">
+
+    </div>
+<div class="galleryWrap">
+    <label>Шаблон Галлереи</label>
 
 {% if documents %}
     <ul>
         {% for document in documents %}
-            <li><a href="{{ document.docfile.url }}">"{{ document.pk }}"<img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a></li>
+            <li class="galleryList"><a href="{{ document.docfile.url }}">"{{ document.pk }}"<img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a></li>
         {% endfor %}
     </ul>
 {% else %}
     <p>No documents.</p>
     <p>{{ documents }}</p>
 {% endif %}
-{% endblock %}
+</div>
+
+    </div>
+
+    <footer>
+        <div class="footerwrap">
+            <ul class="footerlist">
+                <li class="footerleftmain">
+                    <div class="footerright"><span>ООО "Фабер-Кастелл Анадолу</span></div>
+                    <div class="footerright"><span>115432, Москва, проспект Андропова, дом 18/корп. 7</span></div>
+                    <div class="footerright"><span>Бизнес-парк "Nagatino i-land"</span></div>
+                </li>
+                <li class="footerleft">
+                    <div class="number"><span>+7 (495) 225 96 34</span></div>
+                    <div class="email"><span>contest@faber-castell.com.ru</span></div>
+                </li>
+    </footer>
+
+</body>
+</html>

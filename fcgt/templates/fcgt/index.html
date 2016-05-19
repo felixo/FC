@@ -32,7 +32,7 @@
             <li><a href="{% url 'fcgt:uchastnikam' %}">УЧАСТНИКАМ</a></li>
             <li><a href="{% url 'fcgt:jury' %}">ЖЮРИ</a></li>
             <li><a href="{% url 'fcgt:nagradi'%}">ПРИЗЫ</a></li>
-             <li> <a href="{% url 'fcgt:add_art' %}">УЧАВСТВОВАТЬ</a></li>
+             <li> <a href="{% url 'fcgt:index' %}#send">УЧАВСТВОВАТЬ</a></li>
           </ul>
         </nav>
     </div>
@@ -91,7 +91,8 @@
         </div>
     </div>
 
-    <div class="form">
+    <div class="form" >
+        <a name="send"></a>
         <span>УЧАВСТВОВАТЬ ПРОСТО</span>
     <form action="{% url 'fcgt:add_art' %}" method="POST" enctype="multipart/form-data">
     <p>{% csrf_token %}</p>
