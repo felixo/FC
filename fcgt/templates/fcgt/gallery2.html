@@ -41,11 +41,11 @@
 
 <div class="list">
         <ul class="gallerylink">
-            <li><a href="{% url 'fcgt:gallery' %}"><img src="{% static "fcgt/images/blackandwhitePick.png" %}" alt="black and white">Черное и белое <br>и Серое</a></li>
-            <li><a href="{% url 'fcgt:gallery2' %}"><img src="{% static "fcgt/images/trypaint.png" %}" alt="black and white">Цветопробы или <br>Profi vs Hobby</a></li>
-            <li><a href=""><img src="{% static "fcgt/images/scatching.png" %}" alt="black and white">Скетчинг</a></li>
-            <li><a href=""><img src="{% static "fcgt/images/copypast.png" %}" alt="black and white">Copy Paste или <br>Копипастеры всех стран <br>объединяйтесь</a></li>
-            <li><a href=""><img src="{% static "fcgt/images/MiniArt.png" %}" alt="black and white">Мини-художники</a></li>
+            <li><a href="{% url 'fcgt:gallery' %}"><img src="{% static "fcgt/images/blackandwhite.png" %}" alt="black and white">Черное и белое <br>и Серое</a></li>
+            <li><a href="{% url 'fcgt:gallery2' %}"><img src="{% static "fcgt/images/trypaintPicked.png" %}" alt="black and white">Цветопробы или <br>Profi vs Hobby</a></li>
+            <li><a href="{% url 'fcgt:gallery3' %}"><img src="{% static "fcgt/images/scatching.png" %}" alt="black and white">Скетчинг</a></li>
+            <li><a href="{% url 'fcgt:gallery4' %}"><img src="{% static "fcgt/images/copypast.png" %}" alt="black and white">Copy Paste или <br>Копипастеры всех стран <br>объединяйтесь</a></li>
+            <li><a href="{% url 'fcgt:gallery5' %}"><img src="{% static "fcgt/images/MiniArt.png" %}" alt="black and white">Мини-художники</a></li>
         </ul>
  </div>
     <div class="titleWrap">
@@ -89,7 +89,7 @@
 {% if documents %}
     <ul>
         {% for document in documents %}
-            {% if document.art_category == "BlackAndWhite" %}
+            {% if document.art_category == "ProfiVsHobby" %}
             <li class="galleryList">
                 <a href="{{ document.docfile.url }}"><img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">{{document.art_host_name}}, {{document.art_city}}</div>

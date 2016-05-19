@@ -28,6 +28,29 @@ def gallery(request):
         'documents': documents
     })
 
+def gallery2(request):
+    documents = Gallery.objects.all()
+    return render(request, 'fcgt/gallery2.html', {
+        'documents': documents
+    })
+
+def gallery3(request):
+    documents = Gallery.objects.filter(art_category="Scatching")
+    return render(request, 'fcgt/gallery3.html', {
+        'documents': documents
+    })
+
+def gallery4(request):
+    documents = Gallery.objects.all()
+    return render(request, 'fcgt/gallery4.html', {
+        'documents': documents
+    })
+
+def gallery5(request):
+    documents = Gallery.objects.all()
+    return render(request, 'fcgt/gallery5.html', {
+        'documents': documents
+    })
 
 def jury(request):
     return render(request, 'fcgt/jury.html')

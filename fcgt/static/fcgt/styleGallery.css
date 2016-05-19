@@ -175,6 +175,11 @@ nav.menu {
     float: left;
 }
 
+.galleryList {
+    float: left;
+    margin: 8px 12px;
+}
+
 .galleryList a img {
     width: 296px;
     height: 233px;
@@ -184,6 +189,57 @@ nav.menu {
     width: 948px;
     height: 153px;
     background-color: #f0f2f2;
-     margin-left: auto;
-     margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleWrapList {
+    list-style-type: none;
+    float: left;
+}
+
+.titleWrapList li div span{
+    font: 16px 'PT Sans Narrow';
+    color: black;
+    width: 220px;
+    line-height: 0.9em;
+}
+
+.titleWrapList li div h1{
+    font: 18px 'Basil';
+    color: #002d28;
+    margin: -4px 0px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.titleWrapList li{
+    float: left;
+}
+
+.titleText{
+    width: 220px;
+    margin-top: -112px;
+    margin-left: 82px;
+}
+
+.titleGallery {
+    font: 30px 'Basil';
+    color: #002d28;
+    width: 54%;
+    margin: 50px 384px;
+}
+
+.galleryWrap {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galleryText {
+    font: 15px 'PT Sans Narrow';
+    color: #002d28;
+    text-align: right;
 }
