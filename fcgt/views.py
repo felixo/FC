@@ -23,13 +23,13 @@ def full_rull(request):
 
 
 def gallery(request):
-    documents = Gallery.objects.all()
+    documents = Gallery.objects.filter(art_category="BlackAndWhite")
     return render(request, 'fcgt/gallery.html', {
         'documents': documents
     })
 
 def gallery2(request):
-    documents = Gallery.objects.all()
+    documents = Gallery.objects.filter(art_category="ProfiVsHobby")
     return render(request, 'fcgt/gallery2.html', {
         'documents': documents
     })
@@ -41,13 +41,13 @@ def gallery3(request):
     })
 
 def gallery4(request):
-    documents = Gallery.objects.all()
+    documents = Gallery.objects.filter(art_category="CopyPast")
     return render(request, 'fcgt/gallery4.html', {
         'documents': documents
     })
 
 def gallery5(request):
-    documents = Gallery.objects.all()
+    documents = Gallery.objects.filter(art_category="MiniArt")
     return render(request, 'fcgt/gallery5.html', {
         'documents': documents
     })

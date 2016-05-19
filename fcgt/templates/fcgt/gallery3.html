@@ -89,14 +89,12 @@
 {% if documents %}
     <ul>
         {% for document in documents %}
-            {% if document.art_category == "Scatching" %}
+
             <li class="galleryList">
                 <a href="{{ document.docfile.url }}"><img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">{{document.art_host_name}}, {{document.art_city}}</div>
             </li>
-            {% else %}
-                <div>Здесь пока что пусто</div>
-            {% endif %}
+
         {% endfor %}
     <div class="clearfix"></div>
     </ul>
