@@ -1,3 +1,10 @@
+@font-face {
+font-family: Hitch Hike;
+src: url('fonts/Hitch-hike.otf') format("opentype");
+}
+
+
+
 body {
 	color: #e6ddbd;
 	font: 20px Basil, sans-serif;
@@ -456,3 +463,4 @@ input[type="submit"] {
 .shareImg img{
     margin: 1px;
 }
+
