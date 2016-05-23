@@ -20,7 +20,30 @@
 
 <header>
     <div class="title">
-        <div id="share">Поделиться</div>
+                <div id="share">
+            <div class="shareDiv">
+            <span class="shareSpan">
+            Поделиться</span>
+            <div class ="shareImg">
+
+<a id="shareT" href="https://twitter.com/intent/tweet">
+   <img src="{% static "fcgt/images/twitter.png" %}" />
+</a>
+            <a id="shareF" href="http://www.facebook.com/sharer.php?u=http://www.faber-castell.com/">
+   <img src="{% static "fcgt/images/Facebook.png" %}" />
+</a>
+            <a id="shareV" href="http://vk.com/share.php?url=http://www.faber-castell.com/">
+   <img src="{% static "fcgt/images/vk.png" %}" />
+</a>
+            <a id="shareG" href="https://plus.google.com/share?url=http://www.faber-castell.com/">
+   <img src="{% static "fcgt/images/google.png" %}" />
+</a>
+            <a id="shareO" href=" https://connect.ok.ru/offer?url=mypagetoshare">
+   <img src="{% static "fcgt/images/ok.png" %}" />
+</a>
+</div>
+        </div>
+            </div>
         <div class="logo">
             <span id="auchtung">AUCHTUNG!  </span>
             <img id="swoosh" src="{% static "fcgt/images/swoosh.png" %}" alt="swoosh">
@@ -94,13 +117,13 @@
                 <a href="{{ document.docfile.url }}"><img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">{{document.art_host_name}}, {{document.art_city}}</div>
             </li>
-            
+
         {% endfor %}
     <div class="clearfix"></div>
     </ul>
 {% else %}
-    <p>No documents.</p>
-    <p>{{ documents }}</p>
+    <div class="titleGallery">Ни кто еще не добавил работы в эту категорию, бедьте первыми!</div>
+
 {% endif %}
 </div>
 

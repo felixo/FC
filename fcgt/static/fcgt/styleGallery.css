@@ -56,6 +56,8 @@ nav li {
     text-align: right;
     height: 58px;
     background-color: #002d28;
+        font: 12px 'Fedra Serif B Pro';
+    color: #959166;
 }
 
 .logo {
@@ -242,4 +244,22 @@ nav.menu {
     font: 15px 'PT Sans Narrow';
     color: #002d28;
     text-align: right;
+}
+
+.shareImg {
+    display: inline;
+}
+
+.shareDiv {
+    margin-right: 256px;
+
+}
+
+.shareImg {
+    vertical-align: -6px;
+    margin: 7px;
+}
+
+.shareImg img{
+    margin: 1px;
 }

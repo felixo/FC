@@ -69,4 +69,4 @@ def add_art(request):
             return HttpResponseRedirect(reverse('fcgt:index'))
     else:
         form = ArtForm()
-    return render(request, 'fcgt/add_art.html', {'form': form})
+    return render(request, 'fcgt/index.html', {'form': form})
