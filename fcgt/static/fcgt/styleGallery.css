@@ -18,6 +18,12 @@ font-family: 'PT Sans Narrow';
 src: url("fonts/PTN57F_0.ttf");
 }
 
+@font-face {
+font-family: 'PT Sans Narrow';
+font-style: italic;
+src: url("fonts/PTS56F_0.ttf");
+}
+
 body {
 	color: white;
 	font: 20px Basil, sans-serif;
@@ -107,7 +113,7 @@ nav li {
 
 .list {
     margin-top: 172px;
-    width: 81%;
+    width: 82%;
     margin-left: auto;
     margin-right: auto;
 }
