@@ -19,7 +19,6 @@ src: url("fonts/PTN57F_0.ttf");
 }
 
 
-
 body {
 	color: #e6ddbd;
 	font: 20px Basil, sans-serif;
@@ -89,7 +88,7 @@ nav ul {
 
 nav li {
 	list-style-position: inside;
-	font: 19px 'Basil', sans-serif;
+	font: 19px 'Basil';
 	padding: 10px;
 }
 

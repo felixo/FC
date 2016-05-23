@@ -1,3 +1,24 @@
+@font-face {
+font-family: 'Hitch Hike';
+src: url('fonts/Hitch-hike.otf') format("opentype");
+}
+
+@font-face {
+font-family: 'Fedra Serif B Pro';
+src: url("fonts/FedraSerifPro B Book.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'Basil';
+src: url("fonts/Karandash - Basil-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'PT Sans Narrow';
+src: url("fonts/PTN57F_0.ttf");
+}
+
+
 body {
 	color: white;
 	font: 20px Basil, sans-serif;
@@ -33,7 +54,7 @@ nav ul {
 
 nav li {
 	list-style-position: inside;
-	font: 19px 'Basil', sans-serif;
+	font: 19px 'Basil';
 	padding: 10px;
 }
 
