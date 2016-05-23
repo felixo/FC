@@ -5,13 +5,19 @@ src: url('fonts/Hitch-hike.otf') format("opentype");
 
 @font-face {
 font-family: 'Fedra Serif B Pro';
-src: url('fonts/FedraSerifPro B Book.otf') format("opentype");
+src: url("fonts/FedraSerifPro B Book.otf") format("opentype");
 }
 
 @font-face {
-font-family: Basil;
-src: url('fonts/Basil.otf') format("opentype");
+font-family: 'Basil';
+src: url("fonts/Karandash - Basil-Regular.otf") format("opentype");
 }
+
+@font-face {
+font-family: 'PT Sans Narrow';
+src: url("fonts/PTN57F_0.ttf");
+}
+
 
 
 body {
