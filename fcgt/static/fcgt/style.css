@@ -3,6 +3,15 @@ font-family: Hitch Hike;
 src: url('fonts/Hitch-hike.otf') format("opentype");
 }
 
+@font-face {
+font-family: Hitch Hike;
+src: url('fonts/Fedra Serif B Pro.otf') format("opentype");
+}
+
+@font-face {
+font-family: Basil;
+src: url('fonts/Karandash - Basil-Regular.otf') format("opentype");
+}
 
 
 body {
