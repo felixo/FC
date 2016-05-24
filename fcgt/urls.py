@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^sketch/', 'fcgt.views.gallery3', name='gallery3'),
     url(r'^copy_past/', 'fcgt.views.gallery4', name='gallery4'),
     url(r'^mini_art/', 'fcgt.views.gallery5', name='gallery5'),
+    url(r'^where_buy/', 'fcgt.views.where_buy', name='where_buy'),
 ]

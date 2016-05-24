@@ -24,9 +24,10 @@ def full_rull(request):
 
 def gallery(request):
     documents = Gallery.objects.filter(art_category="BlackAndWhite")
+
     return render(request, 'fcgt/gallery.html', {
         'documents': documents
-    })
+            })
 
 def gallery2(request):
     documents = Gallery.objects.filter(art_category="ProfiVsHobby")
@@ -70,3 +71,8 @@ def add_art(request):
     else:
         form = ArtForm()
     return render(request, 'fcgt/index.html', {'form': form})
+
+
+def where_buy(request):
+
+   return render(request, 'fcgt/where_buy.html')

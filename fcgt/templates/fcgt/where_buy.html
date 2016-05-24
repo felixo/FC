@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'fcgt/styleGallery.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/stylePrize.css' %}" />
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -53,11 +53,11 @@
         <nav class="menu">
          <ul class="top-menu">
             <li><a href="{% url 'fcgt:rules' %}">ПРАВИЛА </a></li>
-            <li><a id="currentlink" href="{% url 'fcgt:uchastnikam' %}">УЧАСТНИКАМ</a></li>
+            <li><a href="{% url 'fcgt:uchastnikam' %}">УЧАСТНИКАМ</a></li>
             <li><a href="{% url 'fcgt:jury' %}">ЖЮРИ</a></li>
-            <li><a href="{% url 'fcgt:nagradi'%}">ПРИЗЫ</a></li>
+            <li><a  href="{% url 'fcgt:nagradi'%}">ПРИЗЫ</a></li>
              <li> <a href="{% url 'fcgt:index' %}#send">УЧАСТВОВАТЬ</a></li>
-             <li> <a href="{% url 'fcgt:where_buy' %}">ГДЕ КУПИТЬ</a></li>
+             <li> <a id="currentlink" href="{% url 'fcgt:where_buy' %}">ГДЕ КУПИТЬ</a></li>
           </ul>
         </nav>
     </div>
@@ -69,67 +69,15 @@
             <li><a href="{% url 'fcgt:gallery2' %}"><img src="{% static "fcgt/images/trypaint.png" %}" alt="black and white">Цветопробы или <br>Profi vs Hobby</a></li>
             <li><a href="{% url 'fcgt:gallery3' %}"><img src="{% static "fcgt/images/scatching.png" %}" alt="black and white">Скетчинг</a></li>
             <li><a href="{% url 'fcgt:gallery4' %}"><img src="{% static "fcgt/images/copypast.png" %}" alt="black and white">Copy+Paste или <br>Копипастеры всех стран <br>объединяйтесь</a></li>
-            <li><a href="{% url 'fcgt:gallery5' %}"><img src="{% static "fcgt/images/MiniArtPicked.png" %}" alt="black and white">Мини-художники</a></li>
+            <li><a href="{% url 'fcgt:gallery5' %}"><img src="{% static "fcgt/images/MiniArt.png" %}" alt="black and white">Мини-художники</a></li>
         </ul>
  </div>
-    <div class="titleWrap">
-        <ul class="titleWrapList">
-            <li>
-                <div><img src="{% static "fcgt/images/gallerystep1.png" %}"></div>
-                <div class="titleText">
-                    <h1>ПРОДУКЦИЯ</h1>
-                    <span>Чернографитные карандаши, уголь,
-фломастеры/маркеры, капиллярные
-ручки, пастель.</span>
-                </div>
-            </li>
-            <li>
-                <div><img src="{% static "fcgt/images/gallerystep2.png" %}"></div>
-                <div class="titleText">
-                    <h1>КРИТЕРИИ ОТБОРА</h1>
-                    <span>Законченная картина/картинка,
-любого формата.</span>
-                </div>
-            </li>
-            <li>
-                <div><img src="{% static "fcgt/images/gallerystep3.png" %}"></div>
-                <div class="titleText">
-                    <h1>ПРИЗОВЫЕ МЕСТА</h1>
-                    <span>
-- 1 место;<br>
-- 2 место;<br>
-- 3 место.<br>
-                    </span>
-                </div>
-            </li>
-
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-     <div class="titleGallery">РАБОТЫ УЧАСТНИКОВ НОМИНАЦИИ</div>
-<div class="galleryWrap">
-
-
-{% if documents %}
-    <ul>
-        {% for document in documents %}
-
-            <li class="galleryList">
-                <a href="{{ document.docfile.url }}"><img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a>
-                <div class="galleryText">{{document.art_host_name}}, {{document.art_city}}</div>
-            </li>
-
-        {% endfor %}
-    <div class="clearfix"></div>
-    </ul>
-{% else %}
-    <div class="titleGallery">Никто еще не добавил работы в эту категорию, будьте первыми!</div>
-{% endif %}
-</div>
 
 
 
-    </div>
+    <div class="stepsWrapper">
+        <p id="p1">Вскоре, здесь будет информация о том, где можно приобрести продукцию Faber-Castell</p>
+
 
     <footer>
         <div class="footerwrap">
