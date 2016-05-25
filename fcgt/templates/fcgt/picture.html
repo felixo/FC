@@ -2,17 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'fcgt/styleGallery.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/stylePicture.css' %}" />
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Achtung! Faber Castell ищет таланты!</title>
+    <title>Achtung! Faber-Castell ищет таланты!</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
-
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
 	<![endif]-->
+    <script src="{% static "fcgt/script.js" %}"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -65,65 +67,21 @@
 
 <div class="list">
         <ul class="gallerylink">
-            <li><a href="{% url 'fcgt:gallery' %}"><img src="{% static "fcgt/images/blackandwhite.png" %}" alt="black and white">Черное и Белое <br>и Серое</a></li>
-            <li><a href="{% url 'fcgt:gallery2' %}"><img src="{% static "fcgt/images/trypaintPicked.png" %}" alt="black and white">Цветопробы или <br>Profi vs Hobby</a></li>
+            <li><a href="{% url 'fcgt:gallery' %}"><img src="{% static "fcgt/images/blackandwhitePick.png" %}" alt="black and white">Черное и Белое <br>и Серое</a></li>
+            <li><a href="{% url 'fcgt:gallery2' %}"><img src="{% static "fcgt/images/trypaint.png" %}" alt="black and white">Цветопробы или <br>Profi vs Hobby</a></li>
             <li><a href="{% url 'fcgt:gallery3' %}"><img src="{% static "fcgt/images/scatching.png" %}" alt="black and white">Скетчинг</a></li>
             <li><a href="{% url 'fcgt:gallery4' %}"><img src="{% static "fcgt/images/copypast.png" %}" alt="black and white">Copy+Paste или <br>Копипастеры всех стран <br>объединяйтесь</a></li>
             <li><a href="{% url 'fcgt:gallery5' %}"><img src="{% static "fcgt/images/MiniArt.png" %}" alt="black and white">Мини-художники</a></li>
         </ul>
  </div>
     <div class="titleWrap">
-        <ul class="titleWrapList">
-            <li>
-                <div><img src="{% static "fcgt/images/gallerystep1.png" %}"></div>
-                <div class="titleText">
-                    <h1>ПРОДУКЦИЯ</h1>
-                    <span>Чернографитные карандаши, уголь,
-фломастеры/маркеры, капиллярные
-ручки, пастель.</span>
-                </div>
-            </li>
-            <li>
-                <div><img src="{% static "fcgt/images/gallerystep2.png" %}"></div>
-                <div class="titleText">
-                    <h1>КРИТЕРИИ ОТБОРА</h1>
-                    <span>Законченная картина/картинка,
-любого формата.</span>
-                </div>
-            </li>
-            <li>
-                <div><img src="{% static "fcgt/images/gallerystep3.png" %}"></div>
-                <div class="titleText">
-                    <h1>ПРИЗОВЫЕ МЕСТА</h1>
-                    <span>
-- 1 место для профи;<br>
-- 1 место для любителя;<br>
-                    </span>
-                </div>
-            </li>
-
-        </ul>
-        <div class="clearfix"></div>
+        <img id="{{ documents.id }}" src="{{ documents.docfile.url }}" alt="Reducto!" class="gallery">
+         <div class="galleryText">{{documents.art_host_name}}, {{documents.art_city}}, &hearts; - {{ documents.art_vote }} </div>
     </div>
-     <div class="titleGallery">РАБОТЫ УЧАСТНИКОВ НОМИНАЦИИ</div>
+
 <div class="galleryWrap">
 
 
-{% if documents %}
-    <ul>
-        {% for document in documents %}
-
-            <li class="galleryList">
-                <a href="/picture/{{ document.id }}"><img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a>
-                <div class="galleryText">{{document.art_host_name}}, {{document.art_city}}</div>
-            </li>
-
-        {% endfor %}
-    <div class="clearfix"></div>
-    </ul>
-{% else %}
-   <div class="titleGallery">Никто еще не добавил работы в эту категорию, будьте первыми!</div>
-{% endif %}
 </div>
 
 

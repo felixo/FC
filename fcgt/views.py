@@ -76,3 +76,10 @@ def add_art(request):
 def where_buy(request):
 
    return render(request, 'fcgt/where_buy.html')
+
+def picture(request, art_id):
+    documents = Gallery.objects.get(pk=art_id)
+    return render(request, 'fcgt/picture.html', {
+        'art_id': art_id,
+        'documents': documents,
+    })

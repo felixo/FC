@@ -115,7 +115,7 @@
         {% for document in documents %}
 
             <li class="galleryList">
-                <a href="{{ document.docfile.url }}"><img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a>
+                <a href="/picture/{{ document.id }}"><img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">{{document.art_host_name}}, {{document.art_city}}</div>
             </li>
 
