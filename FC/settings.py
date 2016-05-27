@@ -120,13 +120,17 @@ TEMPLATE_CONTEXT_PROCESSORS = (
    'django.contrib.messages.context_processors.messages',
    'social.apps.django_app.context_processors.backends',
    'social.apps.django_app.context_processors.login_redirect',
+
 )
 
 AUTHENTICATION_BACKENDS = (
    'social.backends.facebook.FacebookOAuth2',
    'social.backends.google.GoogleOAuth2',
    'social.backends.twitter.TwitterOAuth',
+   'social.backends.vk.VKOAuth2',
+   'social.backends.odnoklassniki.OdnoklassnikiOAuth2',
    'django.contrib.auth.backends.ModelBackend',
+
 )
 
 # Internationalization
@@ -150,3 +154,17 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+LOGIN_REDIRECT_URL = '/'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1339309426086090'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'ddb54f6030658d38d67cb3380cfb85c3'
+
+SOCIAL_AUTH_TWITTER_KEY = 'B9ewsDCDVn7Ufrz09w6mhMjzC'
+SOCIAL_AUTH_TWITTER_SECRET = 'SuGtPhAKEiaDY5hDA1UsKlwGhQzwqHJ7VmFbEpb80LER4v7W7h'
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = '5481988'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'kvJ8XwWwiqtHxMFo0wwl'
+
+SOCIAL_AUTH_ODNOKLASSNIKI_OAUTH2_KEY = ''
+SOCIAL_AUTH_ODNOKLASSNIKI_OAUTH2_SECRET = ''
+SOCIAL_AUTH_ODNOKLASSNIKI_OAUTH2_PUBLIC_NAME = ''

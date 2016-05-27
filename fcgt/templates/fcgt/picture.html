@@ -76,11 +76,71 @@
  </div>
     <div class="titleWrap">
         <img id="{{ documents.id }}" src="{{ documents.docfile.url }}" alt="Reducto!" class="gallery">
-         <div class="galleryText">{{documents.art_host_name}}, {{documents.art_city}}, &hearts; - {{ documents.art_vote }} </div>
+         <div class="galleryText">{{documents.art_host_name}}, {{documents.art_city}}, &hearts; - {{ documents.art_vote }}
+
+         {% if user and not user.is_anonymous and not user3 %}
+<a class="likeButtonText">Проголосовать</a></div>
+         {% else %}
+
+         {% endif %}
+
+         {% if user and not user.is_anonymous and user3 %}
+            <a class="voted">Вы уже проголосовали за эту работу.</a></div>
+         {% endif %}
+
+
+
+             <div class="likeButton">
+           <!--{{ user1 }} {{ user2 }} {{ user3 }} -->
+    </div>
+    </div>
     </div>
 
-<div class="galleryWrap">
+<div class="auth">
 
+    <div>
+
+
+ <p>
+
+   {% if user and not user.is_anonymous %}
+   <ul class="logout">
+     <li>
+       <a>Здравствуйте, {{ user.get_full_name|default:user.username }}!</a>
+     </li >
+     <li>
+       <a href="{% url 'auth:logout' %}?next={{ request.path }}">Выйти</a>
+     </li>
+   {% else %}
+   <ul class="socialLogin">
+
+        <div class="socialLogText">Войти через социальную сеть для голосования </div>
+   <li>
+        <a href="{% url 'social:begin' 'vk-oauth2' %}?next={{ request.path }}"><img class="socialPic" src="{% static "fcgt/images/loginVK.png" %}"/></a>
+
+     </li>
+     <li>
+        <a href="{% url 'social:begin' 'odnoklassniki-oauth2' %}?next={{ request.path }}"><img class="socialPic" src="{% static "fcgt/images/loginOk.png" %}"/></a>
+     </li>
+
+     <li>
+       <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}"><img class="socialPic" src="{% static "fcgt/images/loginG.png" %}"/></a>
+     </li>
+
+     <li>
+     <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}"><img class="socialPic" src="{% static "fcgt/images/loginT.png" %}"/></a>
+
+     </li>
+
+    <li>
+    <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}"><img class="socialPic" src="{% static "fcgt/images/loginFb.png" %}"/></a>
+
+     </li>
+
+   {% endif %}
+   </ul>
+ </p>
+ </div>
 
 </div>
 

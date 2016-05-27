@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.contrib.auth.models import User
 
 Nominate_choise = (
     ('BlackAndWhite','Черное и белое и серое'),
@@ -28,5 +29,5 @@ class Gallery(models.Model):
 
 class Vote(models.Model):
     art = models.ForeignKey(Gallery, on_delete=models.CASCADE)
-    vote_id = models.CharField(max_length=200)
+    vote_id = models.ForeignKey(User, related_name='votes')
     vote_is_it = models.BooleanField(default=False)

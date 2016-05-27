@@ -6,6 +6,7 @@ from django.core.urlresolvers import reverse
 from django.utils import timezone
 from .models import Gallery, Vote
 from forms import ArtForm
+from django.template.context import RequestContext
 
 
 def index(request):
@@ -79,7 +80,55 @@ def where_buy(request):
 
 def picture(request, art_id):
     documents = Gallery.objects.get(pk=art_id)
+    votes = Vote.objects.filter(art=art_id)
+    user1 = Vote.objects.filter(art=art_id)
+    user2 = request.user.id
+    user3 = False
+    for us in votes:
+        if us.vote_id == request.user:
+            user3 = True
     return render(request, 'fcgt/picture.html', {
+            'art_id': art_id,
+            'documents': documents,
+            'user1':    user1,
+            'user2':    user2,
+            'user3': user3,
+        })
+
+def home(request):
+   context = RequestContext(request,
+                           {'request': request,
+                            'user': request.user})
+   return render_to_response('thirdauth/home.html',
+                             context_instance=context)
+
+def vote(request, art_id):
+    documents = Gallery.objects.get(pk=art_id)
+    votes = Vote.objects.filter(art=art_id)
+    cat_id = None
+    if request.method == 'GET':
+        cat_id = art_id
+    likes = 0
+
+    for user in votes:
+        if user.vote_id == request.user:
+            cat_id = None
+
+    if cat_id:
+        category = Gallery.objects.get(id=int(cat_id))
+        if category:
+            likes = category.art_vote + 1
+        category.art_vote = likes
+        category.save()
+        votes1 = Vote()
+        votes1.vote_id = request.user
+        votes1.art = category
+        #votes.vote_id = request.user
+        #votes.art = art_id
+        votes1.save()
+
+        return render(request, 'fcgt/picture.html', {
         'art_id': art_id,
         'documents': documents,
-    })
+
+             })

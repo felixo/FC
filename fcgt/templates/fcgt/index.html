@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Achtung! Faber Castell ищет таланты!</title>
+    <title>Achtung! Faber-Castell ищет таланты!</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
 
 	<!--[if lt IE 9]>
@@ -15,23 +15,57 @@
 
 
 
-    <script src="http://swip.codylindley.com/jquery.popupWindow.js"></script>
+
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="{% static "fcgt/script.js" %}"></script>
 
 
 
+    <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Your Website Title" />
+	<meta property="og:description"   content="Your description" />
+	<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+
 </head>
 <body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'your-app-id',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <div id="fb-root"></div>
+<script>
+    (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.6";
+     fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 <div id="wrapper">
+
 
 
 <header>
     <div class="title">
         <div id="share">
             <div class="shareDiv">
-            <span class="shareSpan">
-            Поделиться</span>
+            <span class="shareSpan">Поделиться</span>
             <div class ="shareImg">
 
 <a id="shareT" href="https://twitter.com/intent/tweet?text=Achtung! Faber-Castell ищет таланты! http://fabercastellgottalent.com/">
@@ -41,7 +75,7 @@
    <img src="{% static "fcgt/images/Facebook.png" %}" />
 </a>
             <a id="shareV" href="http://vk.com/share.php?url=http://fabercastellgottalent.com/">
-   <img src="{% static "fcgt/images/vk.png" %}" />
+   <img src="{% static "fcgt/images/vk.png" %}" /> <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon" data-mobile-iframe="true"></div>
 </a>
             <a id="shareG" href="https://plus.google.com/share?url=http://fabercastellgottalent.com/">
    <img src="{% static "fcgt/images/google.png" %}" />
@@ -192,6 +226,7 @@
 
 
     </form>
+    </div>
     </div>
     <footer>
         <div class="footerwrap">
