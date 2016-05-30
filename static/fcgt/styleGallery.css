@@ -1,0 +1,291 @@
+@font-face {
+font-family: 'Hitch Hike';
+src: url('fonts/Hitch-hike.otf') format("opentype");
+}
+
+@font-face {
+font-family: 'Fedra Serif B Pro';
+src: url("fonts/FedraSerifPro B Book.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'Basil';
+src: url("fonts/Karandash - Basil-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'PT Sans Narrow';
+src: url("fonts/PTN57F_0.ttf");
+}
+
+@font-face {
+font-family: 'PT Sans Narrow';
+font-style: italic;
+src: url("fonts/PTS56F_0.ttf");
+}
+
+body {
+	color: white;
+	font: 20px Basil, sans-serif;
+	background-color: white;
+	margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+#wrapper {
+	max-width: 1294px;
+	margin: auto;
+	height: 100%;
+    width: 1294px;
+    background-image: url('images/bannerGallery1.jpg');
+    background-position: 0px -54px;
+    background-repeat: no-repeat;
+}
+
+header {
+
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	list-style-position: inside;
+	font: 19px 'Basil';
+	padding: 10px;
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.top-menu li.active {
+	background: #29c5e6;
+	color: #e6ddbd;
+}
+
+.top-menu a {
+	color: #e6ddbd;
+}
+
+#share {
+    text-align: right;
+    height: 58px;
+    background-color: #002d28;
+        font: 12px 'Fedra Serif B Pro';
+    color: #959166;
+}
+
+.logo {
+    color: #f6f7f7;
+	font: 49px 'Hitch Hike';
+
+}
+
+.logo a img {
+    margin-top: -45px;
+}
+
+.logo span {
+    vertical-align: 30px;
+    padding: 20px 10px;
+}
+
+.title {
+  height: 204px;
+  background: rgba(109, 134, 130, 0.5);
+}
+
+#auchtung {
+    position: relative;
+    left: 165px;
+}
+
+.list {
+    margin-top: 172px;
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav.menu {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallerylink {
+  margin-top: -70px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.gallerylink a {
+    color: #002d28;
+}
+
+.gallerylink li img {
+  display: block;
+}
+
+.gallerylink li{
+  display: inline-block;
+  margin: 10px;
+  font: 26px 'Hitch Hike';
+  vertical-align: top;
+  text-align: center;
+}
+
+
+.footerwrap {
+    max-width: 1294px;
+	margin: auto;
+	height: 303px;
+    width: 1294px;
+    /*background-position: 0px -180px;*/
+    background-repeat: no-repeat;
+    background-image: url('images/footerback.jpg');
+}
+
+.footerlist li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.footerright {
+
+    margin: -7px 0px;
+}
+
+
+.footerright span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.number span{
+    font: 28px 'Basil';
+    color: #051e05;
+}
+
+.email span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.footerleft {
+    margin-left: 450px;
+    text-align: right;
+}
+
+.footerleftmain {
+    margin-top: 22px;
+    margin-left: 140px;
+}
+
+
+.formlist {
+    width: 750px;
+}
+
+.formlist li {
+    list-style-type: none;
+    float: left;
+}
+
+.galleryList {
+    float: left;
+    margin: 8px 12px;
+}
+
+.galleryList a img {
+    width: 296px;
+    height: 233px;
+}
+
+.titleWrap {
+    width: 948px;
+    height: 153px;
+    background-color: #f0f2f2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleWrapList {
+    list-style-type: none;
+    float: left;
+}
+
+.titleWrapList li div span{
+    font: 16px 'PT Sans Narrow';
+    color: black;
+    width: 220px;
+    line-height: 0.9em;
+}
+
+.titleWrapList li div h1{
+    font: 18px 'Basil';
+    color: #002d28;
+    margin: -4px 0px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.titleWrapList li{
+    float: left;
+}
+
+.titleText{
+    width: 220px;
+    margin-top: -112px;
+    margin-left: 82px;
+}
+
+.titleGallery {
+    font: 30px 'Basil';
+    color: #002d28;
+    width: 54%;
+    margin: 50px 384px;
+}
+
+.galleryWrap {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galleryText {
+    font: 15px 'PT Sans Narrow';
+    color: #002d28;
+    text-align: right;
+}
+
+.shareImg {
+    display: inline;
+}
+
+.shareDiv {
+    margin-right: 256px;
+
+}
+
+.shareImg {
+    vertical-align: -6px;
+    margin: 7px;
+}
+
+.shareImg img{
+    margin: 1px;
+}

@@ -1,0 +1,293 @@
+@font-face {
+font-family: 'Hitch Hike';
+src: url('fonts/Hitch-hike.otf') format("opentype");
+}
+
+@font-face {
+font-family: 'Fedra Serif B Pro';
+src: url("fonts/FedraSerifPro B Book.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'Basil';
+src: url("fonts/Karandash - Basil-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'PT Sans Narrow';
+src: url("fonts/PTN57F_0.ttf");
+}
+
+body {
+	color: white;
+	font: 20px Basil, sans-serif;
+	background-color: white;
+	margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+#wrapper {
+	max-width: 1294px;
+	margin: auto;
+	height: 100%;
+    width: 1294px;
+    background-image: url('images/banner-jury.jpg');
+    background-position: 0px -54px;
+    background-repeat: no-repeat;
+}
+
+header {
+
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	list-style-position: inside;
+	font: 19px 'Basil';
+	padding: 10px;
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.top-menu li.active {
+	background: #29c5e6;
+	color: #e6ddbd;
+}
+
+.top-menu a {
+	color: #e6ddbd;
+}
+
+#share {
+    text-align: right;
+    height: 58px;
+    background-color: #002d28;
+        font: 12px 'Fedra Serif B Pro';
+    color: #959166;
+}
+
+.logo {
+    color: #f6f7f7;
+	font: 49px 'Hitch Hike';
+
+}
+
+.logo a img {
+    margin-top: -45px;
+}
+
+.logo span {
+    vertical-align: 30px;
+    padding: 20px 10px;
+}
+
+.title {
+  height: 204px;
+  background: rgba(109, 134, 130, 0.5);
+}
+
+#auchtung {
+    position: relative;
+    left: 165px;
+}
+
+.list {
+    margin-top: 172px;
+    width: 81%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav.menu {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallerylink {
+  margin-top: -70px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.gallerylink a {
+    color: #002d28;
+}
+
+.gallerylink li img {
+  display: block;
+}
+
+.gallerylink li{
+  display: inline-block;
+  margin: 10px;
+  font: 26px 'Hitch Hike';
+  vertical-align: top;
+  text-align: center;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.footerwrap {
+    max-width: 1294px;
+	margin: auto;
+	height: 303px;
+    width: 1294px;
+    /*background-position: 0px -180px;*/
+    background-repeat: no-repeat;
+    background-image: url('images/footerback.jpg');
+}
+
+.footerlist li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.footerright {
+
+    margin: -7px 0px;
+}
+
+
+.footerright span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.number span{
+    font: 28px 'Basil';
+    color: #051e05;
+}
+
+.email span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.footerleft {
+    margin-left: 450px;
+    text-align: right;
+}
+
+.footerleftmain {
+    margin-top: 22px;
+    margin-left: 140px;
+}
+
+
+.juryHeader{
+    color: #002d28;
+    font: 30px 'Basil';
+    width: 23%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.juryRang {
+    font: 20px 'PT Sans Narrow';
+    color: #002d28;
+}
+
+.juryName {
+    font: 48px 'Hitch Hike';
+    color: #c4b37b;
+}
+
+.JuryList1 li {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+     text-align: left;
+}
+
+.portrait {
+    width: 288px;
+    height: 288px;
+}
+
+.juryWords {
+    color: #635c45;
+    width: 648px;
+    margin-left: 54px;
+    text-align: justify;
+    font: 18px 'Arial';
+}
+
+.jury1 {
+    text-align: center;
+}
+
+.ealmOpen {
+    float: left;
+
+}
+
+.ealmClose {
+    float: right;
+    margin-top: -48px;
+}
+
+.about {
+    color: black;
+    width: 684px;
+    margin-left: 17px;
+    text-align: justify;
+    font: 16px 'Arial';
+    margin-top: 34px;
+}
+
+h1 {
+    font: 16px 'Arial';
+    color: black;
+    font-weight: bold;
+}
+
+#currentlink {
+    text-decoration: underline;
+}
+
+#ealm1 {
+    margin-top: -29px;
+}
+
+#ealm2 {
+    margin-top: -18px;
+}
+
+#ealm3 {
+    margin-top: -35px;
+}
+
+.shareImg {
+    display: inline;
+}
+
+.shareDiv {
+    margin-right: 256px;
+
+}
+
+.shareImg {
+    vertical-align: -6px;
+    margin: 7px;
+}
+
+.shareImg img{
+    margin: 1px;
+}

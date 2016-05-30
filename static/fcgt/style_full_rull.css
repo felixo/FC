@@ -1,0 +1,445 @@
+@font-face {
+font-family: 'Hitch Hike';
+src: url('fonts/Hitch-hike.otf') format("opentype");
+}
+
+@font-face {
+font-family: 'Fedra Serif B Pro';
+src: url("fonts/FedraSerifPro B Book.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'Basil';
+src: url("fonts/Karandash - Basil-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'PT Sans Narrow';
+src: url("fonts/PTN57F_0.ttf");
+}
+
+body {
+	color: white;
+	font: 20px Basil, sans-serif;
+	background-color: white;
+	margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+#wrapper {
+	max-width: 1294px;
+	margin: auto;
+	height: 100%;
+    width: 1294px;
+    background-image: url('images/rullBG.jpg');
+    background-position: 0px -54px;
+    background-repeat: no-repeat;
+}
+
+header {
+
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	list-style-position: inside;
+	font: 19px 'Basil';
+	padding: 10px;
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.top-menu li.active {
+	background: #29c5e6;
+	color: #e6ddbd;
+}
+
+.top-menu a {
+	color: #e6ddbd;
+}
+
+#share {
+    text-align: right;
+    height: 58px;
+    background-color: #002d28;
+    font: 12px 'Fedra Serif B Pro';
+    color: #959166;
+}
+
+.logo {
+    color: #f6f7f7;
+	font: 49px 'Hitch Hike';
+
+}
+
+.logo a img {
+    margin-top: -45px;
+}
+
+.logo span {
+    vertical-align: 30px;
+    padding: 20px 10px;
+}
+
+.title {
+  height: 204px;
+  background: rgba(109, 134, 130, 0.5);
+}
+
+#auchtung {
+    position: relative;
+    left: 165px;
+}
+
+.list {
+    margin-top: 172px;
+    width: 81%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav.menu {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallerylink {
+  margin-top: -70px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.gallerylink a {
+    color: #002d28;
+}
+
+.gallerylink li img {
+  display: block;
+}
+
+.gallerylink li{
+  display: inline-block;
+  margin: 10px;
+  font: 26px 'Hitch Hike';
+  vertical-align: top;
+  text-align: center;
+}
+
+.stepsWrapper {
+    background-image: url('images/stepsback.png');
+    background-position: 178px 140px;
+    background-repeat: no-repeat;
+}
+
+.stepsWrapper p {
+    text-align: center;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font: 30px 'Basil';
+    color: #e6ddbd;
+}
+
+#p2 {
+    font: 20px 'Basil';
+    color: #b6a974;
+    margin-top: -20px;
+    }
+
+.steps {
+    list-style-type: none;
+    list-style-position: outside;
+    width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps li {
+
+    font: 24px 'PT Sans Narrow';
+    /*text-align: center;*/
+    color: #e6ddbd;
+    margin: 34px 0px;
+}
+
+.steps img {
+    /*margin: left;*/
+    float: left;
+}
+
+.mainword {
+    font: 46px 'Hitch Hike';
+    color: white;
+}
+
+.web {
+    color: #ffffff;
+    font: 24px 'Basil';
+}
+
+.stepswrap {
+    vertical-align: 40px;
+    margin-left: 193px;
+    display: block;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#mvimg1 {
+    margin-top: -25px;
+}
+
+#mvimg2 {
+    margin-top: -13px;
+}
+
+#swoosh2 {
+    margin-left: 440px;
+    margin-top: -12px;
+}
+
+#swoosh3 {
+    margin-left: 394px;
+}
+
+#mvimg4{
+    margin-left: 322px;
+}
+
+#prizikon {
+    font: 30px 'Basil';
+    color: #b6a974;
+    margin: 20px;
+}
+
+.prizi {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url('images/placeback.png');
+    background-position: 0px 24px;
+    background-repeat: no-repeat;
+
+}
+
+.prizeList {
+    display: block;
+    list-style-type: none;
+}
+
+.prizeList li {
+    float: left;
+}
+
+.prizeList li img{
+    display: block;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.prizelistNarrow {
+    font: 15px 'PT Sans Narrow';
+    /*text-align: center;*/
+    color: #a2986a;
+    margin: 0px 31px;
+}
+
+.place {
+    font: 24px 'Basil';
+    color: white;
+
+}
+
+.prizelistNarrowit {
+    font: 15px 'PT Sans Narrow';
+    /*text-align: center;*/
+    color: #a2986a;
+    font-style: italic;
+    margin: 0px 31px;
+}
+
+.prizeSpecial {
+    font: 20px 'Basil';
+    color: white;
+}
+
+.prizeSpecialNarrow {
+    font: 15px 'PT Sans Narrow';
+    color: #a2986a;
+    margin-top: -18px;
+}
+
+.prizewrap img {
+    margin: 47px -24px;
+}
+
+.form {
+    width: 31%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form span {
+    font: 30px 'Basil';
+    color: #e6ddbd;
+}
+
+.footerwrap {
+    max-width: 1294px;
+	margin: auto;
+	height: 303px;
+    width: 1294px;
+    /*background-position: 0px -180px;*/
+    background-repeat: no-repeat;
+    background-image: url('images/footerback.jpg');
+}
+
+.footerlist li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.footerright {
+
+    margin: -7px 0px;
+}
+
+
+.footerright span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.number span{
+    font: 28px 'Basil';
+    color: #051e05;
+}
+
+.email span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.footerleft {
+    margin-left: 450px;
+    text-align: right;
+}
+
+.footerleftmain {
+    margin-top: 22px;
+    margin-left: 140px;
+}
+
+label {
+    font: 15px 'PT Sans Narrow';
+    color: #a2986a;
+    margin-right: 15px;
+}
+
+.formlist {
+    width: 750px;
+}
+
+.formlist li {
+    list-style-type: none;
+    float: left;
+}
+
+#currentlink {
+    text-decoration: underline;
+}
+
+h1 {
+    font: 24px 'Basil';
+    color: #002d28;
+    text-align: center;
+}
+
+h2 {
+    font: 14px 'Arial';
+    color: black;
+    font-weight: bold;
+    margin-left: 117px;
+}
+
+p {
+    font: 14px 'Arial';
+    color: black;
+    margin-left: 117px;
+}
+
+li {
+    font: 14px 'Arial';
+    color: black;
+    margin-left: 117px;
+}
+
+td {
+    font: 14px 'Arial';
+    color: black;
+}
+
+.link {
+    font: 14px 'Arial';
+    color: black;
+    text-decoration: underline;
+}
+
+table {
+    margin-left: 117px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.headerTr {
+    text-align: center;
+    background-color: #002d28;
+    font: 16px 'Arial';
+}
+
+.headerTr td{
+    color: white;
+}
+
+.shareImg {
+    display: inline;
+}
+
+.shareDiv {
+    margin-right: 256px;
+
+}
+
+.shareImg {
+    vertical-align: -6px;
+    margin: 7px;
+}
+
+.shareImg img{
+    margin: 1px;
+}

@@ -163,7 +163,7 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
   'locale': 'ru_RU',
   'fields': 'id, name, email, age_range'
 }
-
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 
 SOCIAL_AUTH_TWITTER_KEY = 'BeGboVvfquYYdH8zgGqUKA4rM'
 SOCIAL_AUTH_TWITTER_SECRET = 'iDdIuFkhDrbAeb8h4f6UavBU0a4TS46cEpfnoZNzrvxLO907En'

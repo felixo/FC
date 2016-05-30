@@ -1,0 +1,357 @@
+@font-face {
+font-family: 'Hitch Hike';
+src: url('fonts/Hitch-hike.otf') format("opentype");
+}
+
+@font-face {
+font-family: 'Fedra Serif B Pro';
+src: url("fonts/FedraSerifPro B Book.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'Basil';
+src: url("fonts/Karandash - Basil-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'PT Sans Narrow';
+src: url("fonts/PTN57F_0.ttf");
+}
+
+body {
+	color: white;
+	font: 20px Basil, sans-serif;
+	background-color: white;
+	margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+#wrapper {
+	max-width: 1294px;
+	margin: auto;
+	height: 100%;
+    width: 1294px;
+    background-image: url('images/banner-prize.jpg');
+    background-position: 0px -54px;
+    background-repeat: no-repeat;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	list-style-position: inside;
+	font: 19px 'Basil';
+	padding: 10px;
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.top-menu li.active {
+	background: #29c5e6;
+	color: #e6ddbd;
+}
+
+.top-menu a {
+	color: #e6ddbd;
+}
+
+#share {
+    text-align: right;
+    height: 58px;
+    background-color: #002d28;
+        font: 12px 'Fedra Serif B Pro';
+    color: #959166;
+}
+
+.logo {
+    color: #f6f7f7;
+	font: 49px 'Hitch Hike';
+
+}
+
+.logo a img {
+    margin-top: -45px;
+}
+
+.logo span {
+    vertical-align: 30px;
+    padding: 20px 10px;
+}
+
+.title {
+  height: 204px;
+  background: rgba(109, 134, 130, 0.5);
+}
+
+#auchtung {
+    position: relative;
+    left: 165px;
+}
+
+.list {
+    margin-top: 172px;
+    width: 81%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav.menu {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallerylink {
+  margin-top: -70px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.gallerylink a {
+    color: #002d28;
+}
+
+.gallerylink li img {
+  display: block;
+}
+
+.gallerylink li{
+  display: inline-block;
+  margin: 10px;
+  font: 26px 'Hitch Hike';
+  vertical-align: top;
+  text-align: center;
+}
+
+.stepsWrapper {
+
+    background-position: 178px 140px;
+    background-repeat: no-repeat;
+}
+
+.stepsWrapper p {
+    text-align: center;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font: 30px 'Basil';
+    color: #002d28;
+}
+
+#p2 {
+    font: 20px 'Basil';
+    color: #b6a974;
+    margin-top: -20px;
+    }
+
+.steps {
+    list-style-type: none;
+    list-style-position: outside;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.steps li {
+
+    font: 18px 'PT Sans Narrow';
+    text-align: left;
+    color: black;
+    margin: 34px 0px;
+}
+
+.steps img {
+    /*margin: left;*/
+    float: left;
+}
+
+.mainword {
+    font: 46px 'Hitch Hike';
+    color: #002d28;
+}
+
+.web {
+    color: #002d28;
+    font: 24px 'Basil';
+}
+
+.stepswrap {
+    vertical-align: 40px;
+    margin-left: 193px;
+    display: block;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#mvimg1 {
+    margin-top: 3px;
+    margin-left: -215px;
+}
+
+#mvimg2 {
+    margin-top: -13px;
+    margin-left: -205px;
+}
+
+#mvimg3 {
+    margin-top: -25px;
+    margin-left: -211px;
+}
+
+#pros1{
+    margin-top: -59px;
+}
+
+#pros2{
+    margin-top: -51px;
+}
+
+#pros3{
+    margin-top: -63px;
+}
+
+.footerwrap {
+    max-width: 1294px;
+	margin: auto;
+	height: 303px;
+    width: 1294px;
+    /*background-position: 0px -180px;*/
+    background-repeat: no-repeat;
+    background-image: url('images/footerback.jpg');
+}
+
+.footerlist li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.footerright {
+
+    margin: -7px 0px;
+}
+
+
+.footerright span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.number span{
+    font: 28px 'Basil';
+    color: #051e05;
+}
+
+.email span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.footerleft {
+    margin-left: 450px;
+    text-align: right;
+}
+
+.footerleftmain {
+    margin-top: 22px;
+    margin-left: 140px;
+}
+
+#currentlink {
+    text-decoration: underline;
+}
+
+.mainword1 {
+    font: 24px 'Basil';
+    color: #f1b827;
+}
+
+.mainword2 {
+    font: 24px 'Basil';
+    color: #848080;
+}
+
+.mainword3 {
+    font: 24px 'Basil';
+    color: #f78f2f;
+}
+
+.prizewrap {
+    text-align: center;
+}
+
+.logo1 img {
+    margin-left: -11px;
+}
+
+.logo2 img {
+    margin-left: -10px;
+}
+
+.logo3 img {
+    margin-left: -6px;
+}
+
+.specialHead {
+    font: 24px 'Basil';
+    color: #002d28;
+}
+
+.specialList {
+    margin-left: 138px;
+    width: 1000px;
+    margin-top: 20px;
+}
+
+.specialList li {
+    float: left;
+    margin-left: 22px;
+}
+
+.specialText {
+    font: 18px 'PT Sans Narrow';
+    color: black;
+    width: 850px;
+}
+
+#special {
+    width: 733px;
+    margin-top: -26px;
+}
+
+.special {
+    margin: 50px 0px;
+}
+
+.shareImg {
+    display: inline;
+}
+
+.shareDiv {
+    margin-right: 256px;
+
+}
+
+.shareImg {
+    vertical-align: -6px;
+    margin: 7px;
+}
+
+.shareImg img{
+    margin: 1px;
+}
