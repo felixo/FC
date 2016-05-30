@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^copy_past/', 'fcgt.views.gallery4', name='gallery4'),
     url(r'^mini_art/', 'fcgt.views.gallery5', name='gallery5'),
     url(r'^where_buy/', 'fcgt.views.where_buy', name='where_buy'),
+    url(r'^googlef15025f9fffb7db3.html/', 'fcgt.views.google', name='google'),
     url(r'^picture/(?P<art_id>\d+)/$', 'fcgt.views.picture', name='picture'),
     url(r'^picture/(?P<art_id>\d+)/vote$', 'fcgt.views.vote', name='vote'),
 ]

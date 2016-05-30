@@ -102,6 +102,9 @@ def home(request):
    return render_to_response('thirdauth/home.html',
                              context_instance=context)
 
+def google(request):
+    return render(request, 'fcgt/googlef15025f9fffb7db3.html')
+
 def vote(request, art_id):
     documents = Gallery.objects.get(pk=art_id)
     votes = Vote.objects.filter(art=art_id)
