@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404, render, render_to_response
 from django.views.generic import FormView, DetailView, ListView
 from django.core.urlresolvers import reverse
 from django.utils import timezone
-from .models import Gallery, Vote
+from .models import Gallery, Vote, Shop
 from forms import ArtForm
 from django.template.context import RequestContext
 
@@ -75,8 +75,10 @@ def add_art(request):
 
 
 def where_buy(request):
-
-   return render(request, 'fcgt/where_buy.html')
+    shops = Shop.objects.all()
+    return render(request, 'fcgt/where_buy.html', {
+        'shops': shops,
+    })
 
 def picture(request, art_id):
     documents = Gallery.objects.get(pk=art_id)

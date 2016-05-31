@@ -18,12 +18,6 @@ font-family: 'PT Sans Narrow';
 src: url("fonts/PTN57F_0.ttf");
 }
 
-@font-face {
-font-family: 'PT Sans Narrow';
-font-style: italic;
-src: url("fonts/PTS56F_0.ttf");
-}
-
 body {
 	color: white;
 	font: 20px Basil, sans-serif;
@@ -39,13 +33,9 @@ body {
 	margin: auto;
 	height: 100%;
     width: 1294px;
-    background-image: url('images/bannerGallery1.jpg');
+    background-image: url('images/banner-prize.jpg');
     background-position: 0px -54px;
     background-repeat: no-repeat;
-}
-
-header {
-
 }
 
 a {
@@ -113,7 +103,7 @@ nav li {
 
 .list {
     margin-top: 172px;
-    width: 82%;
+    width: 81%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -146,6 +136,95 @@ nav.menu {
   text-align: center;
 }
 
+.stepsWrapper {
+
+    background-position: 178px 140px;
+    background-repeat: no-repeat;
+}
+
+.stepsWrapper p {
+    text-align: center;
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+    font: 30px 'Basil';
+    color: #002d28;
+}
+
+#p2 {
+    font: 20px 'Basil';
+    color: #b6a974;
+    margin-top: -20px;
+    }
+
+.steps {
+    list-style-type: none;
+    list-style-position: outside;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.steps li {
+
+    font: 18px 'PT Sans Narrow';
+    text-align: left;
+    color: black;
+    margin: 34px 0px;
+}
+
+.steps img {
+    /*margin: left;*/
+    float: left;
+}
+
+.mainword {
+    font: 46px 'Hitch Hike';
+    color: #002d28;
+}
+
+.web {
+    color: #002d28;
+    font: 24px 'Basil';
+}
+
+.stepswrap {
+    vertical-align: 40px;
+    margin-left: 193px;
+    display: block;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#mvimg1 {
+    margin-top: 3px;
+    margin-left: -215px;
+}
+
+#mvimg2 {
+    margin-top: -13px;
+    margin-left: -205px;
+}
+
+#mvimg3 {
+    margin-top: -25px;
+    margin-left: -211px;
+}
+
+#pros1{
+    margin-top: -59px;
+}
+
+#pros2{
+    margin-top: -51px;
+}
+
+#pros3{
+    margin-top: -63px;
+}
 
 .footerwrap {
     max-width: 1294px;
@@ -193,86 +272,70 @@ nav.menu {
     margin-left: 140px;
 }
 
-
-.formlist {
-    width: 750px;
+#currentlink {
+    text-decoration: underline;
 }
 
-.formlist li {
-    list-style-type: none;
-    float: left;
+.mainword1 {
+    font: 24px 'Basil';
+    color: #f1b827;
 }
 
-.galleryList {
-    float: left;
-    margin: 8px 12px;
+.mainword2 {
+    font: 24px 'Basil';
+    color: #848080;
 }
 
-.galleryList a img {
-    width: 296px;
-    height: 233px;
+.mainword3 {
+    font: 24px 'Basil';
+    color: #f78f2f;
 }
 
-.titleWrap {
-    width: 1025px;
+.prizewrap {
+    text-align: center;
 }
 
-.titleWrap img {
-    width: 1025px;
-    margin-left: 132px;
+.logo1 img {
+    margin-left: -11px;
 }
 
-.titleWrapList {
-    list-style-type: none;
-    float: left;
+.logo2 img {
+    margin-left: -10px;
 }
 
-.titleWrapList li div span{
-    font: 16px 'PT Sans Narrow';
-    color: black;
-    width: 220px;
-    line-height: 0.9em;
+.logo3 img {
+    margin-left: -6px;
 }
 
-.titleWrapList li div h1{
-    font: 18px 'Basil';
+.specialHead {
+    font: 24px 'Basil';
     color: #002d28;
-    margin: -4px 0px;
 }
 
-.clearfix {
-    clear: both;
-}
-
-.titleWrapList li{
-    float: left;
-}
-
-.titleText{
-    width: 220px;
-    margin-top: -112px;
-    margin-left: 82px;
-}
-
-.titleGallery {
-    font: 30px 'Basil';
-    color: #002d28;
-    width: 54%;
-    margin: 50px 384px;
-}
-
-.galleryWrap {
+.specialList {
+    margin-left: 138px;
     width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 20px;
 }
 
-.galleryText {
-    font: 22px 'PT Sans Narrow';
-    color: #002d28;
-    text-align: right;
-    margin: 3px;
-    width: 1150px;
+.specialList li {
+    float: left;
+    margin-left: 22px;
+}
+
+.specialText {
+    font: 18px 'PT Sans Narrow';
+    color: black;
+    width: 850px;
+}
+
+#special {
+    width: 733px;
+    margin-top: -26px;
+}
+
+.special {
+    margin: 50px 0px;
 }
 
 .shareImg {
@@ -293,44 +356,22 @@ nav.menu {
     margin: 1px;
 }
 
-.auth {
-    color: black;
-}
 
-.likeButtonText {
-    font: 22px 'PT Sans Narrow';
-    color: #002d28;
-    text-align: right;
-    text-decoration: underline;
-}
-
-.likeButton {
-    font: 22px 'PT Sans Narrow';
+table {
+    margin-left: 0px;
+    border-collapse: collapse;
+    font: 18px 'Basil';
     color: #002d28;
 }
 
-.socialLogin li a img{
-    height: 32px;
+table, th, td {
+    border: 1px solid black;
 }
 
-.socialLogin {
-    list-style-type: none;
-    margin-left: 150px;
-}
+tr:nth-child(even){background-color: #f2f2f2}
 
-.socialLogin li {
-    display: inline;
-}
-
-.voted {
-    text-decoration: underline;
-}
-
-.logout {
-    list-style-type: none;
-    margin-left: 613px;
-}
-
-.logout li {
-    display: inline;
+.headerTr {
+    text-align: center;
+    background-color: #002d28;
+    font: 16px 'Arial';
 }

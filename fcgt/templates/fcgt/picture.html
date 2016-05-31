@@ -116,12 +116,8 @@
    <ul class="socialLogin">
 
         <div class="socialLogText">Войти через социальную сеть для голосования </div>
-   <li>
-        <a href="{% url 'social:begin' 'vk-oauth2' %}?next={{ request.path }}"><img class="socialPic" src="{% static "fcgt/images/loginVK.png" %}"/></a>
-
-     </li>
      <li>
-        <a href="{% url 'social:begin' 'odnoklassniki-oauth2' %}?next={{ request.path }}"><img class="socialPic" src="{% static "fcgt/images/loginOk.png" %}"/></a>
+        <a href="{% url 'social:begin' 'vk-oauth2' %}?next={{ request.path }}"><img class="socialPic" src="{% static "fcgt/images/loginVK.png" %}"/></a>
      </li>
 
      <li>

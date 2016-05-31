@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'fcgt/stylePrize.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/styleShops.css' %}" />
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -77,8 +77,26 @@
 
 
     <div class="stepsWrapper">
-        <p id="p1">Вскоре, здесь будет информация о том, где можно приобрести продукцию Faber-Castell</p>
+        <p id="p1">Список магазинов, где можно приобрести продукцию Faber-Castell</p>
 
+        <table>
+            <tr>
+                <td><span>Город</span></td>
+                <td><span>Название магазина</span></td>
+                <td><span>Адрес</span></td>
+                <td><span>Сайт</span></td>
+            </tr>
+
+            {% for shop in shops %}
+
+            <tr class="shopsTr">
+                <td><span class="shopsSp">{{ shop.city }}</span></td>
+                <td><span class="shopsSp">{{ shop.name }}</span></td>
+                <td><span class="shopsSp">{{ shop.adress }}</span></td>
+                <td><span class="shopsSp">{{ shop.web }}</span></td>
+            </tr>
+            {% endfor %}
+        </table>
 
     <footer>
         <div class="footerwrap">
