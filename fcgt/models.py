@@ -31,3 +31,9 @@ class Vote(models.Model):
     art = models.ForeignKey(Gallery, on_delete=models.CASCADE)
     vote_id = models.ForeignKey(User, related_name='votes')
     vote_is_it = models.BooleanField(default=False)
+
+class Shop(models.Model):
+    city = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
+    adress = models.CharField(max_length=200)
+    web = models.CharField(max_length=200)
