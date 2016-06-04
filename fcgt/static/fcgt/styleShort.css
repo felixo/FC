@@ -482,3 +482,29 @@ button {
 .shareImg img{
     margin: 1px;
 }
+
+@-moz-document url-prefix() {
+    #swoosh2 {
+    margin-left: 319px;
+    margin-top: 3px;
+}
+
+    input[type="text"] {
+	background-color: white;
+	border: 1px inset #e7e7e7;
+	height: 27px;
+	width: 245px;
+	color: #5c6759;
+	padding: 0 10px;
+    -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 2px; /* закругление углов для всех, кто понимает */
+    margin: 1px -1px;
+}
+
+    select {
+        margin: 0px -1px;
+    }
+
+}

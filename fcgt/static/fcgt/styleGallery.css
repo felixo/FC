@@ -82,7 +82,7 @@ nav li {
     text-align: right;
     height: 58px;
     background-color: #002d28;
-        font: 12px 'Fedra Serif B Pro';
+    font: 12px 'Fedra Serif B Pro';
     color: #959166;
 }
 
@@ -271,6 +271,7 @@ nav.menu {
     color: #002d28;
     text-align: right;
     width: 296px;
+    height: 23px;
 }
 
 .shareImg {

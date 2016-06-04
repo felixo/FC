@@ -1,6 +1,8 @@
  $(document).ready(function() {
 
-
+    //$('input[type="submit"]').prop('disabled', true);
+    $("input").prop('required',true);
+    $("select").prop('required',true);
     $( ".likeButtonText" ).click(function() {
      //alert( "The Function start" );
      var catid = 0;
@@ -17,5 +19,12 @@
 
            });
     });
+    /*$('input[type="submit"]').click(function(){
+        if ($('#div_art_host').var == ''){
+            alert ("Avada Kedavra");
+            //$('input[type="submit"]').prop('disabled', true);
+        }
+    });*/
+
 
 });
