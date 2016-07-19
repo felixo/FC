@@ -42,25 +42,73 @@ def gallery(request):
             })
 
 def gallery2(request):
-    documents = Gallery.objects.filter(art_category="ProfiVsHobby")
+    obj = Gallery.objects.filter(art_category="ProfiVsHobby")
+    paginator = Paginator(obj, 6)
+    page = request.GET.get('page')
+
+    try:
+        documents = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        documents = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        documents = paginator.page(paginator.num_pages)
+
     return render(request, 'fcgt/gallery2.html', {
         'documents': documents
     })
 
 def gallery3(request):
-    documents = Gallery.objects.filter(art_category="Scatching")
+    obj = Gallery.objects.filter(art_category="Scatching")
+    paginator = Paginator(obj, 6)
+    page = request.GET.get('page')
+
+    try:
+        documents = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        documents = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        documents = paginator.page(paginator.num_pages)
+
     return render(request, 'fcgt/gallery3.html', {
         'documents': documents
     })
 
 def gallery4(request):
-    documents = Gallery.objects.filter(art_category="CopyPast")
+    obj = Gallery.objects.filter(art_category="CopyPast")
+    paginator = Paginator(obj, 6)
+    page = request.GET.get('page')
+
+    try:
+        documents = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        documents = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        documents = paginator.page(paginator.num_pages)
+
     return render(request, 'fcgt/gallery4.html', {
         'documents': documents
     })
 
 def gallery5(request):
-    documents = Gallery.objects.filter(art_category="MiniArt")
+    obj = Gallery.objects.filter(art_category="MiniArt")
+    paginator = Paginator(obj, 6)
+    page = request.GET.get('page')
+
+    try:
+        documents = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        documents = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        documents = paginator.page(paginator.num_pages)
+
     return render(request, 'fcgt/gallery5.html', {
         'documents': documents
     })
