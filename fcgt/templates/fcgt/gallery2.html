@@ -117,6 +117,9 @@
             <li class="galleryList">
                 <a href="/picture/{{ document.id }}"><img src="{{ document.docfile.url }}" alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">{{document.art_host_name}}, {{document.art_city}}, &hearts;  {{ document.art_vote }} </div>
+                {% if user.is_superuser %}
+                <div class="galleryText">{{document.pub_date}}</div>
+                {% endif %}
             </li>
 
         {% endfor %}
