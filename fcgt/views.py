@@ -7,7 +7,7 @@ from django.utils import timezone
 from .models import Gallery, Vote, Shop
 from forms import ArtForm
 from django.template.context import RequestContext
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def index(request):
     # question = get_object_or_404(Question, pk=question_id)
@@ -24,7 +24,18 @@ def full_rull(request):
 
 
 def gallery(request):
-    documents = Gallery.objects.filter(art_category="BlackAndWhite")
+    obj = Gallery.objects.filter(art_category="BlackAndWhite")
+    paginator = Paginator(obj, 6)
+    page = request.GET.get('page')
+
+    try:
+        documents = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        documents = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        documents = paginator.page(paginator.num_pages)
 
     return render(request, 'fcgt/gallery.html', {
         'documents': documents

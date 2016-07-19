@@ -121,6 +121,22 @@
 
         {% endfor %}
     <div class="clearfix"></div>
+        <div id="more">
+        {% if documents.has_previous %}
+        <a id="prewButton" href="?page={{ documents.previous_page_number }}"> << Предыдущая | </a>
+        {% endif %}
+        {% if documents.paginator.num_pages <= 1 %}
+            <span id="currentPage2"> Всего одна страница </span>
+            {% else %}
+        <span id="currentPage"> Страница {{ documents.number }} из {{ documents.paginator.num_pages }} </span>
+            {% endif %}
+        {% if documents.has_next %}
+
+                <a id="nextButton" href="?page={{ documents.next_page_number }}"> | Следующая >></a>
+
+        {% endif %}
+         </div>
+    <div class="clearfix"></div>
     </ul>
 {% else %}
    <div class="titleGallery">Никто еще не добавил работы в эту категорию, будьте первыми!</div>

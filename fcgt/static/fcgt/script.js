@@ -25,6 +25,25 @@
             //$('input[type="submit"]').prop('disabled', true);
         }
     });*/
+    /*$( "#more" ).click(function() {
+       alert('Avada Kedavra');
+       var url=$("#moreButton").attr("href");
+       alert(url);
+       $.get(url, {}, function(data){
+                alert("It's Gone");
+               $(".galleryWrap").append("<ul id='loadersub'></ul>");
 
+                $("#loadersub").load(url+" #loader", function(){
+                    var buffer = $("#loadersub").html();
+                    $(".loade").append(buffer);
+                    alert("Rocn'Roll");
+
+               });
+
+
+           });
+       return false;
+
+    });*/
 
 });

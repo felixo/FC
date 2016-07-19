@@ -20,3 +20,6 @@ class ArtForm(forms.ModelForm):
             'docfile': _('Загрузить файл (jpg, png, tiff)'),
             'art_password': _('Пароль'),
         }
+        widgets = {
+            'art_passwod': forms.TextInput(attrs={'placeholder': 'Пароль не должен совпадать с паролем вашей почты!'})
+        }

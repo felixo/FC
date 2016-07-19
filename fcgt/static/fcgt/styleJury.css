@@ -83,6 +83,7 @@ nav li {
 .logo {
     color: #f6f7f7;
 	font: 49px 'Hitch Hike';
+	margin-left: 45px;
 
 }
 
@@ -114,7 +115,7 @@ nav li {
 
 nav.menu {
     width: 85%;
-    margin-left: auto;
+    margin-left: 123px;
     margin-right: auto;
 }
 
@@ -181,13 +182,14 @@ nav.menu {
 }
 
 .footerleft {
-    margin-left: 450px;
+    margin-left: 633px;
     text-align: right;
 }
 
 .footerleftmain {
     margin-top: 22px;
-    margin-left: 140px;
+    margin-left: 0px;
+    width: 320px;
 }
 
 
@@ -279,7 +281,7 @@ h1 {
 }
 
 .shareDiv {
-    margin-right: 256px;
+    margin-right: 0px;
 
 }
 
