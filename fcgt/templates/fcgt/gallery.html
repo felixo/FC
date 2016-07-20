@@ -129,13 +129,14 @@
         <div class="clearfix"></div>
         <div id="more">
         {% if documents.has_previous %}
+        <a id="prewButton" href="?page=1"> На первую </a>
         <a id="prewButton" href="?page={{ documents.previous_page_number }}"> << Предыдущая | </a>
         {% endif %}
         <span id="currentPage"> Страница {{ documents.number }} из {{ documents.paginator.num_pages }} </span>
         {% if documents.has_next %}
 
                 <a id="nextButton" href="?page={{ documents.next_page_number }}"> | Следующая >></a>
-
+                <a id="nextButton" href="?page={{ documents.paginator.num_pages }}"> На последнюю </a>
         {% endif %}
          </div>
     <div class="clearfix"></div>
