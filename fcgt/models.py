@@ -27,7 +27,7 @@ class Gallery(models.Model):
     art_vote = models.IntegerField(default=0)
 
     def __unicode__(self):  # __unicode__ on Python 2
-        return self.art_host_name
+        return unicode(self.art_host_name) or u''
 
 
 class Vote(models.Model):
@@ -36,7 +36,7 @@ class Vote(models.Model):
     vote_is_it = models.BooleanField(default=False)
 
     def __unicode__(self):  # __unicode__ on Python 2
-        return self.art
+        return unicode(self.art) or u''
 
 class Shop(models.Model):
     city = models.CharField(max_length=200)
@@ -45,4 +45,4 @@ class Shop(models.Model):
     web = models.CharField(max_length=200)
 
     def __unicode__(self):  # __unicode__ on Python 2
-        return self.name
+        return unicode(self.name) or u''
