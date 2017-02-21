@@ -22,7 +22,7 @@ src: url("fonts/PTN57F_0.ttf");
 body {
 	color: #e6ddbd;
 	font: 20px Basil, sans-serif;
-	background-color: #002d28;
+	background-color: white;
 	margin: 0;
     height: 100%;
     width: 100%;
