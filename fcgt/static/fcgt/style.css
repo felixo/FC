@@ -68,7 +68,7 @@ button {
 	margin: auto;
 	height: 100%;
     width: 1294px;
-    background-image: url('images/banner.jpg');
+    background-image: url('images/banner-winner.jpg');
     background-position: 0px -180px;
     background-repeat: no-repeat;
 }
@@ -110,7 +110,7 @@ nav li {
 #share {
     text-align: right;
     height: 58px;
-    background-color: #002d28;
+    background: linear-gradient(to top, #001e1b, #002d28);
     font: 12px 'Fedra Serif B Pro';
     color: #959166;
 }
@@ -133,7 +133,7 @@ nav li {
 
 .title {
   height: 204px;
-  background: rgba(109, 134, 130, 0.5);
+  background: rgba(23, 23, 23, 0.5);
 }
 
 #auchtung {
@@ -161,7 +161,7 @@ nav.menu {
 }
 
 .gallerylink a {
-    color: #e6ddbd;
+    color: #022d28;
 }
 
 .gallerylink li img {
