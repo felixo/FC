@@ -187,14 +187,17 @@ nav.menu {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    font: 30px 'Basil';
-    color: #e6ddbd;
+    font: 49px 'Hitch Hike';
+    color: #022d28;
+    margin-bottom: -18px;
 }
 
 #p2 {
-    font: 20px 'Basil';
-    color: #b6a974;
-    margin-top: -20px;
+    font: 24px 'Basil';
+    color: #022d28;
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 20px;
     }
 
 .steps {
@@ -247,8 +250,8 @@ nav.menu {
 }
 
 #swoosh2 {
-    margin-left: 440px;
-    margin-top: -12px;
+    margin-left: 602px;
+
 }
 
 #swoosh3 {
@@ -260,8 +263,8 @@ nav.menu {
 }
 
 #prizikon {
-    font: 30px 'Basil';
-    color: #b6a974;
+    font: 24px 'Basil';
+    color: #002d28;
     margin: 20px;
 }
 
@@ -273,6 +276,7 @@ nav.menu {
     background-image: url('images/placeback.png');
     background-position: 0px 24px;
     background-repeat: no-repeat;
+    margin-top: -25px;
 
 }
 
@@ -283,6 +287,8 @@ nav.menu {
 
 .prizeList li {
     float: left;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .prizeList li img{
@@ -481,6 +487,19 @@ input[type="submit"] {
     margin: 1px;
 }
 
+.anounceWrap {
+        margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.anounceWrap span{
+    font: 18px 'PT Sans Narrow';
+    color: #002d28;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 @-moz-document url-prefix() {
     #swoosh2 {
     margin-left: 319px;
@@ -504,5 +523,6 @@ input[type="submit"] {
     select {
         margin: 0px -1px;
     }
+
 
 }
