@@ -147,81 +147,41 @@
         </ul>
          <div class="clearfix"></div>
         <div class="prizewrap">
-            <p class="nomination">ЧЕРНОЕ, И БЕЛОЕ, И СЕРОЕ</p><br>
-            <img src="{% static "fcgt/images/line.jpg" %}" alt="bottom-line">
+            <p class="nomination">ЧЕРНОЕ, И БЕЛОЕ, И СЕРОЕ</p>
+            <img src="{% static "fcgt/images/line-brown.png" %}" alt="bottom-line">
         </div>
     </div>
-
-    <div class="form" >
-        <a name="send"></a>
-        <span>УЧАСТВОВАТЬ ПРОСТО</span>
-    <form action="{% url 'fcgt:add_art' %}" method="POST" enctype="multipart/form-data">
-    <p>{% csrf_token %}</p>
-    <div class="formwrap">
-    <ul class="formlist">
-
-        <li class="formleft">
-        <div id="div_art_host">
-        <label class="control-label" for="{{ form.art_host_name.id_for_label }}">{{ form.art_host_name.label }}</label>
-        {{ form.art_host_name }}
-        {% if form.art_host_name.errors %}
-        <label class="control-label">{{ form.art_host_name.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_art_catergory">
-        <label class="control-label" for="{{ form.art_category.id_for_label }}">{{ form.art_category.label }}</label>
-        {{ form.art_category }}
-        {% if form.art_category.errors %}
-        <label class="control-label">{{ form.art_category.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_art_city">
-        <label class="control-label" for="{{ form.art_city.id_for_label }}">{{ form.art_city.label }}</label>
-        {{ form.art_city }}
-        {% if form.art_city.errors %}
-        <label class="control-label">{{ form.art_city.errors|first }}</label>
-        {% endif %}
-        </div></li>
-
-        <li class="formright">
-        <div id="div_art_mail">
-        <label class="control-label" for="{{ form.art_mail.id_for_label }}">{{ form.art_mail.label }}</label>
-        {{ form.art_mail }}
-        {% if form.art_mail.errors %}
-        <label class="control-label">{{ form.art_mail.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_art_password">
-        <label class="control-label" for="{{ form.art_password.id_for_label }}">{{ form.art_password.label }}</label>
-        {{ form.art_password }}
-        {% if form.art_password.errors %}
-        <label class="control-label">{{ form.art_password.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_docfile">
-        <label id="labelfile" class="control-label" for="{{ form.docfile.id_for_label }}">{{ form.docfile.label }}</label>
-    <div id="sendfilefix" title="Нажмите на меня, для обзора файла"></div>
-        {{ form.docfile }}
-        {% if form.docfile.errors %}
-        <label class="control-label">{{ form.docfile.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_send"><input type="submit" value="Отправить на конкурс >>" /></div>
-        </li>
+    <div class="placesWrap">
+        <ul class="places">
+            <li class="placesList" id="firstPlace">
+                <span>1 МЕСТО</span>
+            </li>
+            <li class="placesList" id="secondPlace">
+                <span>2 МЕСТО</span>
+            </li>
+            <li class="placesList" id="thirdPlace">
+                <span>3 МЕСТО</span>
+            </li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div class="galleryWrap">
+        <ul id="loader">
+         <li class="galleryList">
+                <a href="/"><img id="" src="" alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Bla bla from bla </div>
+         </li>
+         <li class="galleryList">
+                <a href="/"><img id="" src="" alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Bla bla from bla </div>
+         </li>
+         <li class="galleryList">
+                <a href="/"><img id="" src="" alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Bla bla from bla </div>
+         </li>
 <div class="clearfix"></div>
-    </ul>
-
-</div>
 
 
-    </form>
-    </div>
-    </div>
     <footer>
         <div class="footerwrap">
             <ul class="footerlist">

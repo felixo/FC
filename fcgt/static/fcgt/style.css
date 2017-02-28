@@ -20,7 +20,7 @@ src: url("fonts/PTN57F_0.ttf");
 
 
 body {
-	color: #e6ddbd;
+	color: #001e1b;
 	font: 20px Basil, sans-serif;
 	background-color: white;
 	margin: 0;
@@ -269,25 +269,28 @@ nav.menu {
 }
 
 .prizi {
-    width: 65%;
+    width: 1294px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     background-image: url('images/placeback.png');
-    background-position: 0px 24px;
+    background-position: 214px 16px;
     background-repeat: no-repeat;
     margin-top: -25px;
 
 }
 
 .prizeList {
+
     display: block;
     list-style-type: none;
+    margin-left: 133px;
+    margin-top: 50px;
 }
 
 .prizeList li {
     float: left;
-    margin-left: auto;
+    margin-left: 150px;
     margin-right: auto;
 }
 
@@ -500,6 +503,65 @@ input[type="submit"] {
     margin-right: auto;
     text-align: center;
 }
+
+.nomination {
+    margin-top: 0px;
+    margin-bottom: -25px;
+}
+
+.galleryWrap {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galleryText {
+    font: 15px 'PT Sans Narrow';
+    color: #002d28;
+    text-align: right;
+    width: 296px;
+    height: 23px;
+}
+
+.galleryList {
+    list-style-type: none;
+    float: left;
+    margin: 8px 12px;
+}
+
+.galleryList a img {
+    width: 296px;
+    height: 233px;
+}
+
+.placesWrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1294px;
+}
+
+.placesList{
+    list-style-type: none;
+    float: left;
+    margin-left: 250px;
+}
+
+.placesList span{
+    font: 18px 'Basil';
+}
+
+#firstPlace {
+    color: #f1b827;
+}
+
+#secondPlace {
+    color: #848080;
+}
+
+#thirdPlace {
+    color: #f78f2f;
+}
+
 @-moz-document url-prefix() {
     #swoosh2 {
     margin-left: 319px;
