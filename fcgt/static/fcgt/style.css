@@ -20,10 +20,11 @@ src: url("fonts/PTN57F_0.ttf");
 
 
 body {
-	color: #e6ddbd;
+	color: #001e1b;
 	font: 20px Basil, sans-serif;
-	background-color: #002d28;
+	background-color: white;
 	margin: 0;
+	margin-top: -10px;
     height: 100%;
     width: 100%;
 }
@@ -68,13 +69,13 @@ button {
 	margin: auto;
 	height: 100%;
     width: 1294px;
-    background-image: url('images/banner.jpg');
+    background-image: url('images/banner-winner.jpg');
     background-position: 0px -180px;
     background-repeat: no-repeat;
 }
 
 header {
-
+    margin: 0;
 }
 
 a {
@@ -110,7 +111,7 @@ nav li {
 #share {
     text-align: right;
     height: 58px;
-    background-color: #002d28;
+    background: linear-gradient(to top, #001e1b, #002d28);
     font: 12px 'Fedra Serif B Pro';
     color: #959166;
 }
@@ -133,7 +134,7 @@ nav li {
 
 .title {
   height: 204px;
-  background: rgba(109, 134, 130, 0.5);
+  background: rgba(23, 23, 23, 0.5);
 }
 
 #auchtung {
@@ -161,7 +162,7 @@ nav.menu {
 }
 
 .gallerylink a {
-    color: #e6ddbd;
+    color: #022d28;
 }
 
 .gallerylink li img {
@@ -177,7 +178,7 @@ nav.menu {
 }
 
 .stepsWrapper {
-    background-image: url('images/stepsback.png');
+
     background-position: 178px 140px;
     background-repeat: no-repeat;
 }
@@ -187,14 +188,17 @@ nav.menu {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    font: 30px 'Basil';
-    color: #e6ddbd;
+    font: 49px 'Hitch Hike';
+    color: #022d28;
+    margin-bottom: -18px;
 }
 
 #p2 {
-    font: 20px 'Basil';
-    color: #b6a974;
-    margin-top: -20px;
+    font: 24px 'Basil';
+    color: #022d28;
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 20px;
     }
 
 .steps {
@@ -247,8 +251,8 @@ nav.menu {
 }
 
 #swoosh2 {
-    margin-left: 440px;
-    margin-top: -12px;
+    margin-left: 602px;
+
 }
 
 #swoosh3 {
@@ -260,29 +264,35 @@ nav.menu {
 }
 
 #prizikon {
-    font: 30px 'Basil';
-    color: #b6a974;
+    font: 24px 'Basil';
+    color: #002d28;
     margin: 20px;
 }
 
 .prizi {
-    width: 65%;
+    width: 1294px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     background-image: url('images/placeback.png');
-    background-position: 0px 24px;
+    background-position: 214px 16px;
     background-repeat: no-repeat;
+    margin-top: -25px;
 
 }
 
 .prizeList {
+
     display: block;
     list-style-type: none;
+    margin-left: 133px;
+    margin-top: 50px;
 }
 
 .prizeList li {
     float: left;
+    margin-left: 150px;
+    margin-right: auto;
 }
 
 .prizeList li img{
@@ -481,9 +491,243 @@ input[type="submit"] {
     margin: 1px;
 }
 
+.anounceWrap {
+        margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.anounceWrap span{
+    font: 18px 'PT Sans Narrow';
+    color: #002d28;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.nomination {
+    margin-top: 0px;
+    margin-bottom: -25px;
+    font: 30px 'Basil';
+}
+
+.galleryWrap {
+    width: 1032px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galleryText {
+    font: 15px 'PT Sans Narrow';
+    color: #002d28;
+    text-align: right;
+    width: 296px;
+    height: 23px;
+}
+
+.galleryList {
+    list-style-type: none;
+    float: left;
+    margin: 8px 12px;
+}
+
+.galleryList a img {
+    width: 296px;
+    height: 233px;
+}
+
+.placesWrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1294px;
+    margin-top: -48px;
+}
+
+.placesList{
+    list-style-type: none;
+    float: left;
+    margin-left: 250px;
+}
+
+.placesList span{
+    font: 18px 'Basil';
+}
+
+#firstPlace {
+    color: #f1b827;
+}
+
+#secondPlace {
+    color: #848080;
+}
+
+#thirdPlace {
+    color: #f78f2f;
+}
+
+#pvsh {
+    background: none;
+    margin-top: 50px;
+}
+
+#shortprize {
+    width: 712px;
+}
+
+#placesWrapShort{
+    width: 918px;
+}
+
+#placesPVsH li{
+    margin-left: 153px;
+}
+
+.stepsWrapper {
+    margin-top: 110px;
+    background-position: 178px 140px;
+    background-repeat: no-repeat;
+}
+
+.stepsWrapper p {
+    text-align: center;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font: 30px 'Basil';
+    color: #002d28;
+}
+
+
+
+.steps {
+    list-style-type: none;
+    list-style-position: outside;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.steps li {
+
+    font: 18px 'PT Sans Narrow';
+    text-align: left;
+    color: black;
+    margin: 34px 0px;
+}
+
+.steps img {
+    /*margin: left;*/
+    float: left;
+}
+
+.mainword {
+    font: 46px 'Hitch Hike';
+    color: #002d28;
+}
+
+.web {
+    color: #002d28;
+    font: 24px 'Basil';
+}
+
+.stepswrap {
+    vertical-align: 40px;
+    margin-left: 193px;
+    display: block;
+}
+
+#mvimg1 {
+    margin-top: 3px;
+    margin-left: -215px;
+}
+
+#mvimg2 {
+    margin-top: -13px;
+    margin-left: -205px;
+}
+
+#mvimg3 {
+    margin-top: -25px;
+    margin-left: -211px;
+}
+
+#pros1{
+    margin-top: -59px;
+}
+
+#pros2{
+    margin-top: -51px;
+}
+
+#pros3{
+    margin-top: -63px;
+}
+
+.mainword1 {
+    font: 24px 'Basil';
+    color: #f1b827;
+}
+
+.mainword2 {
+    font: 24px 'Basil';
+    color: #848080;
+}
+
+.mainword3 {
+    font: 24px 'Basil';
+    color: #f78f2f;
+}
+
+.prizewrap {
+    text-align: center;
+}
+
+.logo1 img {
+    margin-left: -11px;
+}
+
+.logo2 img {
+    margin-left: -10px;
+}
+
+.logo3 img {
+    margin-left: -6px;
+}
+
+.contactUs{
+    margin-top: 50px;
+    font: 18px 'PT Sans Narrow';
+}
+
+.specialList{
+    list-style-type: none;
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.specialList li{
+    float: left;
+}
+
+.specialText{
+    font: 14px 'Basil';
+}
+
+#special{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+#p1{
+    font: 40px 'Hitch Hike';
+}
+
 @-moz-document url-prefix() {
     #swoosh2 {
-    margin-left: 319px;
+    margin-left: 593px;
     margin-top: 3px;
 }
 
@@ -504,5 +748,6 @@ input[type="submit"] {
     select {
         margin: 0px -1px;
     }
+
 
 }

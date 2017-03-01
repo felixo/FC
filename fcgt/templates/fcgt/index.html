@@ -2,6 +2,7 @@
 <html lang="en">
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'fcgt/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/lightbox.css' %}" />
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -19,7 +20,7 @@
 
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="{% static "fcgt/script.js" %}"></script>
-
+    <script src="{% static "fcgt/lightbox.js" %}"></script>
 
     <meta property="og:url"           content="http://fabercastellgottalent.com/" />
 	<meta property="og:type"          content="website" />
@@ -116,119 +117,275 @@
         </ul>
  </div>
     <div class="stepsWrapper">
-        <p id="p1">ПРИМИ УЧАСТИЕ <br>В КОНКУРСЕ ТАЛАНТОВ!</p>
-        <p id="p2"> C 01 мая по 30 ноября 2016 года</p>
-        <ul class="steps">
-            <li id="step1"><img id="mvimg1" src="{% static "fcgt/images/step1.png" %}" alt="Step 1"><span class="stepswrap"><span class="mainword">Создай</span><span> свой шедевр</span></span><div class="clearfix"></div></li>
-            <li id="step2"><img id="mvimg2" src="{% static "fcgt/images/step2.png" %}" alt="Step 2"><span class="stepswrap"><span class="mainword">Закачай</span><span> на специально <br>созданный сайт </span><span class="web">fabercastellgottalent.com</span></span><img id="swoosh2" src="{% static "fcgt/images/swoosh2.png" %}" alt="swoosh"><div class="clearfix"></div></li>
-            <li id="step3"><img id="mvimg3" src="{% static "fcgt/images/step3.png" %}" alt="Step 3"><span class="stepswrap"><span class="mainword">Расскажи</span><br><span>своим друзьям о конкурсе в любой социальной<br>сети с хэштегом </span><span class="web">#fabercastellgottalent</span></span><img id="swoosh3" src="{% static "fcgt/images/swoosh3.png" %}" alt="swoosh"><div class="clearfix"></div></li>
-        </ul>
-        <img id="mvimg4" src="{% static "fcgt/images/step4.png" %}" alt="Step 4"><span class="stepswrap">
+        <p id="p1">ACHTUNG!</p>
+        <img id="swoosh2" src="{% static "fcgt/images/swoosh2.png" %}"
+        <div><p id="p2">ОПРЕДЕЛЕНЫ ПОБЕДИТЕЛИ КОНКУРСА!</p></div>
+        <div class="anounceWrap"><span class="anounce">Faber-Castell благодарит всех участников творческого конкурса</span></div>
+        <div class="anounceWrap"><span class="anounce">"ACHTUNG! Faber-Castell ищет таланты"</span></div>
+        <div class="anounceWrap"><span class="anounce">Желаем всем участникам дальнейших творческих успехов!</span></div>
+
     </div>
     <div class="prizi">
         <br>
         <br>
-        <span id="prizikon">ПРИЗЫ КОНКУРСА</span>
+        <span id="prizikon">Итак... Победители в номинациях:</span>
         <br>
         <br>
         <ul class="prizeList">
             <li>
                 <img id="1st" src="{% static "fcgt/images/1st.png" %}" alt="1st">
-                <span class="place">1 МЕСТО</span>
-                <div><span class="prizelistNarrow">Интенсив-обучение в Британке</span></div>
-                <div><span class="prizelistNarrowit">(или см. "Призы" на выбор Победителя)</span></div>
+
             <div class="clearfix"></div></li>
             <li>
                 <img id="2st" src="{% static "fcgt/images/2st.png" %}" alt="2st">
-                <span class="place">2 МЕСТО</span>
-                <div><span class="prizelistNarrow">Онлайн-обучение в Bang-Bang Education</span></div>
-                <div><span class="prizelistNarrowit">(или см. "Призы" на выбор Победителя)</span></div>
+
            <div class="clearfix"></div></li>
             <li>
                 <img id="3st" src="{% static "fcgt/images/3st.png" %}" alt="3st">
-                <span class="place">3 МЕСТО</span>
-                <div><span class="prizelistNarrow">Полугодовой запас материалов</span></div>
+
                 <img id="logoBottom" src="{% static "fcgt/images/bottomlogo.png" %}" alt="bottom-logo">
             <div class="clearfix"></div></li>
         </ul>
          <div class="clearfix"></div>
         <div class="prizewrap">
-            <p class="prizeSpecial">СПЕЦИАЛЬНЫЙ ПРИЗ</p>
-            <p class="prizeSpecialNarrow">Каждую неделю шедевр, собравший наибольшее количество лайков, будет удостоен специального приза - <br>набор для графики от Faber-Castell!</p>
-            <img src="{% static "fcgt/images/line.jpg" %}" alt="bottom-line">
+            <p class="nomination">ЧЕРНОЕ, И БЕЛОЕ, И СЕРОЕ</p>
+            <img src="{% static "fcgt/images/line-brown.png" %}" alt="bottom-line">
         </div>
     </div>
-
-    <div class="form" >
-        <a name="send"></a>
-        <span>УЧАСТВОВАТЬ ПРОСТО</span>
-    <form action="{% url 'fcgt:add_art' %}" method="POST" enctype="multipart/form-data">
-    <p>{% csrf_token %}</p>
-    <div class="formwrap">
-    <ul class="formlist">
-
-        <li class="formleft">
-        <div id="div_art_host">
-        <label class="control-label" for="{{ form.art_host_name.id_for_label }}">{{ form.art_host_name.label }}</label>
-        {{ form.art_host_name }}
-        {% if form.art_host_name.errors %}
-        <label class="control-label">{{ form.art_host_name.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_art_catergory">
-        <label class="control-label" for="{{ form.art_category.id_for_label }}">{{ form.art_category.label }}</label>
-        {{ form.art_category }}
-        {% if form.art_category.errors %}
-        <label class="control-label">{{ form.art_category.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_art_city">
-        <label class="control-label" for="{{ form.art_city.id_for_label }}">{{ form.art_city.label }}</label>
-        {{ form.art_city }}
-        {% if form.art_city.errors %}
-        <label class="control-label">{{ form.art_city.errors|first }}</label>
-        {% endif %}
-        </div></li>
-
-        <li class="formright">
-        <div id="div_art_mail">
-        <label class="control-label" for="{{ form.art_mail.id_for_label }}">{{ form.art_mail.label }}</label>
-        {{ form.art_mail }}
-        {% if form.art_mail.errors %}
-        <label class="control-label">{{ form.art_mail.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_art_password">
-        <label class="control-label" for="{{ form.art_password.id_for_label }}">{{ form.art_password.label }}</label>
-        {{ form.art_password }}
-        {% if form.art_password.errors %}
-        <label class="control-label">{{ form.art_password.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_docfile">
-        <label id="labelfile" class="control-label" for="{{ form.docfile.id_for_label }}">{{ form.docfile.label }}</label>
-    <div id="sendfilefix" title="Нажмите на меня, для обзора файла"></div>
-        {{ form.docfile }}
-        {% if form.docfile.errors %}
-        <label class="control-label">{{ form.docfile.errors|first }}</label>
-        {% endif %}
-        </div>
-
-        <div id="div_send"><input type="submit" value="Отправить на конкурс >>" /></div>
-        </li>
+    <div class="placesWrap">
+        <ul class="places">
+            <li class="placesList" id="firstPlace">
+                <span>1 МЕСТО</span>
+            </li>
+            <li class="placesList" id="secondPlace">
+                <span>2 МЕСТО</span>
+            </li>
+            <li class="placesList" id="thirdPlace">
+                <span>3 МЕСТО</span>
+            </li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div class="galleryWrap">
+        <ul id="loader">
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/IMG_9617%D0%BB%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD.jpg" data-lightbox="image-1" data-title=""><img id="london" src={% static "fcgt/images/london.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Перминов Алексей Михайлович, Екатеринбург </div>
+         </li>
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/%D1%81%D0%B0%D0%B42.jpg" data-lightbox="image-2" data-title=""><img id="sad" src={% static "fcgt/images/sad.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Покидышев Иван Павлович, Санкт-Петербург</div>
+         </li>
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/image_MPz8tCS.jpeg" data-lightbox="image-3" data-title=""><img id="orkestr" src={% static "fcgt/images/orkestr.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Петрунина Екатерина Александровна, Москва </div>
+         </li>
+        </ul>
+    </div>
 <div class="clearfix"></div>
+
+     <div class="prizi" id="pvsh">
+         <div class="clearfix"></div>
+     <div class="prizewrap">
+            <p class="nomination">ЦВЕТОПРОБЫ: PROFI VS HOBBY</p>
+            <img src="{% static "fcgt/images/line-brown.png" %}" alt="bottom-line">
+     </div>
+           <div class="placesWrap" id="placesWrapShort">
+        <ul class="places" id="placesPVsH">
+            <li class="placesList" >
+                <span>ПРОФЕССИОНАЛЬНЫЙ <br> ХУДОЖНИК</span>
+            </li>
+            <li class="placesList" >
+                <span>ХУДОЖНИК-<br>ЛЮБИТЕЛЬ</span>
+            </li>
+
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div class="galleryWrap" id="shortprize">
+        <ul id="loader2">
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/%D1%80%D0%B5%D0%BF%D0%BA%D0%B8_%D0%B8_%D0%BE%D1%80%D0%B5%D1%85%D0%B821.jpg" data-lightbox="image-4" data-title=""><img id="naturmort" src={% static "fcgt/images/naturmort.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Боровик Евгений Алексеевич, Санкт-Петербург</div>
+         </li>
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/%D0%BF%D1%80%D0%BE%D0%B1%D0%B0-%D0%BF%D0%B5%D1%80%D0%B2%D0%B0%D1%8F-%D0%BB-4.jpg" data-lightbox="image-5" data-title=""><img id="klubok" src={% static "fcgt/images/klubok.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Айгуль Берсеева, Москва</div>
+         </li>
+        </ul>
+    </div>
+     </div>
+<div class="clearfix"></div>
+    <div class="prizi" id="pvsh">
+         <div class="clearfix"></div>
+     <div class="prizewrap">
+            <p class="nomination">СКЕТЧИНГ</p>
+            <img src="{% static "fcgt/images/line-brown.png" %}" alt="bottom-line">
+     </div>
+        <div class="placesWrap">
+        <ul class="places">
+            <li class="placesList" id="firstPlace">
+                <span>1 МЕСТО</span>
+            </li>
+            <li class="placesList" id="secondPlace">
+                <span>2 МЕСТО</span>
+            </li>
+            <li class="placesList" id="thirdPlace">
+                <span>3 МЕСТО</span>
+            </li>
+        </ul>
+        </div>
+        <div class="clearfix"></div>
+            <div class="galleryWrap">
+        <ul id="loader">
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/002_Go04eMU.jpg" data-lightbox="image-6" data-title=""><img id="city" src={% static "fcgt/images/city.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Бодрина Марина Георгиевна, Москва </div>
+         </li>
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/SochalinXSketchEgidaImage-237-2mini3.jpg" data-lightbox="image-7" data-title=""><img id="dacha" src={% static "fcgt/images/dacha.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Сочалин Максим Александрович, Химки</div>
+         </li>
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/30_2000.jpg" data-lightbox="image-8" data-title=""><img id="moleskin" src={% static "fcgt/images/moleskin.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Лобач Анна Юрьевна, Москва </div>
+         </li>
+        </ul>
+    </div>
+<div class="clearfix"></div>
+    </div>
+    <div class="prizi" id="pvsh">
+         <div class="clearfix"></div>
+     <div class="prizewrap">
+            <p class="nomination">КОПИПАСТ</p>
+            <img src="{% static "fcgt/images/line-brown.png" %}" alt="bottom-line">
+     </div>
+        <div class="placesWrap">
+        <ul class="places">
+            <li class="placesList" id="firstPlace">
+                <span>1 МЕСТО</span>
+            </li>
+            <li class="placesList" id="secondPlace">
+                <span>2 МЕСТО</span>
+            </li>
+            <li class="placesList" id="thirdPlace">
+                <span>3 МЕСТО</span>
+            </li>
+        </ul>
+        </div>
+        <div class="clearfix"></div>
+            <div class="galleryWrap">
+        <ul id="loader">
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/fabercastellgottalent1fia.jpg" data-lightbox="image-9" data-title=""><img id="japan" src={% static "fcgt/images/japan.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Фадеева Ирина Анатольевна, Москва </div>
+         </li>
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/LFSMw5dzyfI.jpg" data-lightbox="image-10" data-title=""><img id="russia" src={% static "fcgt/images/russia.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Сарви Игорь Алексеевич, Екатеринбург</div>
+         </li>
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/%D1%84%D0%BE%D1%82%D0%BE_2.JPG" data-lightbox="image-11" data-title=""><img id="bragel" src={% static "fcgt/images/bragel.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Саутина Елена Валентиновна, Новосибирск </div>
+         </li>
+        </ul>
+    </div>
+<div class="clearfix"></div>
+    </div>
+
+    <div class="prizi" id="pvsh">
+         <div class="clearfix"></div>
+     <div class="prizewrap">
+            <p class="nomination">МИНИ-ХУДОЖНИКИ</p>
+            <img src="{% static "fcgt/images/line-brown.png" %}" alt="bottom-line">
+     </div>
+        <div class="placesWrap">
+        <ul class="places">
+            <li class="placesList" id="firstPlace">
+                <span>1 МЕСТО</span>
+            </li>
+            <li class="placesList" id="secondPlace">
+                <span>2 МЕСТО</span>
+            </li>
+            <li class="placesList" id="thirdPlace">
+                <span>3 МЕСТО</span>
+            </li>
+        </ul>
+        </div>
+        <div class="clearfix"></div>
+            <div class="galleryWrap">
+        <ul id="loader">
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/%D0%B2%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B0%D0%B4%D0%B8_%D0%B2%D0%B0%D1%80%D0%B2%D0%B0%D1%80%D0%B0_32.jpg" data-lightbox="image-12" data-title=""><img id="dyno" src={% static "fcgt/images/dyno.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Вассилиади Варвара, Новороссийск</div>
+         </li>
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/img448.jpg" data-lightbox="image-13" data-title=""><img id="dog" src={% static "fcgt/images/dog.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Семенов Михаил Александрович, Биробиджан</div>
+         </li>
+         <li class="galleryList">
+                <a href="http://fabercastellgottalent.com/media/arts/egor.jpg" data-lightbox="image-14" data-title=""><img id="hell" src={% static "fcgt/images/hell.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Гольников Егор Валерьевич, Смоленск</div>
+         </li>
+        </ul>
+    </div>
+<div class="clearfix"></div>
+    </div>
+
+    <div class="prizi" id="pvsh">
+         <div class="clearfix"></div>
+     <div class="prizewrap">
+            <p class="nomination">НАПОМИНАЕМ, ЧТО:</p>
+     </div>
+        <div class="stepsWrapper">
+          <ul class="steps">
+            <li id="step1">
+                <div>
+                    <img id="pros1" src="{% static "fcgt/images/prizeback1.png" %}">
+                    <img id="mvimg1" src="{% static "fcgt/images/1st.png" %}" alt="Step 1">
+                    </div>
+                <span class="stepswrap"><span class="mainword1">1 МЕСТО</span><br><span>
+                Обучение на интенсивных курсах в Британской Высшей Школе Дизайна, или в Bang-Bang Education,
+или онлайн-обучение в школе рисования Вероники Калачевой или интенсивные курсы в Академической Школе Дизайна. Всего разыгрывается 6 призов.
+            </span>
+                            <div class="logo1">
+                    <img src="{% static "fcgt/images/BHS.png" %}">
+                    <img src="{% static "fcgt/images/Bang.png" %}">
+                    <img src="{% static "fcgt/images/Kalacheva.png" %}">
+                    <img src="{% static "fcgt/images/akadem.png" %}">
+                            </div>
+            </span><div class="clearfix"></div></li>
+            <li id="step2"><img id="pros2" src="{% static "fcgt/images/prizeback2.png" %}"><img id="mvimg2" src="{% static "fcgt/images/2st.png" %}" alt="Step 2"><span class="stepswrap"><span class="mainword2">2 МЕСТО</span><br><span>Онлайн-обучение в Bang-Bang Education, или в школе рисования Вероники Калачевой или интенсивные курсы в Академической Школе Дизайна. Всего разыгрывается 4 приза.
+            </span>
+                <div class="logo2">
+
+                    <img src="{% static "fcgt/images/Bang.png" %}">
+                    <img src="{% static "fcgt/images/Kalacheva.png" %}">
+                    <img src="{% static "fcgt/images/akadem.png" %}">
+                </div>
+                <div class="clearfix"></div></li>
+            <li id="step3"><img id="pros3" src="{% static "fcgt/images/prizeback3.png" %}"><img id="mvimg3" src="{% static "fcgt/images/3st.png" %}" alt="Step 3"><span class="stepswrap"><span class="mainword3">3 МЕСТО</span><br><span>Полугодовой запас Faber-Castell.<br>
+Всего разыгрывается 5 призов.
+            <div class="logo3">
+                <img src="{% static "fcgt/images/logo-small.png" %}">
+            </div></span><div class="clearfix"></div></li>
+        </ul>
+    </div>
+    </div>
+     <div class="prizewrap">
+
+            <img src="{% static "fcgt/images/line-brown.png" %}" alt="bottom-line">
+            <p class="nomination">ПРИЗЫ ЖДУТ СВОИХ ГЕРОЕВ!</p>
+            <p class="contactUs">Мы просим победителей связаться с нами по уже знакомому вам адресу<br> contest@faber-castell.com.ru для дальнейших инструкций по получению призов.</p>
+     </div>
+    <ul class="specialList">
+            <li><div><img src="{% static "fcgt/images/logo-midle.png" %}" alt="logo-midle"></div></li>
+            <li id="special">
+                <span class="specialText">С УВАЖЕНИЕМ,</span><br  ><span class="specialText">КОМАНДА FABER-CASTELL</span>
+            </li>
     </ul>
+    <div class="clearfix"></div>
 
-</div>
-
-
-    </form>
-    </div>
-    </div>
     <footer>
         <div class="footerwrap">
             <ul class="footerlist">
@@ -241,6 +398,8 @@
                     <div class="number"><span>+7 (495) 225 96 34</span></div>
                     <div class="email"><span>contest@faber-castell.com.ru</span></div>
                 </li>
+            </ul>
+        </div>
     </footer>
 
 </body>

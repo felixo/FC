@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social.apps.django_app.default',
+    'social_django',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -118,17 +118,17 @@ TEMPLATE_CONTEXT_PROCESSORS = (
    'django.core.context_processors.static',
    'django.core.context_processors.tz',
    'django.contrib.messages.context_processors.messages',
-   'social.apps.django_app.context_processors.backends',
-   'social.apps.django_app.context_processors.login_redirect',
+   'social_core.apps.django_app.context_processors.backends',
+   'social_core.apps.django_app.context_processors.login_redirect',
 
 )
 
 AUTHENTICATION_BACKENDS = (
-   'social.backends.facebook.FacebookOAuth2',
-   'social.backends.google.GoogleOAuth2',
-   'social.backends.twitter.TwitterOAuth',
-   'social.backends.vk.VKOAuth2',
-   'social.backends.odnoklassniki.OdnoklassnikiOAuth2',
+   'social_core.backends.facebook.FacebookOAuth2',
+   'social_core.backends.google.GoogleOAuth2',
+   'social_core.backends.twitter.TwitterOAuth',
+   'social_core.backends.vk.VKOAuth2',
+   'social_core.backends.odnoklassniki.OdnoklassnikiOAuth2',
    'django.contrib.auth.backends.ModelBackend',
 
 )
