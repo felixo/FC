@@ -118,6 +118,7 @@ nav li {
 .logo {
     color: #f6f7f7;
 	font: 49px 'Hitch Hike';
+	margin-left: 45px;
 
 }
 
@@ -149,7 +150,7 @@ nav li {
 
 nav.menu {
     width: 85%;
-    margin-left: auto;
+    margin-left: 123px;
     margin-right: auto;
 }
 
@@ -337,6 +338,7 @@ nav.menu {
 .form span {
     font: 30px 'Basil';
     color: #e6ddbd;
+    margin-left: 9px;
 }
 
 .footerwrap {
@@ -376,13 +378,14 @@ nav.menu {
 }
 
 .footerleft {
-    margin-left: 450px;
+    margin-left: 633px;
     text-align: right;
 }
 
 .footerleftmain {
     margin-top: 22px;
-    margin-left: 140px;
+    margin-left: 0px;
+    width: 320px;
 }
 
 label {
@@ -434,7 +437,7 @@ input[type="submit"] {
 }
 
 .formwrap {
-    margin-left: -138px;
+    margin-left: -175px;
     margin-top: 54px;
 }
 
@@ -465,7 +468,7 @@ input[type="submit"] {
 }
 
 .shareDiv {
-    margin-right: 256px;
+    margin-right: 0px;
     margin-top: 10px;
 }
 
@@ -478,3 +481,28 @@ input[type="submit"] {
     margin: 1px;
 }
 
+@-moz-document url-prefix() {
+    #swoosh2 {
+    margin-left: 319px;
+    margin-top: 3px;
+}
+
+    input[type="text"] {
+	background-color: #e6ddbd;
+	border: 1px inset #e7e7e7;
+	height: 27px;
+	width: 245px;
+	color: #5c6759;
+	padding: 0 10px;
+    -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 2px; /* закругление углов для всех, кто понимает */
+    margin: 1px -1px;
+}
+
+    select {
+        margin: 0px -1px;
+    }
+
+}

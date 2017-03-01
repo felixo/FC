@@ -82,13 +82,14 @@ nav li {
     text-align: right;
     height: 58px;
     background-color: #002d28;
-        font: 12px 'Fedra Serif B Pro';
+    font: 12px 'Fedra Serif B Pro';
     color: #959166;
 }
 
 .logo {
     color: #f6f7f7;
 	font: 49px 'Hitch Hike';
+	margin-left: 45px;
 
 }
 
@@ -120,7 +121,7 @@ nav li {
 
 nav.menu {
     width: 85%;
-    margin-left: auto;
+    margin-left: 123px;
     margin-right: auto;
 }
 
@@ -184,13 +185,14 @@ nav.menu {
 }
 
 .footerleft {
-    margin-left: 450px;
+    margin-left: 633px;
     text-align: right;
 }
 
 .footerleftmain {
     margin-top: 22px;
-    margin-left: 140px;
+    margin-left: 0px;
+    width: 320px;
 }
 
 
@@ -270,6 +272,8 @@ nav.menu {
     font: 15px 'PT Sans Narrow';
     color: #002d28;
     text-align: right;
+    width: 296px;
+    height: 23px;
 }
 
 .shareImg {
@@ -277,7 +281,7 @@ nav.menu {
 }
 
 .shareDiv {
-    margin-right: 256px;
+    margin-right: 0px;
 
 }
 
@@ -288,4 +292,19 @@ nav.menu {
 
 .shareImg img{
     margin: 1px;
+}
+
+#more {
+    color: #002d28;
+
+
+	font: 35px 'Hitch Hike';
+	margin-left: 0px;
+	width: 1000px;
+	text-align: center;
+}
+
+#more a {
+    text-decoration: none;
+    color: #002d28;
 }
