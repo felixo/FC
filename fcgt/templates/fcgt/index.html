@@ -2,6 +2,7 @@
 <html lang="en">
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'fcgt/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/lightbox.css' %}" />
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -19,7 +20,7 @@
 
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="{% static "fcgt/script.js" %}"></script>
-
+    <script src="{% static "fcgt/lightbox.js" %}"></script>
 
     <meta property="og:url"           content="http://fabercastellgottalent.com/" />
 	<meta property="og:type"          content="website" />
@@ -168,15 +169,15 @@
     <div class="galleryWrap">
         <ul id="loader">
          <li class="galleryList">
-                <a href="/"><img id="london" src={% static "fcgt/images/london.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/IMG_9617%D0%BB%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD.jpg" data-lightbox="image-1" data-title=""><img id="london" src={% static "fcgt/images/london.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Перминов Алексей Михайлович, Екатеринбург </div>
          </li>
          <li class="galleryList">
-                <a href="/"><img id="sad" src={% static "fcgt/images/sad.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/%D1%81%D0%B0%D0%B42.jpg" data-lightbox="image-2" data-title=""><img id="sad" src={% static "fcgt/images/sad.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Покидышев Иван Павлович, Санкт-Петербург</div>
          </li>
          <li class="galleryList">
-                <a href="/"><img id="orkestr" src={% static "fcgt/images/orkestr.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/image_MPz8tCS.jpeg" data-lightbox="image-3" data-title=""><img id="orkestr" src={% static "fcgt/images/orkestr.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Петрунина Екатерина Александровна, Москва </div>
          </li>
         </ul>
@@ -204,11 +205,11 @@
     <div class="galleryWrap" id="shortprize">
         <ul id="loader2">
          <li class="galleryList">
-                <a href="/"><img id="naturmort" src={% static "fcgt/images/naturmort.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/%D1%80%D0%B5%D0%BF%D0%BA%D0%B8_%D0%B8_%D0%BE%D1%80%D0%B5%D1%85%D0%B821.jpg" data-lightbox="image-4" data-title=""><img id="naturmort" src={% static "fcgt/images/naturmort.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Боровик Евгений Алексеевич, Санкт-Петербург</div>
          </li>
          <li class="galleryList">
-                <a href="/"><img id="klubok" src={% static "fcgt/images/klubok.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/%D0%BF%D1%80%D0%BE%D0%B1%D0%B0-%D0%BF%D0%B5%D1%80%D0%B2%D0%B0%D1%8F-%D0%BB-4.jpg" data-lightbox="image-5" data-title=""><img id="klubok" src={% static "fcgt/images/klubok.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Айгуль Берсеева, Москва</div>
          </li>
         </ul>
@@ -238,15 +239,15 @@
             <div class="galleryWrap">
         <ul id="loader">
          <li class="galleryList">
-                <a href="/"><img id="city" src={% static "fcgt/images/city.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/002_Go04eMU.jpg" data-lightbox="image-6" data-title=""><img id="city" src={% static "fcgt/images/city.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Бодрина Марина Георгиевна, Москва </div>
          </li>
          <li class="galleryList">
-                <a href="/"><img id="dacha" src={% static "fcgt/images/dacha.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/SochalinXSketchEgidaImage-237-2mini3.jpg" data-lightbox="image-7" data-title=""><img id="dacha" src={% static "fcgt/images/dacha.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Сочалин Максим Александрович, Химки</div>
          </li>
          <li class="galleryList">
-                <a href="/"><img id="moleskin" src={% static "fcgt/images/moleskin.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/30_2000.jpg" data-lightbox="image-8" data-title=""><img id="moleskin" src={% static "fcgt/images/moleskin.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Лобач Анна Юрьевна, Москва </div>
          </li>
         </ul>
@@ -276,15 +277,15 @@
             <div class="galleryWrap">
         <ul id="loader">
          <li class="galleryList">
-                <a href="/"><img id="japan" src={% static "fcgt/images/japan.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/fabercastellgottalent1fia.jpg" data-lightbox="image-9" data-title=""><img id="japan" src={% static "fcgt/images/japan.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Фадеева Ирина Анатольевна, Москва </div>
          </li>
          <li class="galleryList">
-                <a href="/"><img id="russia" src={% static "fcgt/images/russia.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/LFSMw5dzyfI.jpg" data-lightbox="image-10" data-title=""><img id="russia" src={% static "fcgt/images/russia.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Сарви Игорь Алексеевич, Екатеринбург</div>
          </li>
          <li class="galleryList">
-                <a href="/"><img id="bragel" src={% static "fcgt/images/bragel.jpg" %} alt="Reducto!" class="gallery"></a>
+                <a href="http://fabercastellgottalent.com/media/arts/%D1%84%D0%BE%D1%82%D0%BE_2.JPG" data-lightbox="image-11" data-title=""><img id="bragel" src={% static "fcgt/images/bragel.jpg" %} alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">Саутина Елена Валентиновна, Новосибирск </div>
          </li>
         </ul>
@@ -315,16 +316,16 @@
             <div class="galleryWrap">
         <ul id="loader">
          <li class="galleryList">
-                <a href="/"><img id="dyno" src={% static "fcgt/images/dyno.jpg" %} alt="Reducto!" class="gallery"></a>
-                <div class="galleryText">Фадеева Ирина Анатольевна, Москва </div>
+                <a href="http://fabercastellgottalent.com/media/arts/%D0%B2%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B0%D0%B4%D0%B8_%D0%B2%D0%B0%D1%80%D0%B2%D0%B0%D1%80%D0%B0_32.jpg" data-lightbox="image-12" data-title=""><img id="dyno" src={% static "fcgt/images/dyno.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Вассилиади Варвара, Новороссийск</div>
          </li>
          <li class="galleryList">
-                <a href="/"><img id="dog" src={% static "fcgt/images/dog.jpg" %} alt="Reducto!" class="gallery"></a>
-                <div class="galleryText">Сарви Игорь Алексеевич, Екатеринбург</div>
+                <a href="http://fabercastellgottalent.com/media/arts/img448.jpg" data-lightbox="image-13" data-title=""><img id="dog" src={% static "fcgt/images/dog.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Семенов Михаил Александрович, Биробиджан</div>
          </li>
          <li class="galleryList">
-                <a href="/"><img id="hell" src={% static "fcgt/images/hell.jpg" %} alt="Reducto!" class="gallery"></a>
-                <div class="galleryText">Саутина Елена Валентиновна, Новосибирск </div>
+                <a href="http://fabercastellgottalent.com/media/arts/egor.jpg" data-lightbox="image-14" data-title=""><img id="hell" src={% static "fcgt/images/hell.jpg" %} alt="Reducto!" class="gallery"></a>
+                <div class="galleryText">Гольников Егор Валерьевич, Смоленск</div>
          </li>
         </ul>
     </div>
