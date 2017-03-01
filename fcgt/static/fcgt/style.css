@@ -510,7 +510,7 @@ input[type="submit"] {
 }
 
 .galleryWrap {
-    width: 1000px;
+    width: 1032px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -538,6 +538,7 @@ input[type="submit"] {
     margin-left: auto;
     margin-right: auto;
     width: 1294px;
+    margin-top: -48px;
 }
 
 .placesList{
@@ -560,6 +561,23 @@ input[type="submit"] {
 
 #thirdPlace {
     color: #f78f2f;
+}
+
+#pvsh {
+    background: none;
+    margin-top: 50px;
+}
+
+#shortprize {
+    width: 712px;
+}
+
+#placesWrapShort{
+    width: 918px;
+}
+
+#placesPVsH li{
+    margin-left: 153px;
 }
 
 @-moz-document url-prefix() {
