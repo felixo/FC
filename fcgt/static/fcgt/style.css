@@ -24,6 +24,7 @@ body {
 	font: 20px Basil, sans-serif;
 	background-color: white;
 	margin: 0;
+	margin-top: -10px;
     height: 100%;
     width: 100%;
 }
@@ -74,7 +75,7 @@ button {
 }
 
 header {
-
+    margin: 0;
 }
 
 a {
@@ -177,7 +178,7 @@ nav.menu {
 }
 
 .stepsWrapper {
-    background-image: url('images/stepsback.png');
+
     background-position: 178px 140px;
     background-repeat: no-repeat;
 }
@@ -507,6 +508,7 @@ input[type="submit"] {
 .nomination {
     margin-top: 0px;
     margin-bottom: -25px;
+    font: 30px 'Basil';
 }
 
 .galleryWrap {
@@ -580,9 +582,152 @@ input[type="submit"] {
     margin-left: 153px;
 }
 
+.stepsWrapper {
+    margin-top: 110px;
+    background-position: 178px 140px;
+    background-repeat: no-repeat;
+}
+
+.stepsWrapper p {
+    text-align: center;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font: 30px 'Basil';
+    color: #002d28;
+}
+
+
+
+.steps {
+    list-style-type: none;
+    list-style-position: outside;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.steps li {
+
+    font: 18px 'PT Sans Narrow';
+    text-align: left;
+    color: black;
+    margin: 34px 0px;
+}
+
+.steps img {
+    /*margin: left;*/
+    float: left;
+}
+
+.mainword {
+    font: 46px 'Hitch Hike';
+    color: #002d28;
+}
+
+.web {
+    color: #002d28;
+    font: 24px 'Basil';
+}
+
+.stepswrap {
+    vertical-align: 40px;
+    margin-left: 193px;
+    display: block;
+}
+
+#mvimg1 {
+    margin-top: 3px;
+    margin-left: -215px;
+}
+
+#mvimg2 {
+    margin-top: -13px;
+    margin-left: -205px;
+}
+
+#mvimg3 {
+    margin-top: -25px;
+    margin-left: -211px;
+}
+
+#pros1{
+    margin-top: -59px;
+}
+
+#pros2{
+    margin-top: -51px;
+}
+
+#pros3{
+    margin-top: -63px;
+}
+
+.mainword1 {
+    font: 24px 'Basil';
+    color: #f1b827;
+}
+
+.mainword2 {
+    font: 24px 'Basil';
+    color: #848080;
+}
+
+.mainword3 {
+    font: 24px 'Basil';
+    color: #f78f2f;
+}
+
+.prizewrap {
+    text-align: center;
+}
+
+.logo1 img {
+    margin-left: -11px;
+}
+
+.logo2 img {
+    margin-left: -10px;
+}
+
+.logo3 img {
+    margin-left: -6px;
+}
+
+.contactUs{
+    margin-top: 50px;
+    font: 18px 'PT Sans Narrow';
+}
+
+.specialList{
+    list-style-type: none;
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.specialList li{
+    float: left;
+}
+
+.specialText{
+    font: 14px 'Basil';
+}
+
+#special{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+#p1{
+    font: 40px 'Hitch Hike';
+}
+
 @-moz-document url-prefix() {
     #swoosh2 {
-    margin-left: 319px;
+    margin-left: 593px;
     margin-top: 3px;
 }
 
