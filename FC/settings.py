@@ -25,7 +25,17 @@ SECRET_KEY = '&2@4=m)edh8^-kj^bgb)*=y!5k%uqfhmko#khxo0ih4rbx$v+u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	'www.fabercastellgottalent.ru',
+	'www.fabercastellgottalent.com',
+	'fabercastellgottalent.ru',
+	'fabercastellgottalent.com',
+	'xn--80aaaacyba0arnad3a8asrfaew6j6b.xn--p1ai/',
+	u'xn--80aaaacyba0arnad3a8asrfaew6j6b.xn--p1ai',
+	'localhost',
+	'138.201.116.120',
+	'127.0.0.1'
+]
 
 
 # Application definition

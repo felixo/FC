@@ -146,7 +146,7 @@ nav li {
     margin-top: 400px;
     width: 1290px;
     margin-left: 125px;
-
+    
 }
 
 nav.menu {
@@ -491,11 +491,6 @@ input[type="submit"] {
     margin: 1px;
 }
 
-<<<<<<< HEAD
-@-moz-document url-prefix() {
-    #swoosh2 {
-    margin-left: 319px;
-=======
 .anounceWrap {
         margin-left: auto;
     margin-right: auto;
@@ -733,7 +728,6 @@ input[type="submit"] {
 @-moz-document url-prefix() {
     #swoosh2 {
     margin-left: 593px;
->>>>>>> e8d700b8927b1036c51caec4580874b829622157
     margin-top: 3px;
 }
 
@@ -755,9 +749,759 @@ input[type="submit"] {
         margin: 0px -1px;
     }
 
-<<<<<<< HEAD
-}
-=======
 
 }
->>>>>>> e8d700b8927b1036c51caec4580874b829622157
+@font-face {
+font-family: 'Hitch Hike';
+src: url('fonts/Hitch-hike.otf') format("opentype");
+}
+
+@font-face {
+font-family: 'Fedra Serif B Pro';
+src: url("fonts/FedraSerifPro B Book.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'Basil';
+src: url("fonts/Karandash - Basil-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'PT Sans Narrow';
+src: url("fonts/PTN57F_0.ttf");
+}
+
+
+body {
+	color: #001e1b;
+	font: 20px Basil, sans-serif;
+	background-color: white;
+	margin: 0;
+	margin-top: -10px;
+    height: 100%;
+    width: 100%;
+}
+
+input[type="text"] {
+	background-color: #e6ddbd;
+	border: 1px inset #e7e7e7;
+	height: 27px;
+	width: 245px;
+	color: #5c6759;
+	padding: 0 10px;
+    -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 2px; /* закругление углов для всех, кто понимает */
+}
+
+
+select {
+    background-color: #e6ddbd;
+	border: 1px solid #e7e7e7;
+	height: 27px;
+	width: 267px;
+	color: #5c6759;
+	padding: 0 10px;
+	 -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 2px; /* закругление углов для всех, кто понимает */
+}
+
+button {
+	color: #5c6759;
+	background-color: #e6ddbd;
+	border: none;
+	height: 32px;
+	font-family: 'Basil', sans-serif;
+}
+
+#wrapper {
+	max-width: 1294px;
+	margin: auto;
+	height: 100%;
+    width: 1294px;
+    background-image: url('images/banner-winner.jpg');
+    background-position: 0px -180px;
+    background-repeat: no-repeat;
+}
+
+header {
+    margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	list-style-position: inside;
+	font: 19px 'Basil';
+	padding: 10px;
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.top-menu li.active {
+	background: #29c5e6;
+	color: #e6ddbd;
+}
+
+.top-menu a {
+	color: #e6ddbd;
+}
+
+#share {
+    text-align: right;
+    height: 58px;
+    background: linear-gradient(to top, #001e1b, #002d28);
+    font: 12px 'Fedra Serif B Pro';
+    color: #959166;
+}
+
+.logo {
+    color: #f6f7f7;
+	font: 49px 'Hitch Hike';
+	margin-left: 45px;
+
+}
+
+.logo a img {
+    margin-top: -45px;
+}
+
+.logo span {
+    vertical-align: 30px;
+    padding: 20px 10px;
+}
+
+.title {
+  height: 204px;
+  background: rgba(23, 23, 23, 0.5);
+}
+
+#auchtung {
+    position: relative;
+    left: 165px;
+}
+
+.list {
+    margin-top: 400px;
+    width: 1290px;
+    margin-left: 125px;
+    
+}
+
+nav.menu {
+    width: 85%;
+    margin-left: 123px;
+    margin-right: auto;
+}
+
+.gallerylink {
+  margin-top: -70px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.gallerylink a {
+    color: #022d28;
+}
+
+.gallerylink li img {
+  display: block;
+}
+
+.gallerylink li{
+  display: inline-block;
+  margin: 10px;
+  font: 26px 'Hitch Hike';
+  vertical-align: top;
+  text-align: center;
+}
+
+.stepsWrapper {
+
+    background-position: 178px 140px;
+    background-repeat: no-repeat;
+}
+
+.stepsWrapper p {
+    text-align: center;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font: 49px 'Hitch Hike';
+    color: #022d28;
+    margin-bottom: -18px;
+}
+
+#p2 {
+    font: 24px 'Basil';
+    color: #022d28;
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+    }
+
+.steps {
+    list-style-type: none;
+    list-style-position: outside;
+    width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps li {
+
+    font: 24px 'PT Sans Narrow';
+    /*text-align: center;*/
+    color: #e6ddbd;
+    margin: 34px 0px;
+}
+
+.steps img {
+    /*margin: left;*/
+    float: left;
+}
+
+.mainword {
+    font: 46px 'Hitch Hike';
+    color: white;
+}
+
+.web {
+    color: #ffffff;
+    font: 24px 'Basil';
+}
+
+.stepswrap {
+    vertical-align: 40px;
+    margin-left: 193px;
+    display: block;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#mvimg1 {
+    margin-top: -25px;
+}
+
+#mvimg2 {
+    margin-top: -13px;
+}
+
+#swoosh2 {
+    margin-left: 602px;
+
+}
+
+#swoosh3 {
+    margin-left: 394px;
+}
+
+#mvimg4{
+    margin-left: 322px;
+}
+
+#prizikon {
+    font: 24px 'Basil';
+    color: #002d28;
+    margin: 20px;
+}
+
+.prizi {
+    width: 1294px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url('images/placeback.png');
+    background-position: 214px 16px;
+    background-repeat: no-repeat;
+    margin-top: -25px;
+
+}
+
+.prizeList {
+
+    display: block;
+    list-style-type: none;
+    margin-left: 133px;
+    margin-top: 50px;
+}
+
+.prizeList li {
+    float: left;
+    margin-left: 150px;
+    margin-right: auto;
+}
+
+.prizeList li img{
+    display: block;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.prizelistNarrow {
+    font: 15px 'PT Sans Narrow';
+    /*text-align: center;*/
+    color: #a2986a;
+    margin: 0px 31px;
+}
+
+.place {
+    font: 24px 'Basil';
+    color: white;
+
+}
+
+.prizelistNarrowit {
+    font: 15px 'PT Sans Narrow';
+    /*text-align: center;*/
+    color: #a2986a;
+    font-style: italic;
+    margin: 0px 31px;
+}
+
+.prizeSpecial {
+    font: 20px 'Basil';
+    color: white;
+}
+
+.prizeSpecialNarrow {
+    font: 15px 'PT Sans Narrow';
+    color: #a2986a;
+    margin-top: -18px;
+}
+
+.prizewrap img {
+    margin: 47px -24px;
+}
+
+.form {
+    width: 31%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form span {
+    font: 30px 'Basil';
+    color: #e6ddbd;
+    margin-left: 9px;
+}
+
+.footerwrap {
+    max-width: 1294px;
+	margin: auto;
+	height: 303px;
+    width: 1294px;
+    /*background-position: 0px -180px;*/
+    background-repeat: no-repeat;
+    background-image: url('images/footerback.jpg');
+}
+
+.footerlist li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.footerright {
+
+    margin: -7px 0px;
+}
+
+
+.footerright span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.number span{
+    font: 28px 'Basil';
+    color: #051e05;
+}
+
+.email span {
+    font: 16px 'PT Sans Narrow';
+    color: #051e05;
+}
+
+.footerleft {
+    margin-left: 633px;
+    text-align: right;
+}
+
+.footerleftmain {
+    margin-top: 22px;
+    margin-left: 0px;
+    width: 320px;
+}
+
+label {
+    font: 15px 'PT Sans Narrow';
+    color: #a2986a;
+    margin-right: 15px;
+}
+
+.formlist {
+    width: 750px;
+}
+
+.formlist li {
+    list-style-type: none;
+    float: left;
+}
+
+#sendfilefix {
+
+      overflow:hidden;
+      width:130px;
+      height:27px;
+      cursor:pointer;
+      background: url('images/choose.png') no-repeat;
+      display: inline-table;
+ }
+
+input[type="file"] {
+      opacity:0;
+      filter:alpha(opacity:0);
+      font-size:0px;
+      cursor:pointer;
+      padding:0px;
+      border:none;
+      margin-left:-130px;
+      width: 130px;
+      height: 30px;
+      vertical-align: 26px;
+}
+
+input[type="submit"] {
+    color: #e6ddbd;
+	background-color: #002d28;
+	border: none;
+	height: 32px;
+	font: 26px 'Hitch Hike';
+	margin-left: 133px;
+	margin-top: 18px;
+}
+
+.formwrap {
+    margin-left: -175px;
+    margin-top: 54px;
+}
+
+#div_art_city {
+    margin-left: -4px;
+}
+
+#div_art_catergory {
+    margin-left: -35px;
+    margin-right: 83px;
+}
+
+#id_art_mail {
+    margin-left: 5px;
+}
+
+#sendfilefix {
+    margin-left: 20px;
+    vertical-align: 0px;
+}
+
+#labelfile {
+    vertical-align: 8px;
+}
+
+.shareImg {
+    display: inline;
+}
+
+.shareDiv {
+    margin-right: 0px;
+    margin-top: 10px;
+}
+
+.shareImg {
+    vertical-align: -6px;
+    margin: 7px;
+}
+
+.shareImg img{
+    margin: 1px;
+}
+
+.anounceWrap {
+        margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.anounceWrap span{
+    font: 18px 'PT Sans Narrow';
+    color: #002d28;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.nomination {
+    margin-top: 0px;
+    margin-bottom: -25px;
+    font: 30px 'Basil';
+}
+
+.galleryWrap {
+    width: 1032px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galleryText {
+    font: 15px 'PT Sans Narrow';
+    color: #002d28;
+    text-align: right;
+    width: 296px;
+    height: 23px;
+}
+
+.galleryList {
+    list-style-type: none;
+    float: left;
+    margin: 8px 12px;
+}
+
+.galleryList a img {
+    width: 296px;
+    height: 233px;
+}
+
+.placesWrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1294px;
+    margin-top: -48px;
+}
+
+.placesList{
+    list-style-type: none;
+    float: left;
+    margin-left: 250px;
+}
+
+.placesList span{
+    font: 18px 'Basil';
+}
+
+#firstPlace {
+    color: #f1b827;
+}
+
+#secondPlace {
+    color: #848080;
+}
+
+#thirdPlace {
+    color: #f78f2f;
+}
+
+#pvsh {
+    background: none;
+    margin-top: 50px;
+}
+
+#shortprize {
+    width: 712px;
+}
+
+#placesWrapShort{
+    width: 918px;
+}
+
+#placesPVsH li{
+    margin-left: 153px;
+}
+
+.stepsWrapper {
+    margin-top: 110px;
+    background-position: 178px 140px;
+    background-repeat: no-repeat;
+}
+
+.stepsWrapper p {
+    text-align: center;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font: 30px 'Basil';
+    color: #002d28;
+}
+
+
+
+.steps {
+    list-style-type: none;
+    list-style-position: outside;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.steps li {
+
+    font: 18px 'PT Sans Narrow';
+    text-align: left;
+    color: black;
+    margin: 34px 0px;
+}
+
+.steps img {
+    /*margin: left;*/
+    float: left;
+}
+
+.mainword {
+    font: 46px 'Hitch Hike';
+    color: #002d28;
+}
+
+.web {
+    color: #002d28;
+    font: 24px 'Basil';
+}
+
+.stepswrap {
+    vertical-align: 40px;
+    margin-left: 193px;
+    display: block;
+}
+
+#mvimg1 {
+    margin-top: 3px;
+    margin-left: -215px;
+}
+
+#mvimg2 {
+    margin-top: -13px;
+    margin-left: -205px;
+}
+
+#mvimg3 {
+    margin-top: -25px;
+    margin-left: -211px;
+}
+
+#pros1{
+    margin-top: -59px;
+}
+
+#pros2{
+    margin-top: -51px;
+}
+
+#pros3{
+    margin-top: -63px;
+}
+
+.mainword1 {
+    font: 24px 'Basil';
+    color: #f1b827;
+}
+
+.mainword2 {
+    font: 24px 'Basil';
+    color: #848080;
+}
+
+.mainword3 {
+    font: 24px 'Basil';
+    color: #f78f2f;
+}
+
+.prizewrap {
+    text-align: center;
+}
+
+.logo1 img {
+    margin-left: -11px;
+}
+
+.logo2 img {
+    margin-left: -10px;
+}
+
+.logo3 img {
+    margin-left: -6px;
+}
+
+.contactUs{
+    margin-top: 50px;
+    font: 18px 'PT Sans Narrow';
+}
+
+.specialList{
+    list-style-type: none;
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.specialList li{
+    float: left;
+}
+
+.specialText{
+    font: 14px 'Basil';
+}
+
+#special{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+#p1{
+    font: 40px 'Hitch Hike';
+}
+
+@-moz-document url-prefix() {
+    #swoosh2 {
+    margin-left: 593px;
+    margin-top: 3px;
+}
+
+    input[type="text"] {
+	background-color: #e6ddbd;
+	border: 1px inset #e7e7e7;
+	height: 27px;
+	width: 245px;
+	color: #5c6759;
+	padding: 0 10px;
+    -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 2px; /* закругление углов для всех, кто понимает */
+    margin: 1px -1px;
+}
+
+    select {
+        margin: 0px -1px;
+    }
+
+
+}
+
