@@ -804,3 +804,99 @@ input[type="submit"] {
 .gallerylink li a:hover {
     text-decoration: underline;
 }
+
+h1 {
+    font: 43px 'Walley';
+    color: white;
+}
+
+h2 {
+    font: 33px 'Walley';
+    color: white;
+    text-transform: uppercase;
+}
+
+.header_wrap {
+    width: 1290px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.time_of_contest {
+    color: #34b379;
+    font: 24px 'Walley';
+}
+
+#pens {
+    background-image: url('images/pens.png');
+    height: 786px;
+    background-repeat: no-repeat;
+    background-position: 288px -5px;
+}
+
+.steps_header {
+    color: white;
+    font: 33px 'Walley';
+    text-transform: uppercase;
+}
+
+.steps_regular {
+    color: white;
+    font: 26px 'Walley';
+}
+
+.steps_green {
+    font: 32px 'Walley';
+    color: #34b379;
+}
+
+.steps_special {
+    font: 32px 'Walley';
+    color: white;
+}
+
+.inner_step_list li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#stepList{
+    width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 77px;
+    padding: 0;
+    list-style: none;
+}
+
+#step_list {
+    width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0;
+    list-style: none;
+}
+
+.step_list_li{
+    margin-bottom: 50px;
+}
+
+.inner_step_list {
+    padding: 0;
+}
+
+.number {
+    margin-right: 50px;
+}
+
+.swoosh_fix {
+    margin-top: -30px;
+    margin-left: 133px;
+}
+
+.smallheader {
+    font: 22px 'Walley';
+    color: white;
+}
