@@ -18,6 +18,11 @@ font-family: 'PT Sans Narrow';
 src: url("fonts/PTN57F_0.ttf");
 }
 
+@font-face {
+    font-family: 'Walley';
+    src: url("fonts/Walleye.otf");
+}
+
 
 body {
 	color: #001e1b;
@@ -65,13 +70,14 @@ button {
 }
 
 #wrapper {
-	max-width: 1294px;
+	max-width: 1290px;
 	margin: auto;
 	height: 100%;
-    width: 1294px;
+    width: 1290px;
     background-image: url('images/banner-winner.jpg');
-    background-position: 0px -180px;
+    background-position: 0px 80px;
     background-repeat: no-repeat;
+    background-color: #001e1b;
 }
 
 header {
@@ -94,6 +100,8 @@ nav li {
 }
 
 .top-menu li {
+    font: 14px 'Walley';
+    color: #d4d8d7;
 	display: inline-block;
 	padding: 10px 30px;
 	margin: 0;
@@ -101,26 +109,35 @@ nav li {
 
 .top-menu li.active {
 	background: #29c5e6;
-	color: #e6ddbd;
+	color: #d4d8d7;
 }
 
 .top-menu a {
-	color: #e6ddbd;
+	color: #d4d8d7;
+}
+
+.top-menu a:hover{
+    text-decoration: underline;
 }
 
 #share {
     text-align: right;
-    height: 58px;
+    height: 93px;
     background: linear-gradient(to top, #001e1b, #002d28);
-    font: 12px 'Fedra Serif B Pro';
-    color: #959166;
+    font: 14px 'Walley';
+    color: #d4d8d7;
 }
 
 .logo {
-    color: #f6f7f7;
-	font: 49px 'Hitch Hike';
-	margin-left: 45px;
+    width: 202px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -474px;
 
+}
+
+#logo_link:hover {
+    text-decoration: underline;
 }
 
 .logo a img {
@@ -133,8 +150,7 @@ nav li {
 }
 
 .title {
-  height: 204px;
-  background: rgba(23, 23, 23, 0.5);
+
 }
 
 #auchtung {
@@ -143,26 +159,29 @@ nav li {
 }
 
 .list {
-    margin-top: 400px;
+    margin-top: 120px;
     width: 1290px;
-    margin-left: 125px;
-    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 nav.menu {
-    width: 85%;
-    margin-left: 123px;
-    margin-right: auto;
+    font: 16px 'Walley';
+    color: #d4d8d7;
+    margin-top: -74px;
 }
 
 .gallerylink {
-  margin-top: -70px;
+  margin-top: -20px;
   list-style-type: none;
   padding: 0;
 }
 
 .gallerylink a {
-    color: #022d28;
+    color: white;
+    font: 18px 'Walley';
+    line-height: 0.2em;
 }
 
 .gallerylink li img {
@@ -171,8 +190,7 @@ nav.menu {
 
 .gallerylink li{
   display: inline-block;
-  margin: 10px;
-  font: 26px 'Hitch Hike';
+  margin-left: 50px;
   vertical-align: top;
   text-align: center;
 }
@@ -181,6 +199,7 @@ nav.menu {
 
     background-position: 178px 140px;
     background-repeat: no-repeat;
+    background-color: #001e1b;
 }
 
 .stepsWrapper p {
@@ -478,8 +497,9 @@ input[type="submit"] {
 }
 
 .shareDiv {
-    margin-right: 0px;
+    margin-right: 154px;
     margin-top: 10px;
+    padding: 10px;
 }
 
 .shareImg {
@@ -750,4 +770,37 @@ input[type="submit"] {
     }
 
 
+}
+
+#circle_wrap {
+    margin-top: -57px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 657px;
+}
+
+#nav_wrap {
+    width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#menu_special {
+    margin-right: 500px;
+}
+
+.use {
+    width: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 355px;
+}
+
+.img_fix {
+    padding-left: 13px;
+}
+
+.gallerylink li a:hover {
+    text-decoration: underline;
 }

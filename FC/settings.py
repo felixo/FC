@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
 	'fabercastellgottalent.ru',
 	'fabercastellgottalent.com',
 	'xn--80aaaacyba0arnad3a8asrfaew6j6b.xn--p1ai/',
-	u'xn--80aaaacyba0arnad3a8asrfaew6j6b.xn--p1ai',
+	'xn--80aaaacyba0arnad3a8asrfaew6j6b.xn--p1ai',
 	'localhost',
 	'138.201.116.120',
 	'127.0.0.1'
