@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&2@4=m)edh8^-kj^bgb)*=y!5k%uqfhmko#khxo0ih4rbx$v+u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
 	'www.fabercastellgottalent.ru',

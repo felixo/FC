@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from models import Gallery
+from models import Gallery2
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
@@ -9,7 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class ArtForm(forms.ModelForm):
     class Meta:
-        model = Gallery
+        model = Gallery2
         fields = ('art_host_name', 'art_city', 'art_mail',
                   'art_category', 'docfile', 'art_password')
         labels = {

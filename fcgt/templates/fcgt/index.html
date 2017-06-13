@@ -9,7 +9,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>ACHTUNG! Faber-Castell ищет таланты!</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
-    <link rel="shortcut icon" href="{% static "fcgt/images/favicon-FC.jpg" %}" type="image/jpg">
+    <link rel="shortcut icon" href="{% static 'fcgt/images/favicon-FC.jpg' %}" type="image/jpg">
 
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,8 +19,8 @@
 
 
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="{% static "fcgt/script.js" %}"></script>
-    <script src="{% static "fcgt/lightbox.js" %}"></script>
+    <script src="{% static 'fcgt/script.js' %}"></script>
+    <script src="{% static 'fcgt/lightbox.js' %}"></script>
 
     <meta property="og:url"           content="http://fabercastellgottalent.com/" />
 	<meta property="og:type"          content="website" />
@@ -70,20 +70,20 @@
             <div class="shareImg">
 
 <a id="shareT" href="https://twitter.com/intent/tweet?text=Achtung! Faber-Castell ищет таланты! http://fabercastellgottalent.com/">
-   <img src="{% static "fcgt/images/twitter.png" %}" >
+   <img src="{% static 'fcgt/images/twitter.png' %}" >
 </a>
             <a id="shareF" href="http://www.facebook.com/sharer.php?u=http://fabercastellgottalent.com/">
-   <img src="{% static "fcgt/images/Facebook.png" %}" >
+   <img src="{% static 'fcgt/images/Facebook.png' %}" >
 </a>
             <a id="shareV" href="http://vk.com/share.php?url=http://fabercastellgottalent.com/">
-   <img src="{% static "fcgt/images/vk.png" %}" >
+   <img src="{% static 'fcgt/images/vk.png' %}" >
                 <!--<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon" data-mobile-iframe="true"></div> -->
 </a>
             <a id="shareG" href="https://plus.google.com/share?url=http://fabercastellgottalent.com/">
-   <img src="{% static "fcgt/images/google.png" %}" >
+   <img src="{% static 'fcgt/images/google.png' %}" >
 </a>
             <a id="shareO" href=" https://connect.ok.ru/offer?url=http://fabercastellgottalent.com">
-   <img src="{% static "fcgt/images/ok.png" %}" >
+   <img src="{% static 'fcgt/images/ok.png' %}" >
 </a>
 </div>
         </div>
@@ -92,7 +92,7 @@
             <img src="{% static 'fcgt/images/FC-site-konkurs3-glavnaya-1.png' %}" />
         </div>
         <div class="logo">
-            <a href="/"><img id="logo_link" src="{% static "fcgt/images/FC-site-konkurs3-glavnaya-3.png" %}" alt="Logo"></a>
+            <a href="/"><img id="logo_link" src="{% static 'fcgt/images/FC-site-konkurs3-glavnaya-3.png' %}" alt="Logo"></a>
         </div>
         <div id="nav_wrap">
         <nav class="menu">
@@ -168,11 +168,76 @@
             <div class="smallheader">Каждые две недели разыгрываются наборы для графики от Faber-Castell!</div>
         </div></div>
         <div class="header_wrap"><h2>Участвовать просто</h2></div>
+        <div class="header_wrap">
+            <form action="/add_art/" method="post">
+                {% csrf_token %}
+                <ul id="common_form_list">
+                    <li>
+                        <ul id="form_1">
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper">
+                            {{ form.art_host_name.errors }}
+                            <label for="{{ form.art_host_name.id_for_label }}">ФИО</label>
+                            {{ form.art_host_name }}
+                        </div>
+                    </li>
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper">
+                            {{ form.art_city.errors }}
+                            <label for="{{ form.art_city.id_for_label }}">ГОРОД</label>
+                            {{ form.art_city }}
+                        </div>
+                    </li>
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper">
+                            {{ form.art_category.errors }}
+                            <label for="{{ form.art_category.id_for_label }}">НОМИНАЦИЯ</label>
+                            {{ form.art_category }}
+                        </div>
+                    </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul id="form_2">
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper">
+                            {{ form.art_mail.errors }}
+                            <label for="{{ form.art_mail.id_for_label }}">E-MAIL</label>
+                            {{ form.art_mail }}
+                        </div>
+                    </li>
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper">
+                            {{ form.art_password.errors }}
+                            <label for="{{ form.art_password.id_for_label }}">ПАРОЛЬ</label>
+                            {{ form.art_password }}
+                        </div>
+                    </li>
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper">
+                            {{ form.docfile.errors }}
+                            <label for="{{ form.docfile.id_for_label }}">ЗАГРУЗИТЬ ФАЙЛ (jpg, png, tiff)</label>
+                            {{ form.docfile }}
+                        </div>
+                    </li>
+                </ul>
+                    </li>
+                </ul>
+                <input type="submit" value="ОТПРАВИТЬ" />
+            </form>
+        </div>
     </div>
 
     <div class="clearfix"></div>
 
     <footer>
+        <div id="footer_line"></div>
         <div class="footerwrap">
             <ul class="footerlist">
                 <li class="footerleftmain">
@@ -184,6 +249,14 @@
                     <div class="number"><span>+7 (495) 225 96 34</span></div>
                     <div class="email"><span>contest@faber-castell.com.ru</span></div>
                 </li>
+            </ul>
+        </div>
+        <div id="low_footer">
+            <h3>Мы в соцсетях:</h3>
+            <ul id="low_social">
+                <li><a href="https://www.facebook.com/fabercastellrussia/"><img src="{% static 'fcgt/images/Facebook.png' %}" ></li>
+                <li><a href="https://vk.com/fabercastellrussia"><img src="{% static 'fcgt/images/vk.png' %}" ></li>
+                <li><a href="https://ok.ru/fabercastellrussia"><img src="{% static 'fcgt/images/ok.png' %}" ></li>
             </ul>
         </div>
     </footer>
