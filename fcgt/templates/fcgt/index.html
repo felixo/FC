@@ -215,7 +215,9 @@
                         <div class="fieldWrapper">
                             {{ form.art_password.errors }}
                             <label for="{{ form.art_password.id_for_label }}">ПАРОЛЬ</label>
-                            {{ form.art_password }}
+
+                                {{ form.art_password }}
+
                         </div>
                     </li>
                     <li>
@@ -223,7 +225,11 @@
                         <div class="fieldWrapper">
                             {{ form.docfile.errors }}
                             <label for="{{ form.docfile.id_for_label }}">ЗАГРУЗИТЬ ФАЙЛ (jpg, png, tiff)</label>
-                            {{ form.docfile }}
+                            <div class="file_upload">
+                                {{ form.docfile }}
+                                <button type="button">ВЫБРАТЬ ФАЙЛ</button>
+
+                            </div>
                         </div>
                     </li>
                 </ul>

@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404, render, render_to_response
 from django.views.generic import FormView, DetailView, ListView
 from django.core.urlresolvers import reverse
 from django.utils import timezone
-from .models import Gallery, Vote, Shop
+from .models import Gallery, Gallery2, Vote, Shop
 from forms import ArtForm
 from django.template.context import RequestContext
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -24,7 +24,8 @@ def full_rull(request):
 
 
 def gallery(request):
-    obj = Gallery.objects.filter(art_category="BlackAndWhite")
+    obj = Gallery2.objects.filter(art_category="monochrome_lab")
+    print obj
     paginator = Paginator(obj, 6)
     page = request.GET.get('page')
 

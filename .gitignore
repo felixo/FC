@@ -1,5 +1,9 @@
+
 *.pyc
 /.idea
 data.db
+data3.db
 /venv
 /media
+*settings.py
+FC/settings.py
