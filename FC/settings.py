@@ -97,7 +97,7 @@ DATABASES = {
     # },
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'data.db'
+        'NAME': 'data3.db'
     }
 }
 
