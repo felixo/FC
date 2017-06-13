@@ -127,8 +127,9 @@ def add_art(request):
     if request.method == 'POST':
         form = ArtForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse('fcgt:index'))
+            new_art = form.save()
+            art_id = new_art.id
+            return HttpResponseRedirect(reverse('fcgt:picture', args=[art_id]))
     else:
         form = ArtForm()
     return render(request, 'fcgt/index.html', {'form': form})
@@ -141,7 +142,7 @@ def where_buy(request):
     })
 
 def picture(request, art_id):
-    documents = Gallery.objects.get(pk=art_id)
+    documents = Gallery2.objects.get(pk=art_id)
     votes = Vote.objects.filter(art=art_id)
     user1 = Vote.objects.filter(art=art_id)
     user2 = request.user.id
