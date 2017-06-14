@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'fcgt/lightbox.css' %}" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>{% block title %}ACHTUNG! Faber-Castell ищет таланты!{% endblock %}</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+    <link rel="shortcut icon" href="{% static 'fcgt/images/favicon-FC.jpg' %}" type="image/jpg">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+
+
+
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="{% static 'fcgt/script.js' %}"></script>
+    <script src="{% static 'fcgt/lightbox.js' %}"></script>
+
+    <meta property="og:url"           content="http://fabercastellgottalent.com/" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="ACHTUNG! Faber-Castell ищет таланты!" />
+	<meta property="og:description"   content="Прими участие в конкурсе талантов с 1 мая по 30 ноября 2016 г. и выиграй обучение в Британской Высшей Школе Дизайна и множество других призов! Подробности на www.fabercastellgottalent.com" />
+	<meta property="og:image"         content="http://fabercastellgottalent.com/static/fcgt/images/logo.png" />
+
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'your-app-id',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <div id="fb-root"></div>
+<script>
+    (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.6";
+     fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="wrapper_base">
+
+
+
+<header>
+    <div class="title">
+        <div id="share">
+            <div class="shareDiv">
+            <span class="shareSpan">Поделиться</span>
+            <div class="shareImg">
+
+<a id="shareT" href="https://twitter.com/intent/tweet?text=Achtung! Faber-Castell ищет таланты! http://fabercastellgottalent.com/">
+   <img src="{% static 'fcgt/images/twitter.png' %}" >
+</a>
+            <a id="shareF" href="http://www.facebook.com/sharer.php?u=http://fabercastellgottalent.com/">
+   <img src="{% static 'fcgt/images/Facebook.png' %}" >
+</a>
+            <a id="shareV" href="http://vk.com/share.php?url=http://fabercastellgottalent.com/">
+   <img src="{% static 'fcgt/images/vk.png' %}" >
+                <!--<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon" data-mobile-iframe="true"></div> -->
+</a>
+            <a id="shareG" href="https://plus.google.com/share?url=http://fabercastellgottalent.com/">
+   <img src="{% static 'fcgt/images/google.png' %}" >
+</a>
+            <a id="shareO" href=" https://connect.ok.ru/offer?url=http://fabercastellgottalent.com">
+   <img src="{% static 'fcgt/images/ok.png' %}" >
+</a>
+</div>
+        </div>
+            </div>
+        <div id="circle_wrap_base">
+            <img src="{% static 'fcgt/images/FC-site-konkurs3-1.png' %}" />
+        </div>
+        <div class="logo_base">
+            <a href="/"><img id="logo_link" src="{% static 'fcgt/images/FC-site-konkurs3-glavnaya-3.png' %}" alt="Logo"></a>
+        </div>
+        <div id="nav_wrap">
+        <nav class="menu">
+         <ul class="top-menu">
+            <li><a href="{% url 'fcgt:rules' %}">ПРАВИЛА </a></li>
+
+            <li id="menu_special"><a href="{% url 'fcgt:jury' %}">ЖЮРИ</a></li>
+
+             <li><a href="{% url 'fcgt:jury' %}">УЧАСТНИКАМ</a></li>
+            <li><a href="{% url 'fcgt:nagradi'%}">ПРИЗЫ</a></li>
+          </ul>
+        </nav>
+            </div>
+        <div class="use_base">
+            <a href="/"><img id="" src="{% static 'fcgt/images/FC-site-konkurs3-2.png' %}" alt="Logo"></a>
+        </div>
+    </div>
+</header>
+</div>
+{% block menu %}
+<div class="list_base">
+        <ul class="gallerylink_base">
+            <li><a href="{% url 'fcgt:gallery' %}"><img src="{% static "fcgt/images/FC-site-konkurs3-color-menu-1.png" %}" alt="black and white">Лаборатория<br>Monochromos</a></li>
+            <li><a href="{% url 'fcgt:gallery2' %}"><img src="{% static "fcgt/images/FC-site-konkurs3-color-menu-2.png" %}" alt="black and white">Планета<br>Polychromos</a></li>
+            <li><a href="{% url 'fcgt:gallery3' %}"><img src="{% static "fcgt/images/FC-site-konkurs3-color-menu-3.png" %}" alt="black and white">PITT Artist<br>скетч</a></li>
+            <li><a href="{% url 'fcgt:gallery4' %}"><img class="img_fix" src="{% static "fcgt/images/FC-site-konkurs3-color-menu-4.png" %}" alt="black and white">Albrecht durer:<br>работают<br>профессионалы</a></li>
+            <li><a href="{% url 'fcgt:gallery5' %}"><img src="{% static "fcgt/images/FC-site-konkurs3-color-menu-5.png" %}" alt="black and white">Connector:<br>сам себе<br>конструктор</a></li>
+            <li><a href="{% url 'fcgt:gallery5' %}"><img class="img_fix" src="{% static "fcgt/images/FC-site-konkurs3-color-menu-6.png" %}" alt="black and white">Замок маленьких<br>художников</a></li>
+        </ul>
+ </div>
+{% endblock %}
+<div class="content_wrap">
+{% block content %}
+{% endblock %}
+</div>
+{% block footer %}
+    <footer>
+        <div id="footer_line"></div>
+        <div class="footerwrap">
+            <ul class="footerlist">
+                <li class="footerleftmain">
+                    <div class="footerright"><span>ООО "Фабер-Кастелл Анадолу"</span></div>
+                    <div class="footerright"><span>115432, Москва, проспект Андропова, дом 18/корп. 7</span></div>
+                    <div class="footerright"><span>Бизнес-парк "Nagatino i-land"</span></div>
+                </li>
+                <li class="footerleft">
+                    <div class="number"><span>+7 (495) 225 96 34</span></div>
+                    <div class="email"><span>contest@faber-castell.com.ru</span></div>
+                </li>
+            </ul>
+        </div>
+        <div id="low_footer">
+            <h3>Мы в соцсетях:</h3>
+            <ul id="low_social">
+                <li><a href="https://www.facebook.com/fabercastellrussia/"><img src="{% static 'fcgt/images/Facebook.png' %}" ></li>
+                <li><a href="https://vk.com/fabercastellrussia"><img src="{% static 'fcgt/images/vk.png' %}" ></li>
+                <li><a href="https://ok.ru/fabercastellrussia"><img src="{% static 'fcgt/images/ok.png' %}" ></li>
+            </ul>
+        </div>
+    </footer>
+{% endblock %}

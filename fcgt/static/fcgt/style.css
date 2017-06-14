@@ -584,8 +584,8 @@ input[type="submit"] {
 }
 
 .galleryList a img {
-    width: 296px;
-    height: 233px;
+    width: 294px;
+    height: 227px;
 }
 
 .placesWrap {
@@ -937,6 +937,8 @@ h2 {
     background-color: #34b379;
     width: 1290px;
     height: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
@@ -1016,4 +1018,211 @@ h3 {
 
 #id_art_mail {
     margin-left: 44px;
+}
+
+#wrapper_base {
+	max-width: 1290px;
+	margin: auto;
+	height: 490px;
+    width: 1290px;
+    background-image: url('images/small_fon.jpg');
+    background-position: 0px 90px;
+    background-repeat: no-repeat;
+    background-color: #001e1b;
+}
+
+#circle_wrap_base {
+    margin-top: -57px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+}
+
+.logo_base {
+    width: 202px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -312px;
+
+}
+
+.logo_base a img {
+    margin-top: -45px;
+}
+
+.logo_base span {
+    vertical-align: 30px;
+    padding: 20px 10px;
+}
+
+.use_base {
+    width: 165px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 220px;
+}
+
+.list_base {
+    margin-top: 60px;
+    width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.gallerylink_base {
+  margin-top: -20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.gallerylink_base a {
+    color: #002d28;
+    font: 18px 'Walley';
+    line-height: 0.2em;
+}
+
+.gallerylink_base li img {
+  display: block;
+}
+
+.gallerylink_base li{
+  display: inline-block;
+  margin-left: 50px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.gallerylink_base li a:hover {
+    text-decoration: underline;
+}
+
+.current_menu a{
+    color: #169586;
+}
+
+.titleWrap {
+    width: 948px;
+    height: 153px;
+    background-color: #f0f2f2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleWrapList {
+    padding: 0;
+    padding-top: 26px;
+}
+
+.titleWrapList li div span{
+    font: 16px 'PT Sans Narrow';
+    color: black;
+    width: 220px;
+    line-height: 0.9em;
+}
+
+.titleWrapList li div h1{
+    font: 18px 'Basil';
+    color: #002d28;
+    margin: -4px 0px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.titleWrapList li{
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.titleText{
+    width: 220px;
+    margin-top: -112px;
+    margin-left: 82px;
+}
+
+.titleGallery {
+    font: 30px 'Basil';
+    color: #002d28;
+    width: 54%;
+    margin: 50px 384px;
+}
+
+.galleryWrap {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galleryText {
+    font: 15px 'Roboto';
+    color: #002d28;
+    text-align: right;
+    width: 296px;
+    height: 23px;
+}
+
+.shareImg {
+    display: inline;
+}
+
+.shareDiv {
+    margin-right: 0px;
+
+}
+
+.shareImg {
+    vertical-align: -6px;
+    margin: 7px;
+}
+
+.shareImg img{
+    margin: 1px;
+}
+
+#more {
+    color: #002d28;
+	font: 17px 'Roboto';
+	margin-left: 0px;
+	width: 1000px;
+	text-align: center;
+}
+
+#more a {
+    text-decoration: none;
+    color: #002d28;
+}
+
+.content_wrap {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 1290px;
+}
+
+.title_text{
+    padding: 0;
+}
+
+.title_text li {
+    display: block;
+    text-align: left;
+    font: 14px 'Roboto';
+}
+
+.title_row {
+    padding: 0;
+}
+
+.title_row li:first-child {
+    margin-right: 22px;
+}
+
+.title_text li:first-child {
+    font: 18px 'Walley';
+    margin-bottom: 10px;
+    margin-right: 0px;
 }

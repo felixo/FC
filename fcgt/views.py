@@ -26,7 +26,7 @@ def full_rull(request):
 def gallery(request):
     obj = Gallery2.objects.filter(art_category="monochrome_lab")
     print obj
-    paginator = Paginator(obj, 6)
+    paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
     try:
@@ -44,7 +44,7 @@ def gallery(request):
 
 def gallery2(request):
     obj = Gallery.objects.filter(art_category="ProfiVsHobby")
-    paginator = Paginator(obj, 6)
+    paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
     try:
