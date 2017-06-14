@@ -4,6 +4,9 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
+from PIL import Image as Img
+import StringIO
+from django.core.files.uploadedfile import InMemoryUploadedFile
 
 Nominate_choise = (
     ('monochrome_lab','Лаборатория Monochromos'),
@@ -42,6 +45,18 @@ class Gallery2(models.Model):
     docfile = models.FileField(upload_to='arts')
     art_password = models.CharField(max_length=200)
     art_vote = models.IntegerField(default=0)
+    small_image = models.FileField(upload_to='arts',default='')
+
+    def save(self, *args, **kwargs):
+        if self.docfile:
+            image = Img.open(StringIO.StringIO(self.docfile.read()))
+            image.thumbnail((296, 233), Img.ANTIALIAS)
+            output = StringIO.StringIO()
+            image.save(output, format='JPEG', quality=75)
+            output.seek(0)
+            self.small_image = InMemoryUploadedFile(output, 'ImageField', "small_%s.jpg" % self.docfile.name, 'image/jpeg',
+                                              output.len, None)
+        super(Gallery2, self).save(*args, **kwargs)
 
     def __unicode__(self):  # __unicode__ on Python 2
         return unicode(self.art_host_name) or u''
