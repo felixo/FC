@@ -1281,7 +1281,12 @@ h3 {
     font: 22px 'PT Sans Narrow';
     color: #002d28;
     text-align: right;
+
+}
+
+.likeButtonText:hover {
     text-decoration: underline;
+    cursor: pointer
 }
 
 .likeButton {

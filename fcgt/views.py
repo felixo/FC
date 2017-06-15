@@ -54,7 +54,8 @@ def gallery(request):
             })
 
 def gallery2(request):
-    obj = Gallery.objects.filter(art_category="ProfiVsHobby")
+    obj = Gallery2.objects.filter(art_category="polychrome_planet")
+    print obj
     paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
@@ -71,11 +72,11 @@ def gallery2(request):
     # This value is maximum index of your pages, so the last page - 1
     max_index = len(paginator.page_range)
     # You want a range of 7, so lets calculate where to slice the list
-    start_index = index - 3 if index >= 3 else 0
-    end_index = index + 3 if index <= max_index - 3 else max_index
+    start_index = index - 5 if index >= 5 else 0
+    end_index = index + 5 if index <= max_index - 5 else max_index
     # My new page range
-    page_range = paginator.page_range[start_index:end_index]
-    print page_range
+    page_range = list(paginator.page_range)
+    page_range = page_range[start_index:end_index]
 
     return render(request, 'fcgt/gallery2.html', {
         'documents': documents,
@@ -83,8 +84,9 @@ def gallery2(request):
     })
 
 def gallery3(request):
-    obj = Gallery.objects.filter(art_category="Scatching")
-    paginator = Paginator(obj, 6)
+    obj = Gallery2.objects.filter(art_category="pitt_artist")
+    print obj
+    paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
     try:
@@ -96,13 +98,25 @@ def gallery3(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         documents = paginator.page(paginator.num_pages)
 
+    index = documents.number - 1  # edited to something easier without index
+    # This value is maximum index of your pages, so the last page - 1
+    max_index = len(paginator.page_range)
+    # You want a range of 7, so lets calculate where to slice the list
+    start_index = index - 5 if index >= 5 else 0
+    end_index = index + 5 if index <= max_index - 5 else max_index
+    # My new page range
+    page_range = list(paginator.page_range)
+    page_range = page_range[start_index:end_index]
+
     return render(request, 'fcgt/gallery3.html', {
-        'documents': documents
+        'documents': documents,
+        'page_range': page_range,
     })
 
 def gallery4(request):
-    obj = Gallery.objects.filter(art_category="CopyPast")
-    paginator = Paginator(obj, 6)
+    obj = Gallery2.objects.filter(art_category="albrecht_durer")
+    print obj
+    paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
     try:
@@ -114,13 +128,25 @@ def gallery4(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         documents = paginator.page(paginator.num_pages)
 
+    index = documents.number - 1  # edited to something easier without index
+    # This value is maximum index of your pages, so the last page - 1
+    max_index = len(paginator.page_range)
+    # You want a range of 7, so lets calculate where to slice the list
+    start_index = index - 5 if index >= 5 else 0
+    end_index = index + 5 if index <= max_index - 5 else max_index
+    # My new page range
+    page_range = list(paginator.page_range)
+    page_range = page_range[start_index:end_index]
+
     return render(request, 'fcgt/gallery4.html', {
-        'documents': documents
+        'documents': documents,
+        'page_range': page_range,
     })
 
 def gallery5(request):
-    obj = Gallery.objects.filter(art_category="MiniArt")
-    paginator = Paginator(obj, 6)
+    obj = Gallery2.objects.filter(art_category="connector")
+    print obj
+    paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
     try:
@@ -132,8 +158,49 @@ def gallery5(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         documents = paginator.page(paginator.num_pages)
 
+    index = documents.number - 1  # edited to something easier without index
+    # This value is maximum index of your pages, so the last page - 1
+    max_index = len(paginator.page_range)
+    # You want a range of 7, so lets calculate where to slice the list
+    start_index = index - 5 if index >= 5 else 0
+    end_index = index + 5 if index <= max_index - 5 else max_index
+    # My new page range
+    page_range = list(paginator.page_range)
+    page_range = page_range[start_index:end_index]
+
     return render(request, 'fcgt/gallery5.html', {
-        'documents': documents
+        'documents': documents,
+        'page_range': page_range,
+    })
+
+def gallery6(request):
+    obj = Gallery2.objects.filter(art_category="little_castle")
+    print obj
+    paginator = Paginator(obj, 15)
+    page = request.GET.get('page')
+
+    try:
+        documents = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        documents = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        documents = paginator.page(paginator.num_pages)
+
+    index = documents.number - 1  # edited to something easier without index
+    # This value is maximum index of your pages, so the last page - 1
+    max_index = len(paginator.page_range)
+    # You want a range of 7, so lets calculate where to slice the list
+    start_index = index - 5 if index >= 5 else 0
+    end_index = index + 5 if index <= max_index - 5 else max_index
+    # My new page range
+    page_range = list(paginator.page_range)
+    page_range = page_range[start_index:end_index]
+
+    return render(request, 'fcgt/gallery6.html', {
+        'documents': documents,
+        'page_range': page_range,
     })
 
 def jury(request):
