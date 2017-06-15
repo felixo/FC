@@ -1192,8 +1192,9 @@ h3 {
 }
 
 #more a {
-    text-decoration: none;
+    
     color: #002d28;
+    vertical-align: -webkit-baseline-middle;
 }
 
 .content_wrap {
@@ -1225,4 +1226,31 @@ h3 {
     font: 18px 'Walley';
     margin-bottom: 10px;
     margin-right: 0px;
+}
+
+.paginator_list {
+    padding: 0;
+}
+
+.paginator_list li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.paginator_button {
+    border: 1px solid #335753;
+	height: 36px;
+	width: 142px;
+	color: #335753;
+	padding: 0 10px;
+    -moz-border-radius: 6px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 6px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius: 6px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 6px; /* закругление углов для всех, кто понимает */
+}
+
+#btn-default {
+    text-decoration: underline;
 }

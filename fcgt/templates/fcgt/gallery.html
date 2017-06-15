@@ -88,16 +88,29 @@
         {% endfor %}
         <div class="clearfix"></div>
         <div id="more">
+            <ul class="paginator_list">
         {% if documents.has_previous %}
-        <a id="prewButton" href="?page=1"> На первую </a>
-        <a id="prewButton" href="?page={{ documents.previous_page_number }}"> << Предыдущая | </a>
+        <li><div class="paginator_button"><a id="prewButton" href="?page={{ documents.previous_page_number }}">< Предыдущая</a></div></li>
+                {% if page_range.0 != 1%}
+                <li><a id="prewButton" href="?page=1"> 1 </a></li>
+                {% endif %}
         {% endif %}
-        <span id="currentPage"> Страница {{ documents.number }} из {{ documents.paginator.num_pages }} </span>
+            {% for pg in page_range %}
+            {% if documents.number == pg %}
+                <li><a href="?page={{pg}}" id="btn-default">{{pg}}</a></li>
+            {% else %}
+                <li><a href="?page={{pg}}" class="btn">{{pg}}</a></li>
+            {% endif %}
+        {% endfor %}
         {% if documents.has_next %}
-
-                <a id="nextButton" href="?page={{ documents.next_page_number }}"> | Следующая >></a>
-                <a id="nextButton" href="?page={{ documents.paginator.num_pages }}"> На последнюю </a>
+                <li><a id="nextButton" href="?page={{ documents.paginator.num_pages }}"> {{ documents.paginator.num_pages }}</a></li>
+                <li><div class="paginator_button"><a id="nextButton" href="?page={{ documents.next_page_number }}">Следующая ></a></div></li>
         {% endif %}
+
+
+
+        </ul>
+        </div>
          </div>
     <div class="clearfix"></div>
     </ul>

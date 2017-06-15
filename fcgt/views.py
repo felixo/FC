@@ -38,8 +38,19 @@ def gallery(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         documents = paginator.page(paginator.num_pages)
 
+    index = documents.number - 1  # edited to something easier without index
+        # This value is maximum index of your pages, so the last page - 1
+    max_index = len(paginator.page_range)
+        # You want a range of 7, so lets calculate where to slice the list
+    start_index = index - 5 if index >= 5 else 0
+    end_index = index + 5 if index <= max_index - 5 else max_index
+        # My new page range
+    page_range = list(paginator.page_range)
+    page_range = page_range[start_index:end_index]
+
     return render(request, 'fcgt/gallery.html', {
-        'documents': documents
+        'documents': documents,
+        'page_range': page_range,
             })
 
 def gallery2(request):
@@ -56,8 +67,19 @@ def gallery2(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         documents = paginator.page(paginator.num_pages)
 
+    index = documents.number - 1  # edited to something easier without index
+    # This value is maximum index of your pages, so the last page - 1
+    max_index = len(paginator.page_range)
+    # You want a range of 7, so lets calculate where to slice the list
+    start_index = index - 3 if index >= 3 else 0
+    end_index = index + 3 if index <= max_index - 3 else max_index
+    # My new page range
+    page_range = paginator.page_range[start_index:end_index]
+    print page_range
+
     return render(request, 'fcgt/gallery2.html', {
-        'documents': documents
+        'documents': documents,
+        'page_range': page_range,
     })
 
 def gallery3(request):
