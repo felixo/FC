@@ -191,7 +191,7 @@ def google(request):
     return render(request, 'fcgt/googlef15025f9fffb7db3.html')
 
 def vote(request, art_id):
-    documents = Gallery.objects.get(pk=art_id)
+    documents = Gallery2.objects.get(pk=art_id)
     votes = Vote.objects.filter(art=art_id)
     cat_id = None
     if request.method == 'GET':
@@ -203,7 +203,7 @@ def vote(request, art_id):
             cat_id = None
 
     if cat_id:
-        category = Gallery.objects.get(id=int(cat_id))
+        category = Gallery2.objects.get(id=int(cat_id))
         if category:
             likes = category.art_vote + 1
         category.art_vote = likes
