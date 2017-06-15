@@ -1192,7 +1192,7 @@ h3 {
 }
 
 #more a {
-    
+
     color: #002d28;
     vertical-align: -webkit-baseline-middle;
 }
@@ -1253,4 +1253,64 @@ h3 {
 
 #btn-default {
     text-decoration: underline;
+}
+
+.art_warp {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.art_warp img {
+    width: 100%;
+}
+
+.galleryText_pic {
+    font: 22px 'PT Sans Narrow';
+    color: #002d28;
+    text-align: right;
+    margin: 3px;
+}
+
+.auth {
+    color: black;
+    text-align: left;
+}
+
+.likeButtonText {
+    font: 22px 'PT Sans Narrow';
+    color: #002d28;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.likeButton {
+    font: 22px 'PT Sans Narrow';
+    color: #002d28;
+}
+
+.socialLogin li a img{
+    height: 32px;
+    width: 108px;
+}
+
+.socialLogin {
+    list-style-type: none;
+}
+
+.socialLogin li {
+    display: inline;
+}
+
+.voted {
+    text-decoration: underline;
+}
+
+.logout {
+    list-style-type: none;
+    margin-left: 613px;
+}
+
+.logout li {
+    display: inline;
 }
