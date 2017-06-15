@@ -1102,7 +1102,7 @@ h3 {
 }
 
 .titleWrap {
-    width: 948px;
+    width: 1000px;
     height: 153px;
     background-color: #f0f2f2;
     margin-left: auto;
@@ -1318,4 +1318,11 @@ h3 {
 
 .logout li {
     display: inline;
+}
+
+.delete_admin {
+    margin-top: 10px;
+    font: 22px 'PT Sans Narrow';
+    color: #002d28;
+    text-align: right;
 }
