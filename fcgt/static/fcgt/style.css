@@ -37,6 +37,7 @@ body {
 	margin-top: -10px;
     height: 100%;
     width: 100%;
+    max-width: 1290px;
 }
 
 input[type="text"] {
@@ -864,7 +865,7 @@ h2 {
     background-image: url('images/pens.png');
     height: 786px;
     background-repeat: no-repeat;
-    background-position: 288px -5px;
+    background-position: 288px 16px;
 }
 
 .steps_header {
@@ -1009,7 +1010,8 @@ h3 {
     letter-spacing: 10em;     /* IE 9 fix */
     -ms-transform: scale(20); /* IE 9 fix */
     opacity: 0;
-    cursor: pointer
+    cursor: pointer;
+    display: none;
 }
 
 #id_art_password{
@@ -1325,4 +1327,71 @@ h3 {
     font: 22px 'PT Sans Narrow';
     color: #002d28;
     text-align: right;
+}
+
+.header {
+    font: 33px 'Walley';
+    color: #002d28;
+}
+
+.header2 {
+    color: black;
+    text-transform: none;
+    font: 14px 'arian';
+    text-align: left;
+    font-weight: bold;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+
+p.rule {
+    color: black;
+    text-transform: none;
+    font: 14px 'arian';
+    text-align: left;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+
+.list_rules {
+    color: black;
+    text-transform: none;
+    font: 14px 'arian';
+    text-align: left;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+
+.list_rules li{
+    color: black;
+    text-transform: none;
+    font: 14px 'arian';
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 175px;
+}
+
+.table_rule {
+    border: 1px solid #002d28;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+
+.table_rule tr{
+    border: 1px solid #002d28;
+}
+
+.table_rule td{
+    border: 1px solid #002d28;
+    font: 14px 'arian';
+}
+
+.rule_it {
+    color: black;
+    text-transform: none;
+    font: 14px 'arian';
+    text-align: left;
+    font-weight: italic;
+    margin-left: 175px;
+    margin-right: 175px;
 }
