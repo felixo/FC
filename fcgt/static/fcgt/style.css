@@ -38,6 +38,8 @@ body {
     height: 100%;
     width: 100%;
     max-width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input[type="text"] {
@@ -1394,4 +1396,106 @@ p.rule {
     font-weight: italic;
     margin-left: 175px;
     margin-right: 175px;
+}
+
+.list_awards {
+    margin-top: 91px;
+    padding: 0;
+}
+
+.list_awards li{
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+.list_text_awards {
+    padding: 0;
+}
+
+.list_text_awards li {
+    display: block;
+    text-align: left;
+    color: #002d28;
+    font: 33px 'Walley';
+}
+
+.small_logo_li {
+    margin-top: 15px;
+}
+
+.list_awards_places {
+    padding: 0;
+}
+
+.list_awards_places li {
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: top;
+}
+
+.awards_places {
+    padding: 0;
+    padding-left: 50px;
+}
+
+.awards_places li {
+    display: block;
+    text-align: left;
+}
+
+.name_awards img {
+    vertical-align: -11px;
+}
+
+.small_logo_li img {
+    vertical-align: top;
+    padding-left: 16px;
+}
+
+.name_awards {
+    font: 30px 'Walley';
+}
+
+.small_awards {
+    font: 18px 'Roboto';
+     padding-left: 16px;
+    margin-top: 14px;
+}
+
+#award-2 {
+    margin-left: 110px;
+}
+
+#mega {
+    vertical-align: -30px;
+}
+
+
+#award-3 {
+    margin-left: 52px;
+}
+
+#super {
+    vertical-align: -2  0px;
+}
+
+.prize_line {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.out_of_awards {
+    padding: 0;
+}
+
+.out_of_awards li {
+    display: inline-block;
+     list-style-type: none;
+}
+
+.out_of_awards_text {
+    text-align: left;
+    font: 18px 'Roboto';
+    padding-left: 50px;
 }

@@ -3,6 +3,95 @@
 {% block title%}Призы конкурса Achtung {% endblock%}
 {% block content %}
 <h1 class="header">
-    Скоро мы расскажем про наши призы.
+    ПРИЗЫ КОНКУРСА
 </h1>
+<ul class="list_awards">
+    <li>
+        <img src="{% static 'fcgt/images/karlbox.png' %}" />
+    </li>
+    <li>
+        <ul class="list_text_awards">
+            <li>
+                Супер-приз
+            </li>
+            <li>
+                Karlbox by Faber-Castell!
+            </li>
+            <li class="small_logo_li">
+                <img src="{% static 'fcgt/images/small_logo.png' %}" />
+            </li>
+        </ul>
+    </li>
+</ul>
+<div class="prize_line">
+    <img src="{% static 'fcgt/images/prize_line.png' %}" />
+</div>
+<ul class="list_awards_places">
+    <li>
+        <img src="{% static 'fcgt/images/3-award-1.png' %}" />
+    </li>
+    <li>
+        <ul class="awards_places">
+            <li class="name_awards">
+                <img src="{% static 'fcgt/images/wow.png' %}" />-запас продукции Faber-Castell
+            </li>
+            <li class="small_awards">
+                или обучающий курс в «Британской Высшей школе дизайна»
+            </li>
+            <li class="small_logo_li">
+                <img src="{% static 'fcgt/images/small_logo.png' %}" />
+                <img src="{% static 'fcgt/images/BHS.png' %}" />
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul id="award-2"class="list_awards_places">
+    <li>
+        <img src="{% static 'fcgt/images/3-award-2.png' %}" />
+    </li>
+    <li>
+        <ul class="awards_places">
+            <li class="name_awards">
+                <img id="mega" src="{% static 'fcgt/images/mega.png' %}" />-запас продукции Faber-Castell
+            </li>
+            <li class="small_awards">
+                или обучающий курс в школе иллюстрации и дизайна Bang Bang Education
+            </li>
+            <li class="small_logo_li">
+                <img src="{% static 'fcgt/images/small_logo.png' %}" />
+                <img src="{% static 'fcgt/images/bang-bang.png' %}" />
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul id="award-3"class="list_awards_places">
+    <li>
+        <img src="{% static 'fcgt/images/3-award-3.png' %}" />
+    </li>
+    <li>
+        <ul class="awards_places">
+            <li class="name_awards">
+                <img id="super" src="{% static 'fcgt/images/super.png' %}" />-запас продукции Faber-Castell
+            </li>
+            <li class="small_logo_li">
+                <img src="{% static 'fcgt/images/small_logo.png' %}" />
+            </li>
+        </ul>
+    </li>
+</ul>
+<div class="prize_line">
+    <img src="{% static 'fcgt/images/prize_line.png' %}" />
+</div>
+<h1 class="header">
+    ВНЕКОНКУРСНЫЕ ПРИЗЫ
+</h1>
+<ul class="out_of_awards">
+    <li>
+        <img src="{% static 'fcgt/images/medium-logo.png' %}" />
+    </li>
+    <li class="out_of_awards_text">
+        Каждые две недели разыгрываются наборы <br>
+для графики от Faber-Castell!
+    </li>
+</ul>
 {% endblock %}
