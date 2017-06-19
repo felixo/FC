@@ -1499,3 +1499,88 @@ p.rule {
     font: 18px 'Roboto';
     padding-left: 50px;
 }
+
+.steps_header_ad {
+    color: #002d28;
+    font: 33px 'Walley';
+    text-transform: uppercase;
+}
+
+.steps_regular_ad {
+    color: #002d28;
+    font: 26px 'Walley';
+}
+
+.steps_green_ad {
+    font: 32px 'Walley';
+    color: #34b379;
+}
+
+.steps_special_ad {
+    font: 32px 'Walley';
+    color: #002d28;
+}
+
+.single_pen {
+    margin-top: 100px;
+    margin-left: -39px;
+}
+
+.yellow_line {
+    text-align: right;
+    margin-right: 319px;
+}
+
+#first_step_3 {
+    padding-left: 305px;
+}
+
+#fourth_step_3 {
+    margin-left: -17px;
+}
+
+#third_step_3 {
+    padding-left: 50px;
+}
+
+.label_ad {
+    color: #002d28;
+    font: 15px 'Roboto';
+}
+
+.fieldWrapper_ad input[type="text"] {
+	background-color: #ffffff;
+	border: 1px solid #34b379;
+	height: 27px;
+	width: 245px;
+	color: #002d28;
+	padding: 0 10px;
+    -moz-border-radius: 6px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 6px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:6px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 6px; /* закругление углов для всех, кто понимает */
+}
+
+.fieldWrapper_ad select {
+    background-color: #ffffff;
+	border: 1px solid #34b379;
+	height: 27px;
+	width: 267px;
+	color: #002d28;
+	padding: 0 10px;
+	 -moz-border-radius: 2px; /* закругление для старых Mozilla Firefox */
+    -webkit-border-radius: 2px; /* закругление для старых Chrome и Safari */
+    -khtml-border-radius:2px; /* закругл. для браузера Konquerer системы Linux */
+    border-radius: 2px; /* закругление углов для всех, кто понимает */
+}
+
+#submit_ad {
+    color: #002d28;
+	background-color: #ffffff;
+	border: 1px solid #34b379;
+	height: 32px;
+	font: 17px 'Roboto';
+	margin-left: 0px;
+	margin-top: 18px;
+	border-radius: 6px;
+}

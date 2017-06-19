@@ -2,7 +2,124 @@
 {% load staticfiles %}
 {% block title%}Участникам конкурса Achtung {% endblock%}
 {% block content %}
+<<h1 class="header">
+    УЧАСТНИКАМ
+<</h1>
+<div id="stepList">
+    <ul id="step_list">
+                    <li id="first_step_3" class="step_list_li">
+                        <ul class="inner_step_list">
+                            <li class="number"><img class="img_fix" src="{% static 'fcgt/images/step-tea-1.png' %}" alt="1"></li>
+                            <li class="text"><span class="steps_header_ad">Создай свой шедевр</span></li>
+                            <li><img class="single_pen" src="{% static 'fcgt/images/single-pen.png'%}"/></li>
+                        </ul>
+                    </li>
+                    <li class="step_list_li">
+                        <ul class="inner_step_list">
+                            <li class="number"><img class="img_fix" src="{% static 'fcgt/images/step-tea-2.png' %}" alt="2"></li>
+                            <li class="text">
+                                <span class="steps_header_ad">Закачай</span>
+                                <div><span class="steps_regular_ad">на специально созданный сайт<br></span></div>
+                                <span class="steps_green_ad">fabercastellgottalent.com<br><img class="swoosh_fix" src="{% static "fcgt/images/swoosh-white.png" %}" alt="swoosh-white"></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="third_step_3" class="step_list_li">
+                        <ul class="inner_step_list">
+                            <li class="number"><img class="img_fix" src="{% static 'fcgt/images/step-tea-3.png' %}" alt="3"></li>
+                            <li class="text">
+                                <span class="steps_header_ad">расскажи</span>
+                                <div><span class="steps_regular_ad">своим друзьям о конкурсе в любой<br></span></div>
+                                <div><span class="steps_regular_ad">социальной сети с хэштегом</span></div><span class="steps_green">#fabercastellgottalent<br><img class="swoosh_fix" src="{% static "fcgt/images/swoosh-white.png" %}" alt="swoosh-white"></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="fourth_step_3" class="step_list_li">
+                        <ul class="inner_step_list">
+                            <li class="number"><img class="img_fix" src="{% static 'fcgt/images/step-tea-4.png' %}" alt="4"></li>
+                            <li class="text">
+                                <span class="steps_header_ad">выиграй</span>
+                                <div><span class="steps_special_ad">Супер приз</span></div>
+                                <div><span class="steps_special_ad">KarlBox by Faber Castell!</span></div>
+                            </li>
+                        </ul>
+                    </li>
+    </ul>
+</div>
+<div class="yellow_line">
+    <img src="{% static 'fcgt/images/yellow-line.png' %}" alt="yellow-line">
+</div>
 <h1 class="header">
-    Скоро мы расскажем про условия участия.
+    УЧАСТВОВАТЬ ПРОСТО
 </h1>
+<div class="header_wrap">
+            <form action="{% url 'fcgt:add_art' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <ul id="common_form_list">
+                    <li>
+                        <ul id="form_1">
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper_ad">
+                            {{ form.art_host_name.errors }}
+                            <label class="label_ad" for="{{ form.art_host_name.id_for_label }}">ФИО</label>
+                            {{ form.art_host_name }}
+                        </div>
+                    </li>
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper_ad">
+                            {{ form.art_city.errors }}
+                            <label class="label_ad" for="{{ form.art_city.id_for_label }}">ГОРОД</label>
+                            {{ form.art_city }}
+                        </div>
+                    </li>
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper_ad">
+                            {{ form.art_category.errors }}
+                            <label class="label_ad" for="{{ form.art_category.id_for_label }}">НОМИНАЦИЯ</label>
+                            {{ form.art_category }}
+                        </div>
+                    </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul id="form_2">
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper_ad">
+                            {{ form.art_mail.errors }}
+                            <label class="label_ad" for="{{ form.art_mail.id_for_label }}">E-MAIL</label>
+                            {{ form.art_mail }}
+                        </div>
+                    </li>
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper_ad">
+                            {{ form.art_password.errors }}
+                            <label class="label_ad" for="{{ form.art_password.id_for_label }}">ПАРОЛЬ</label>
+
+                                {{ form.art_password }}
+
+                        </div>
+                    </li>
+                    <li>
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper_ad">
+                            {{ form.docfile.errors }}
+                            <label class="label_ad" for="{{ form.docfile.id_for_label }}">ЗАГРУЗИТЬ ФАЙЛ (jpg, png, tiff)</label>
+                            <div class="file_upload">
+                                {{ form.docfile }}
+                                <button type="button">ВЫБРАТЬ ФАЙЛ</button>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                    </li>
+                </ul>
+                <input id="submit_ad" type="submit" value="ОТПРАВИТЬ" />
+            </form>
+        </div>
 {% endblock %}
