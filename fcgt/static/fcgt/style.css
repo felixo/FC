@@ -1584,3 +1584,69 @@ p.rule {
 	margin-top: 18px;
 	border-radius: 6px;
 }
+
+.jury_list {
+    padding: 0;
+}
+
+.jury_list li {
+    list-style-type: none;
+}
+
+.jury_set {
+    padding: 0;
+}
+
+.jury_set li {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.jury_set_left {
+    padding: 0;
+}
+
+.jury_set_left li {
+    display: block;
+    text-align: left;
+}
+
+.jury_set_left li:last-child {
+    max-width: 255px;
+}
+
+.jury_set_right {
+    padding: 0;
+}
+
+.jury_set_right li {
+    display: block;
+    text-align: left;
+}
+
+.jury_text {
+    max-width: 632px;
+    font: 16px 'Roboto';
+    padding-left: 50px;
+}
+
+.jury_name {
+    font: 30px 'Walley';
+    color: #34b379;
+    max-width: 255px;
+}
+
+.jury_title {
+    font: 18px 'Roboto';
+    color: #002d28;
+    max-width: 255px;
+}
+
+.jury_line {
+    width: 964px;
+    height: 14px;
+    background-color: #34b379;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
