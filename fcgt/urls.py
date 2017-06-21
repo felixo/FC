@@ -18,4 +18,5 @@ urlpatterns = [
     url(r'^googlef15025f9fffb7db3.html/', views.google, name='google'),
     url(r'^picture/(?P<art_id>\d+)/$', views.picture, name='picture'),
     url(r'^picture/(?P<art_id>\d+)/vote$', views.vote, name='vote'),
+    url(r'^karlbox/', views.karlbox, name='karlbox'),
 ]

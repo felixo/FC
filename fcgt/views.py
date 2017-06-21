@@ -287,3 +287,6 @@ def vote(request, art_id):
         'documents': documents,
 
              })
+
+def karlbox(request):
+    return render(request,'fcgt/karlbox.html')

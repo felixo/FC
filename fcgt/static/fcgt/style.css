@@ -154,7 +154,7 @@ nav li {
     font: 14px 'Walley';
     color: #d4d8d7;
 	display: inline-block;
-	padding: 10px 30px;
+	padding: 10px 10px;
 	margin: 0;
 }
 
@@ -822,7 +822,15 @@ input[type="submit"] {
 }
 
 #menu_special {
-    margin-right: 500px;
+    padding-right: 300px;
+}
+
+#menu_special_2 {
+    padding-left: 200px;
+}
+
+.top-menu {
+    padding-left: 100px;
 }
 
 .use {
@@ -1649,4 +1657,45 @@ p.rule {
     background-color: #34b379;
     margin-top: 70px;
     margin-bottom: 70px;
+}
+
+.karl_header {
+    font: 24px 'Roboto';
+    color: #002d28;
+    text-align: left;
+    margin-left: 180px;
+}
+
+.karl_text {
+    font: 18px 'Roboto';
+    color: #002d28;
+    margin-left: 180px;
+    max-width: 950px;
+    text-align: left;
+}
+
+.karl_text_tea {
+    font: 24px 'Roboto';
+    color: #34b379;
+    margin-left: 180px;
+    max-width: 950px;
+    text-align: left;
+}
+
+.karl_video_frame {
+    margin-left: 19px;
+}
+
+.karlbox_img_list {
+    padding: 0;
+}
+
+.karlbox_img_list li {
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: top;
+}
+
+.karl_box_img_fix {
+    padding-top: 10px;
 }
