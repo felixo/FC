@@ -19,4 +19,5 @@ urlpatterns = [
     url(r'^picture/(?P<art_id>\d+)/$', views.picture, name='picture'),
     url(r'^picture/(?P<art_id>\d+)/vote$', views.vote, name='vote'),
     url(r'^karlbox/', views.karlbox, name='karlbox'),
+    url(r'^delete/(?P<art_id>\d+)/$', views.delete, name='delete'),
 ]

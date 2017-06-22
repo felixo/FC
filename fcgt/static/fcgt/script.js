@@ -56,6 +56,15 @@
 
            });
     });
+    $( ".delete_admin" ).click(function(event) {
+        var r = confirm("Вы уверены, что хотите удалить рисунок?");
+            if (r == true) {
+
+            } else {
+                event.preventDefault();
+            }
+    });
+
     /*$('input[type="submit"]').click(function(){
         if ($('#div_art_host').var == ''){
             alert ("Avada Kedavra");

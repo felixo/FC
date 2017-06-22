@@ -1337,6 +1337,14 @@ h3 {
     font: 22px 'PT Sans Narrow';
     color: #002d28;
     text-align: right;
+    cursor: pointer;
+}
+
+.delete_admin a{
+    color: #002d28;}
+
+.delete_admin:hover {
+    text-decoration: underline;
 }
 
 .header {

@@ -82,7 +82,7 @@
                 <div class="galleryText">{{document.art_host_name}}, {{document.art_city}}, &hearts;  {{ document.art_vote }} </div>
                 {% if user.is_superuser %}
                 <div class="galleryText_admin">{{document.pub_date}}</div>
-                <div class="delete_admin">Delete</div>
+                <div class="delete_admin"><a href="/delete/{{ document.id }}">Удалить работу pk = {{ document.id }}</a></div>
                 {% endif %}
             </li>
 

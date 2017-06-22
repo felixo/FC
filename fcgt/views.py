@@ -8,6 +8,8 @@ from .models import Gallery, Gallery2, Vote, Shop
 from forms import ArtForm
 from django.template.context import RequestContext
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.admin.views.decorators import staff_member_required
+
 
 def index(request):
     # question = get_object_or_404(Question, pk=question_id)
@@ -290,3 +292,10 @@ def vote(request, art_id):
 
 def karlbox(request):
     return render(request,'fcgt/karlbox.html')
+
+@staff_member_required
+def delete(request, art_id):
+    print art_id
+    doc = Gallery2.objects.get(pk=art_id)
+    doc.delete()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
