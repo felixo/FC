@@ -79,7 +79,8 @@
                 <a href="/picture/{{ document.id }}"><img id="{{ document.id }}" src="{{ document.small_image.url }}" alt="Reducto!" class="gallery"></a>
                 <div class="galleryText">{{document.art_host_name}}, {{document.art_city}}, &hearts;  {{ document.art_vote }} </div>
                 {% if user.is_superuser %}
-                <div class="galleryText">{{document.pub_date}}</div>
+                <div class="galleryText_admin">{{document.pub_date}}</div>
+                <div class="delete_admin">Delete</div>
                 {% endif %}
             </li>
 

@@ -1699,3 +1699,8 @@ p.rule {
 .karl_box_img_fix {
     padding-top: 10px;
 }
+
+.galleryText_admin {
+    text-align: right;
+    margin-top: 15px;
+}
