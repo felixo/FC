@@ -27,7 +27,6 @@ def full_rull(request):
 
 def gallery(request):
     obj = Gallery2.objects.filter(art_category="monochrome_lab")
-    print obj
     paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
@@ -57,7 +56,6 @@ def gallery(request):
 
 def gallery2(request):
     obj = Gallery2.objects.filter(art_category="polychrome_planet")
-    print obj
     paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
@@ -87,7 +85,6 @@ def gallery2(request):
 
 def gallery3(request):
     obj = Gallery2.objects.filter(art_category="pitt_artist")
-    print obj
     paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
@@ -117,7 +114,6 @@ def gallery3(request):
 
 def gallery4(request):
     obj = Gallery2.objects.filter(art_category="albrecht_durer")
-    print obj
     paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
@@ -147,7 +143,6 @@ def gallery4(request):
 
 def gallery5(request):
     obj = Gallery2.objects.filter(art_category="connector")
-    print obj
     paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
@@ -177,7 +172,6 @@ def gallery5(request):
 
 def gallery6(request):
     obj = Gallery2.objects.filter(art_category="little_castle")
-    print obj
     paginator = Paginator(obj, 15)
     page = request.GET.get('page')
 
