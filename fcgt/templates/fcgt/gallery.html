@@ -104,7 +104,9 @@
             {% endif %}
         {% endfor %}
         {% if documents.has_next %}
+                {% if page_range|last != documents.paginator.num_pages  %}
                 <li><a id="nextButton" href="?page={{ documents.paginator.num_pages }}"> {{ documents.paginator.num_pages }}</a></li>
+                {% endif %}
                 <li><div class="paginator_button"><a id="nextButton" href="?page={{ documents.next_page_number }}">Следующая ></a></div></li>
         {% endif %}
 

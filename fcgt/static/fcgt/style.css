@@ -583,7 +583,7 @@ input[type="submit"] {
 .galleryList {
     list-style-type: none;
     float: left;
-    margin: 8px 12px;
+    margin: 22px 12px;
 }
 
 .galleryList a img {
@@ -1201,6 +1201,7 @@ h3 {
 	margin-left: 0px;
 	width: 1000px;
 	text-align: center;
+	margin-top: 50px;
 }
 
 #more a {
