@@ -12,7 +12,7 @@ Nominate_choise = (
     ('monochrome_lab','Лаборатория Monochromos'),
     ('polychrome_planet','Планета Polychromos'),
     ('pitt_artist','PITT Artist скетч'),
-    ('albrecht_Durer','Albrecht Durer: работают профессионалы'),
+    ('albrecht_durer','Albrecht Durer: работают профессионалы'),
     ('connector','Connector: сам себе конструктор'),
     ('little_castle','Замок маленьких художников'),
 )
